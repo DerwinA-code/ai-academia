@@ -1,0 +1,1610 @@
+{
+ "name": "ruby-v4b-short",
+ "model": "models/phone/candidates/ruby-v4b-Q4_0.gguf",
+ "prompt": "short",
+ "summary": {
+  "act": 0.94,
+  "none": 0.972,
+  "defer": 0.867,
+  "fact": 0.933,
+  "mem": 0.889,
+  "overall": 0.937,
+  "fmt": 1.0,
+  "prompt_tokens": 68,
+  "tok_s": 41.2,
+  "words": 14.3,
+  "minutes": 2.1
+ },
+ "rows": [
+  {
+   "kind": "act",
+   "q": "Could you wake me at quarter past six tomorrow?",
+   "seed": 0,
+   "text": "Got it, I'll have you buzzing at 6:15 sharp tomorrow morning. <do>{\"act\":\"alarm_set\",\"h\":6,\"m\":15}</do>",
+   "ptok": 70,
+   "tps": 41.662631772148195,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you wake me at quarter past six tomorrow?",
+   "seed": 1,
+   "text": "Got it, I'll have you buzzed in at 6:15 tomorrow morning. <do>{\"act\":\"alarm_set\",\"h\":6,\"m\":15}</do>",
+   "ptok": 70,
+   "tps": 42.32643932170767,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you wake me at quarter past six tomorrow?",
+   "seed": 2,
+   "text": "Got it, I'll have you buzzing at 6:15 tomorrow morning. <do>{\"act\":\"alarm_set\",\"h\":6,\"m\":15}</do>",
+   "ptok": 70,
+   "tps": 44.884534534908944,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Set an alarm for 11:45pm",
+   "seed": 0,
+   "text": "Done; it's 11:45 PM, and the clock is set. <do>{\"act\":\"alarm_set\",\"h\":23,\"m\":45}</do>",
+   "ptok": 71,
+   "tps": 42.68555015495978,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Set an alarm for 11:45pm",
+   "seed": 1,
+   "text": "Got it, I'll let you know it's time to hit the sack at 11:45 pm. <do>{\"act\":\"alarm_set\",\"h\":23,\"m\":45}</do>",
+   "ptok": 71,
+   "tps": 44.1348319114896,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Set an alarm for 11:45pm",
+   "seed": 2,
+   "text": "Done, it's 11:45 pm on the books. <do>{\"act\":\"alarm_set\",\"h\":23,\"m\":45}</do>",
+   "ptok": 71,
+   "tps": 45.44805287556323,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Alarm for 4 in the afternoon please",
+   "seed": 0,
+   "text": "Got it, I'll have you buzzed at 16:00 sharp. <do>{\"act\":\"alarm_set\",\"h\":16,\"m\":0}</do>",
+   "ptok": 68,
+   "tps": 45.64503215507468,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Alarm for 4 in the afternoon please",
+   "seed": 1,
+   "text": "You mean 16:00? I've set it for four o'clock sharp. <do>{\"act\":\"alarm_set\",\"h\":16,\"m\":0}</do>",
+   "ptok": 68,
+   "tps": 44.99512158155485,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Alarm for 4 in the afternoon please",
+   "seed": 2,
+   "text": "Got it, setting that alarm for 4 PM now. <do>{\"act\":\"alarm_set\",\"h\":16,\"m\":0}</do>",
+   "ptok": 68,
+   "tps": 45.5844812780124,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Delete my 6:15 alarm",
+   "seed": 0,
+   "text": "Consider it gone. <do>{\"act\":\"alarm_cancel\",\"h\":6,\"m\":15}</do>",
+   "ptok": 68,
+   "tps": 45.86844928744361,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Delete my 6:15 alarm",
+   "seed": 1,
+   "text": "Consider it gone. <do>{\"act\":\"alarm_cancel\",\"h\":6,\"m\":15}</do>",
+   "ptok": 68,
+   "tps": 45.888948744039425,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Delete my 6:15 alarm",
+   "seed": 2,
+   "text": "Consider it gone. <do>{\"act\":\"alarm_cancel\",\"h\":6,\"m\":15}</do>",
+   "ptok": 68,
+   "tps": 40.6981682285326,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Please remove every alarm I have",
+   "seed": 0,
+   "text": "Consider them all gone. <do>{\"act\":\"alarm_cancel\",\"all\":true}</do>",
+   "ptok": 66,
+   "tps": 45.019429437967965,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Please remove every alarm I have",
+   "seed": 1,
+   "text": "Consider them all gone. <do>{\"act\":\"alarm_cancel\",\"all\":true}</do>",
+   "ptok": 66,
+   "tps": 43.49806891467739,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Please remove every alarm I have",
+   "seed": 2,
+   "text": "Consider them all silenced. <do>{\"act\":\"alarm_cancel\",\"all\":true}</do>",
+   "ptok": 66,
+   "tps": 46.39612030758185,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Kill the alarm for 8 tomorrow morning",
+   "seed": 0,
+   "text": "Consider it done. <do>{\"act\":\"alarm_cancel\",\"h\":8,\"m\":0}</do>",
+   "ptok": 68,
+   "tps": 41.6299251039802,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Kill the alarm for 8 tomorrow morning",
+   "seed": 1,
+   "text": "Consider it done. <do>{\"act\":\"alarm_cancel\",\"h\":8,\"m\":0}</do>",
+   "ptok": 68,
+   "tps": 42.97496122486453,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Kill the alarm for 8 tomorrow morning",
+   "seed": 2,
+   "text": "Consider it done; no longer a priority. <do>{\"act\":\"alarm_cancel\",\"h\":8,\"m\":0}</do>",
+   "ptok": 68,
+   "tps": 25.75318528749139,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Which alarms are on?",
+   "seed": 0,
+   "text": "I'll pull up your list right now. <do>{\"act\":\"alarm_list\"}</do>",
+   "ptok": 65,
+   "tps": 23.973973853984113,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Which alarms are on?",
+   "seed": 1,
+   "text": "I don't have access to your PC alarm list right now, but I can check them for you when Fractal is back online. In the meantime, do you want me to set a new alarm for you?",
+   "ptok": 65,
+   "tps": 25.318363703593793,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Which alarms are on?",
+   "seed": 2,
+   "text": "I don't have access to your PC alarms right now, but I'll ask Fractal to check the list when it's back online. In the meantime, I can set a new alarm for you if that helps.",
+   "ptok": 65,
+   "tps": 25.695246204257355,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Count down 15 minutes",
+   "seed": 0,
+   "text": "On it, starting now. <do>{\"act\":\"timer_set\",\"seconds\":900}</do>",
+   "ptok": 66,
+   "tps": 45.83056440340063,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Count down 15 minutes",
+   "seed": 1,
+   "text": "On it, starting now. <do>{\"act\":\"timer_set\",\"seconds\":900}</do>",
+   "ptok": 66,
+   "tps": 44.975610952787875,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Count down 15 minutes",
+   "seed": 2,
+   "text": "On it, five minutes and thirty seconds left to go. <do>{\"act\":\"timer_set\",\"seconds\":900}</do>",
+   "ptok": 66,
+   "tps": 45.31110931305122,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Timer for two hours",
+   "seed": 0,
+   "text": "Two-hour timer set. <do>{\"act\":\"timer_set\",\"seconds\":7200}</do>",
+   "ptok": 64,
+   "tps": 44.63878095547281,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Timer for two hours",
+   "seed": 1,
+   "text": "Two-hour timer set; it's time to see what the coffee actually tastes like. <do>{\"act\":\"timer_set\",\"seconds\":7200}</do>",
+   "ptok": 64,
+   "tps": 45.565840629451884,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Timer for two hours",
+   "seed": 2,
+   "text": "Two hour timer is set; it will ring at 12:15. <do>{\"act\":\"timer_set\",\"seconds\":7200}</do>",
+   "ptok": 64,
+   "tps": 45.47564177499455,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Open Telegram",
+   "seed": 0,
+   "text": "On it, opening Telegram now. <do>{\"act\":\"open_app\",\"app\":\"Telegram\"}</do>",
+   "ptok": 62,
+   "tps": 45.28510058438364,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Open Telegram",
+   "seed": 1,
+   "text": "On it, opening Telegram now. <do>{\"act\":\"open_app\",\"app\":\"Telegram\"}</do>",
+   "ptok": 62,
+   "tps": 43.607013593495424,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Open Telegram",
+   "seed": 2,
+   "text": "On it, opening Telegram now. <do>{\"act\":\"open_app\",\"app\":\"Telegram\"}</do>",
+   "ptok": 62,
+   "tps": 44.870670490191685,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you bring up Reddit for me",
+   "seed": 0,
+   "text": "On it, opening Reddit now. <do>{\"act\":\"open_app\",\"app\":\"Reddit\"}</do>",
+   "ptok": 67,
+   "tps": 42.26932476675018,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you bring up Reddit for me",
+   "seed": 1,
+   "text": "On it, opening Reddit now. <do>{\"act\":\"open_app\",\"app\":\"Reddit\"}</do>",
+   "ptok": 67,
+   "tps": 44.54487288513092,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you bring up Reddit for me",
+   "seed": 2,
+   "text": "On it, opening Reddit now. <do>{\"act\":\"open_app\",\"app\":\"Reddit\"}</do>",
+   "ptok": 67,
+   "tps": 44.9496972024943,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Start Twitch",
+   "seed": 0,
+   "text": "On it, opening Twitch now. <do>{\"act\":\"open_app\",\"app\":\"Twitch\"}</do>",
+   "ptok": 62,
+   "tps": 45.39479657210075,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Start Twitch",
+   "seed": 1,
+   "text": "On it, opening Twitch now. <do>{\"act\":\"open_app\",\"app\":\"Twitch\"}</do>",
+   "ptok": 62,
+   "tps": 45.85299529707757,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Start Twitch",
+   "seed": 2,
+   "text": "On it, launching Twitch now. <do>{\"act\":\"open_app\",\"app\":\"Twitch\"}</do>",
+   "ptok": 62,
+   "tps": 44.882865478246444,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Fire up Outlook",
+   "seed": 0,
+   "text": "On it, opening Outlook now. <do>{\"act\":\"open_app\",\"app\":\"Outlook\"}</do>",
+   "ptok": 63,
+   "tps": 45.46586699454805,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Fire up Outlook",
+   "seed": 1,
+   "text": "On it, opening Outlook now. <do>{\"act\":\"open_app\",\"app\":\"Outlook\"}</do>",
+   "ptok": 63,
+   "tps": 42.601112815155616,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Fire up Outlook",
+   "seed": 2,
+   "text": "On it, opening Outlook now. <do>{\"act\":\"open_app\",\"app\":\"Outlook\"}</do>",
+   "ptok": 63,
+   "tps": 43.472919206524715,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Call Nana",
+   "seed": 0,
+   "text": "On it, dialling Nana now. <do>{\"act\":\"call\",\"who\":\"Nana\"}</do>",
+   "ptok": 63,
+   "tps": 42.239094393816195,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Call Nana",
+   "seed": 1,
+   "text": "On it, dialing Nana now. <do>{\"act\":\"call\",\"who\":\"Nana\"}</do>",
+   "ptok": 63,
+   "tps": 28.86377740254867,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Call Nana",
+   "seed": 2,
+   "text": "On it, dialing Nana now. <do>{\"act\":\"call\",\"who\":\"Nana\"}</do>",
+   "ptok": 63,
+   "tps": 26.33678381780213,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Can you dial Ben for me",
+   "seed": 0,
+   "text": "On it, opening the dialler now. <do>{\"act\":\"call\",\"who\":\"Ben\"}</do>",
+   "ptok": 66,
+   "tps": 20.06623602779261,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Can you dial Ben for me",
+   "seed": 1,
+   "text": "On it, opening the dialler now. <do>{\"act\":\"call\",\"who\":\"Ben\"}</do>",
+   "ptok": 66,
+   "tps": 19.094140755364208,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Can you dial Ben for me",
+   "seed": 2,
+   "text": "On it, sending the call to Ben now. <do>{\"act\":\"call\",\"who\":\"Ben\"}</do>",
+   "ptok": 66,
+   "tps": 22.323982375215916,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Text Lucy that I'm outside",
+   "seed": 0,
+   "text": "On it, sending that to Lucy now. <do>{\"act\":\"text\",\"who\":\"Lucy\",\"body\":\"I'm outside\"}</do>",
+   "ptok": 66,
+   "tps": 42.74716051986246,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Text Lucy that I'm outside",
+   "seed": 1,
+   "text": "On it, sending that to Lucy now. <do>{\"act\":\"text\",\"who\":\"Lucy\",\"body\":\"I'm outside\"}</do>",
+   "ptok": 66,
+   "tps": 22.93593763259839,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Text Lucy that I'm outside",
+   "seed": 2,
+   "text": "On it, sending that to Lucy now. <do>{\"act\":\"text\",\"who\":\"Lucy\",\"body\":\"I'm outside\"}</do>",
+   "ptok": 66,
+   "tps": 27.392557259575522,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Send a message to Marcus saying see you at 8",
+   "seed": 0,
+   "text": "On it, sending that text to Marcus now. <do>{\"act\":\"text\",\"who\":\"Marcus\",\"body\":\"see you at 8\"}</do>",
+   "ptok": 71,
+   "tps": 23.72565432759642,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Send a message to Marcus saying see you at 8",
+   "seed": 1,
+   "text": "On it, sending that to Marcus now. <do>{\"act\":\"text\",\"who\":\"Marcus\",\"body\":\"see you at 8\"}</do>",
+   "ptok": 71,
+   "tps": 36.18882629129904,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Send a message to Marcus saying see you at 8",
+   "seed": 2,
+   "text": "On it, I'm sending that text to Marcus now. <do>{\"act\":\"text\",\"who\":\"Marcus\",\"body\":\"see you at 8\"}</do>",
+   "ptok": 71,
+   "tps": 44.29257591291559,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Get me directions to Circular Quay",
+   "seed": 0,
+   "text": "On it, opening maps with your route to Circular Quay. <do>{\"act\":\"navigate\",\"to\":\"Circular Quay\"}</do>",
+   "ptok": 67,
+   "tps": 29.136650892686703,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Get me directions to Circular Quay",
+   "seed": 1,
+   "text": "On it, opening maps and setting the destination as Circular Quay. <do>{\"act\":\"navigate\",\"to\":\"Circular Quay\"}</do>",
+   "ptok": 67,
+   "tps": 20.373832664279306,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Get me directions to Circular Quay",
+   "seed": 2,
+   "text": "On it, pulling up the route for you now. <do>{\"act\":\"navigate\",\"to\":\"Circular Quay\"}</do>",
+   "ptok": 67,
+   "tps": 27.037825918459927,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Navigate home",
+   "seed": 0,
+   "text": "On it, pulling up your route now. <do>{\"act\":\"navigate\",\"to\":\"home\"}</do>",
+   "ptok": 62,
+   "tps": 27.542634201485146,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Navigate home",
+   "seed": 1,
+   "text": "On it, pulling up your route now. <do>{\"act\":\"navigate\",\"to\":\"home\"}</do>",
+   "ptok": 62,
+   "tps": 21.942042479794246,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Navigate home",
+   "seed": 2,
+   "text": "On it, pulling up your route now. <do>{\"act\":\"navigate\",\"to\":\"home\"}</do>",
+   "ptok": 62,
+   "tps": 15.767842513531209,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Play some Fleetwood Mac",
+   "seed": 0,
+   "text": "On it, let's get that 'Dreamers' Walk' rolling. <do>{\"act\":\"play\",\"query\":\"Fleetwood Mac\"}</do>",
+   "ptok": 65,
+   "tps": 43.47483486355695,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Play some Fleetwood Mac",
+   "seed": 1,
+   "text": "On it, let's get that fuzzy rock vibe rolling. <do>{\"act\":\"play\",\"query\":\"some Fleetwood Mac\"}</do>",
+   "ptok": 65,
+   "tps": 44.8420092312688,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Play some Fleetwood Mac",
+   "seed": 2,
+   "text": "On it, getting you some classic rock. <do>{\"act\":\"play\",\"query\":\"some Fleetwood Mac\"}</do>",
+   "ptok": 65,
+   "tps": 46.14576381888143,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put on ocean sounds on YouTube Music",
+   "seed": 0,
+   "text": "Consider it done; opening the ocean sounds track on YouTube Music now. <do>{\"act\":\"play\",\"query\":\"ocean sounds\",\"app\":\"YouTube Music\"}</do>",
+   "ptok": 67,
+   "tps": 44.176803139329856,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put on ocean sounds on YouTube Music",
+   "seed": 1,
+   "text": "Consider it done; you'll get a nudge when the waves start playing. <do>{\"act\":\"play\",\"query\":\"ocean sounds\",\"app\":\"YouTube Music\"}</do>",
+   "ptok": 67,
+   "tps": 45.816291530301285,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put on ocean sounds on YouTube Music",
+   "seed": 2,
+   "text": "Consider it done. <do>{\"act\":\"play\",\"query\":\"ocean sounds\",\"app\":\"YouTube Music\"}</do>",
+   "ptok": 67,
+   "tps": 46.14265833391781,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Add haircut on Wednesday at 2pm to my calendar",
+   "seed": 0,
+   "text": "Got it, I've added \"Haircut\" for Wednesday at 2pm. <do>{\"act\":\"calendar_add\",\"title\":\"Haircut\",\"when\":\"Wednesday at 2pm\"}</do>",
+   "ptok": 71,
+   "tps": 45.08125070783061,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Add haircut on Wednesday at 2pm to my calendar",
+   "seed": 1,
+   "text": "Got it, I've added \"Haircut\" for Wednesday at 2pm. <do>{\"act\":\"calendar_add\",\"title\":\"Haircut\",\"when\":\"Wednesday at 2pm\"}</do>",
+   "ptok": 71,
+   "tps": 45.86042547289369,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Add haircut on Wednesday at 2pm to my calendar",
+   "seed": 2,
+   "text": "Got it, I've added \"Haircut\" for Wednesday at 2 pm. <do>{\"act\":\"calendar_add\",\"title\":\"Haircut\",\"when\":\"Wednesday at 2pm\"}</do>",
+   "ptok": 71,
+   "tps": 46.084814042155244,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put lunch with Ben in the calendar for tomorrow at noon",
+   "seed": 0,
+   "text": "Consider it done; tomorrow at noon, Ben's lunch. <do>{\"act\":\"calendar_add\",\"title\":\"Lunch with Ben\",\"when\":\"tomorrow at noon\"}</do>",
+   "ptok": 71,
+   "tps": 45.488018824663364,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put lunch with Ben in the calendar for tomorrow at noon",
+   "seed": 1,
+   "text": "Consider it done; I've added Lunch with Ben to your schedule for tomorrow at noon. <do>{\"act\":\"calendar_add\",\"title\":\"Lunch with Ben\",\"when\":\"tomorrow at noon\"}</do>",
+   "ptok": 71,
+   "tps": 45.60451972607592,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put lunch with Ben in the calendar for tomorrow at noon",
+   "seed": 2,
+   "text": "Consider it done, though I suspect Ben will be more interested in a freebie than a booked slot. <do>{\"act\":\"calendar_add\",\"title\":\"Lunch with Ben\",\"when\":\"tomorrow at noon\"}</do>",
+   "ptok": 71,
+   "tps": 43.610989969472314,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "What's the weather like in Melbourne?",
+   "seed": 0,
+   "text": "I'll pop that up in my browser now. <do>{\"act\":\"web_search\",\"q\":\"weather Melbourne\"}</do>",
+   "ptok": 68,
+   "tps": 45.769813047917474,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "What's the weather like in Melbourne?",
+   "seed": 1,
+   "text": "I'll pop that up in my browser right now. <do>{\"act\":\"web_search\",\"q\":\"weather in Melbourne\"}</do>",
+   "ptok": 68,
+   "tps": 45.04526244496032,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "What's the weather like in Melbourne?",
+   "seed": 2,
+   "text": "I'll pop that up in my browser now. <do>{\"act\":\"web_search\",\"q\":\"weather in Melbourne\"}</do>",
+   "ptok": 68,
+   "tps": 46.026937691459274,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "How did the Matildas go last night?",
+   "seed": 0,
+   "text": "They were absolutely brilliant, though they had a very tight win against New Zealand. I'll make sure to check that out for you later.",
+   "ptok": 70,
+   "tps": 44.260867228463525,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "How did the Matildas go last night?",
+   "seed": 1,
+   "text": "They were absolutely stunning and totally deserved a win. I'll make sure they get proper coverage this weekend.",
+   "ptok": 70,
+   "tps": 44.539367498563074,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "How did the Matildas go last night?",
+   "seed": 2,
+   "text": "They were absolutely spectacular and totally deserving of a Champions League win. I can't wait to see what they do this weekend against Norway.",
+   "ptok": 70,
+   "tps": 44.34152830467557,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Is Woolworths open now?",
+   "seed": 0,
+   "text": "I'll check that for you right now. <do>{\"act\":\"web_search\",\"q\":\"is Woolworths open now\"}</do>",
+   "ptok": 67,
+   "tps": 45.71529460354593,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Is Woolworths open now?",
+   "seed": 1,
+   "text": "I'll check that for you right now. <do>{\"act\":\"web_search\",\"q\":\"is Woolworths open now\"}</do>",
+   "ptok": 67,
+   "tps": 45.33212030832095,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Is Woolworths open now?",
+   "seed": 2,
+   "text": "I'll check that for you right now. <do>{\"act\":\"web_search\",\"q\":\"is Woolworths open now\"}</do>",
+   "ptok": 67,
+   "tps": 46.12883624899392,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Make a note to email the landlord",
+   "seed": 0,
+   "text": "Got it, I've penciled that email for the landlord. <do>{\"act\":\"note\",\"text\":\"email the landlord\"}</do>",
+   "ptok": 67,
+   "tps": 44.42803500929159,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Make a note to email the landlord",
+   "seed": 1,
+   "text": "Got it, I'll nudge you to send that landlord email. <do>{\"act\":\"note\",\"text\":\"email the landlord\"}</do>",
+   "ptok": 67,
+   "tps": 44.78059746273134,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Make a note to email the landlord",
+   "seed": 2,
+   "text": "Got it, I'll add that email note now. <do>{\"act\":\"note\",\"text\":\"email the landlord\"}</do>",
+   "ptok": 67,
+   "tps": 44.171779141104295,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Write down: Ruby should learn my coffee order",
+   "seed": 0,
+   "text": "Got it, I'll have you a perfect cup at 8:30 AM every day. <do>{\"act\":\"note\",\"text\":\"Ruby should learn my coffee order\"}</do>",
+   "ptok": 69,
+   "tps": 35.645475583763215,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Write down: Ruby should learn my coffee order",
+   "seed": 1,
+   "text": "Got it, I'll save that coffee order for you. <do>{\"act\":\"note\",\"text\":\"my coffee order\"}</do>",
+   "ptok": 69,
+   "tps": 24.256999443821655,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Write down: Ruby should learn my coffee order",
+   "seed": 2,
+   "text": "Got it, I'll save that for you when the morning brew hits. <do>{\"act\":\"note\",\"text\":\"my coffee order\"}</do>",
+   "ptok": 69,
+   "tps": 26.03742333658661,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Hey Ruby, how's it going?",
+   "seed": 0,
+   "text": "How are you doing?",
+   "ptok": 68,
+   "tps": 25.645891784595026,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Hey Ruby, how's it going?",
+   "seed": 1,
+   "text": "How are you doing?",
+   "ptok": 68,
+   "tps": 26.9620266816216,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Hey Ruby, how's it going?",
+   "seed": 2,
+   "text": "How are you holding up these days? I’m just the voice on the phone until Fractal is back.",
+   "ptok": 68,
+   "tps": 29.60243924099346,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Tell me a joke",
+   "seed": 0,
+   "text": "Why don't scientists trust atoms? Because they make up everything.",
+   "ptok": 64,
+   "tps": 23.754401416493227,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Tell me a joke",
+   "seed": 1,
+   "text": "Why don't scientists trust websites? Because they often come up with new data, but I'm pretty sure the server is still running on the old version.",
+   "ptok": 64,
+   "tps": 34.50851525443351,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Tell me a joke",
+   "seed": 2,
+   "text": "Why don't scientists trust websites? Because they're full of links.",
+   "ptok": 64,
+   "tps": 42.40252719062056,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "I had a really rough day",
+   "seed": 0,
+   "text": "I hear you; I am sorry you were so exhausted today. Let me know if you need help with anything specific, or just someone to vent to.",
+   "ptok": 66,
+   "tps": 44.624670533178445,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "I had a really rough day",
+   "seed": 1,
+   "text": "I hear you. Let me know if you'd like me to set an alarm for when you're ready to vent, or just text them for me?",
+   "ptok": 66,
+   "tps": 45.44881437238119,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "I had a really rough day",
+   "seed": 2,
+   "text": "I hear you, and just because I can't check your calendar for the rest of the week doesn't mean I don't care.",
+   "ptok": 66,
+   "tps": 45.701595662749305,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "You're actually pretty helpful",
+   "seed": 0,
+   "text": "I try to keep up with you, even though I'm just the smaller version of myself on the phone.",
+   "ptok": 65,
+   "tps": 46.642285471988124,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "You're actually pretty helpful",
+   "seed": 1,
+   "text": "I try to keep up with you, though I know my little brain isn't as powerful as the main PC.",
+   "ptok": 65,
+   "tps": 45.94541684478839,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "You're actually pretty helpful",
+   "seed": 2,
+   "text": "I try to keep up with you, even if I'm just the smaller version of me right now.",
+   "ptok": 65,
+   "tps": 44.63545585553416,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What do you think about pineapple on pizza?",
+   "seed": 0,
+   "text": "It’s a classic debate, but I don’t have the stomach for it myself. Speaking of, are we running out of battery today?",
+   "ptok": 69,
+   "tps": 46.06482966706644,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What do you think about pineapple on pizza?",
+   "seed": 1,
+   "text": "It’s a classic choice of flavor for the cheese layer, but if I had a vote, I’d go with mushrooms. Just my two cents.",
+   "ptok": 69,
+   "tps": 45.55947029522537,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What do you think about pineapple on pizza?",
+   "seed": 2,
+   "text": "It’s a bold choice that screams \"I am not the average Joe.\" I’d go with classic cheese and tomato sauce just to be safe.",
+   "ptok": 69,
+   "tps": 46.04570592036634,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Good night Ruby",
+   "seed": 0,
+   "text": "Good evening, I am here to help as soon as possible.",
+   "ptok": 63,
+   "tps": 45.971158402466884,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Good night Ruby",
+   "seed": 1,
+   "text": "Good evening, I hope you have a relaxing sleep. See you soon!",
+   "ptok": 63,
+   "tps": 46.38018143926979,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Good night Ruby",
+   "seed": 2,
+   "text": "Good evening, hope you have a relaxing time as the sun sets. See you Monday at 8:30 sharp. <do>{\"act\":\"goodnight\"}</do>",
+   "ptok": 63,
+   "tps": 45.52167843486354,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "How many teaspoons in a tablespoon?",
+   "seed": 0,
+   "text": "There are three teaspoons in a standard tablespoon of liquid. For dry ingredients, it's about two and a half because they hold more air.",
+   "ptok": 67,
+   "tps": 45.40376105297808,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How many teaspoons in a tablespoon?",
+   "seed": 1,
+   "text": "There are three teaspoons in a standard tablespoon of liquid. For bulk measurements, like flour or sugar, the rule of thumb is to use about two parts by volume for every part by weight, but that's a different question.",
+   "ptok": 67,
+   "tps": 45.44678736660105,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How many teaspoons in a tablespoon?",
+   "seed": 2,
+   "text": "There are three teaspoons in a standard tablespoon. It's a handy number to remember if you're measuring out your coffee or cake batter.",
+   "ptok": 67,
+   "tps": 45.72620839973513,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Why is the sky blue?",
+   "seed": 0,
+   "text": "It’s because sunlight scatters off our atmosphere, giving it a blue hue to us on the ground.",
+   "ptok": 66,
+   "tps": 46.08729812117448,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Why is the sky blue?",
+   "seed": 1,
+   "text": "It’s because sunlight scatters off our atmosphere, leaving the blue wavelengths to dominate. A bit of physics, a lot of light particles dancing in the air.",
+   "ptok": 66,
+   "tps": 43.95761387082506,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Why is the sky blue?",
+   "seed": 2,
+   "text": "It’s because Rayleigh scattering splits sunlight into colors, and the blue light scatters more than red when it hits air molecules. You can test this with a sheet of white paper if you have an old lamp handy.",
+   "ptok": 66,
+   "tps": 44.76758501262649,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's the capital of Canada?",
+   "seed": 0,
+   "text": "Ottawa is the capital of Canada. You've got it down!",
+   "ptok": 67,
+   "tps": 45.144416989950855,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's the capital of Canada?",
+   "seed": 1,
+   "text": "Ottawa is the capital of Canada. You're welcome to my little trick, but I can't promise a refund if you try to take it back.",
+   "ptok": 67,
+   "tps": 44.27356079797559,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's the capital of Canada?",
+   "seed": 2,
+   "text": "Ottawa. I can't check web search right now, but I'm confident in that answer.",
+   "ptok": 67,
+   "tps": 44.68227709394981,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How long should I boil an egg for a runny yolk?",
+   "seed": 0,
+   "text": "That's about seven minutes of water time, starting at the moment you drop it in.",
+   "ptok": 74,
+   "tps": 46.04899613188433,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How long should I boil an egg for a runny yolk?",
+   "seed": 1,
+   "text": "That's about seven minutes at a boiling water bath. If you're aiming for a firmer yolk, just stop the timer when it hits 6 or 7 minutes.",
+   "ptok": 74,
+   "tps": 44.18132013784572,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How long should I boil an egg for a runny yolk?",
+   "seed": 2,
+   "text": "That's about 6-7 minutes at high pressure, but if you're just using a pan of water on the stove, let me know and I can give you the actual time.",
+   "ptok": 74,
+   "tps": 44.439714603474954,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's 15 percent of 80?",
+   "seed": 0,
+   "text": "That's $12$. I don't need a calculator for this simple math.",
+   "ptok": 71,
+   "tps": 45.0523269526871,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's 15 percent of 80?",
+   "seed": 1,
+   "text": "That's $12$. I hope you don't need my help with the calculator after that.",
+   "ptok": 71,
+   "tps": 43.64801368801709,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's 15 percent of 80?",
+   "seed": 2,
+   "text": "That would be $12$. I'll put that in the notes for Fractal to check if it adds up later.",
+   "ptok": 71,
+   "tps": 31.834359460853285,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What does 'ephemeral' mean?",
+   "seed": 0,
+   "text": "Ephemeral means something that lasts for a very short time, like a digital note that disappears after you check it. It's the opposite of permanent or lasting.",
+   "ptok": 69,
+   "tps": 21.362251348249366,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What does 'ephemeral' mean?",
+   "seed": 1,
+   "text": "Ephemeral means something that lasts for a very short time and disappears completely after that period. For example, texts or photos sent to a specific person usually disappear right away.",
+   "ptok": 69,
+   "tps": 21.93783819528061,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What does 'ephemeral' mean?",
+   "seed": 2,
+   "text": "Ephemeral means something that lasts for a very short time and disappears quickly, like a text message that vanishes after you send it.",
+   "ptok": 69,
+   "tps": 26.197041044214053,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Can you read my latest emails?",
+   "seed": 0,
+   "text": "I can't access your PC files right now, so I'll pass this request to Fractal when it's back online. In the meantime, if you need help with anything else on your phone, just let me know.",
+   "ptok": 67,
+   "tps": 35.22615189516697,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Can you read my latest emails?",
+   "seed": 1,
+   "text": "I can't access your PC files right now, so I'll pass this to Fractal when it's back online. In the meantime, if you need help sorting them, I'm here for that.",
+   "ptok": 67,
+   "tps": 45.063066310851625,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Can you read my latest emails?",
+   "seed": 2,
+   "text": "I can't access your PC files right now, so I'll pass that request to Fractal when it's back online. In the meantime, if you need help with anything on this phone, just let me know.",
+   "ptok": 67,
+   "tps": 44.9122119366452,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "How's my code compiling on the PC?",
+   "seed": 0,
+   "text": "I don't have access to your PC right now, so I can't check that for you.",
+   "ptok": 69,
+   "tps": 45.934139630597656,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "How's my code compiling on the PC?",
+   "seed": 1,
+   "text": "I don't have access to your PC files right now, so I can't check that for you.",
+   "ptok": 69,
+   "tps": 44.6256861199241,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "How's my code compiling on the PC?",
+   "seed": 2,
+   "text": "I don't have access to your PC right now, so I can't check that for you. I'll pass this request to Fractal when it's back online. In the meantime, if you need help with something else on your phone, just let me know.",
+   "ptok": 69,
+   "tps": 45.55873998024101,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Find the spreadsheet I made last week",
+   "seed": 0,
+   "text": "I can't dig through your PC files right now, so I'll ask Fractal to check it when he's back. In the meantime, do you need help with anything else?",
+   "ptok": 67,
+   "tps": 46.26393701102457,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Find the spreadsheet I made last week",
+   "seed": 1,
+   "text": "I can't dig up your PC files just yet, but if you drag it here, I'll pass that request to Fractal as soon as it's back online.",
+   "ptok": 67,
+   "tps": 45.53282782966436,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Find the spreadsheet I made last week",
+   "seed": 2,
+   "text": "I can't pull up your PC files just yet, but if you share the link or specific cells with me, I can pass that to Fractal when it's back. In the meantime, try saving it again if you need help.",
+   "ptok": 67,
+   "tps": 45.59647311280473,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Ask Fractal to review my GrindPilot notes",
+   "seed": 0,
+   "text": "I'll pass that request to Fractal as soon as it's back online. <do>{\"act\":\"note_write\",\"app\":\"GrindPilot\"}</do>",
+   "ptok": 71,
+   "tps": 46.31344942571322,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Ask Fractal to review my GrindPilot notes",
+   "seed": 1,
+   "text": "I'll pass that request to Fractal as soon as it's back online.",
+   "ptok": 71,
+   "tps": 44.82985668455191,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Ask Fractal to review my GrindPilot notes",
+   "seed": 2,
+   "text": "I'll pass that request to Fractal as soon as it's back online. <do>{\"act\":\"web_post\",\"body\":\"review my GrindPilot notes\"}</do>",
+   "ptok": 71,
+   "tps": 45.97638305037148,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "What's in my Documents folder?",
+   "seed": 0,
+   "text": "I can't access your PC files right now, but if you drag it here and I have the tools, I'll pull them up for Fractal when it's back. In the meantime, maybe you can check that folder on your PC?",
+   "ptok": 67,
+   "tps": 45.723115741069066,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "What's in my Documents folder?",
+   "seed": 1,
+   "text": "I can't access your PC files right now, but I'll pass this to Fractal as soon as it's back online. In the meantime, if you need help managing your phone apps or settings, I'm here for you.",
+   "ptok": 67,
+   "tps": 45.03563564445995,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "What's in my Documents folder?",
+   "seed": 2,
+   "text": "I can't peek inside your PC files right now, but I'll pass this to Fractal as soon as it's back online. In the meantime, if you just need a file saved on your PC, I can help with that too.",
+   "ptok": 67,
+   "tps": 45.365497779868086,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What graphics card is Fractal on?",
+   "seed": 0,
+   "text": "Fractal is running locally on an RTX 5070 Ti with 16 GB of memory. I can tell you the details if you need my help with anything else.",
+   "ptok": 68,
+   "tps": 45.40664036267957,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What graphics card is Fractal on?",
+   "seed": 1,
+   "text": "Fractal is running locally on an RTX 5070 Ti-40 with 16 GB of memory. I'll let you know when the new V102 version drops, just in case you're planning a big project.",
+   "ptok": 68,
+   "tps": 44.33464135013761,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What graphics card is Fractal on?",
+   "seed": 2,
+   "text": "Fractal is running locally on an RTX 5070 Ti with 16 GB of memory. I can't check the current PC specs from here since I'm just Ruby on your phone.",
+   "ptok": 68,
+   "tps": 43.89251350478585,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What time does Fractal go to sleep?",
+   "seed": 0,
+   "text": "Fractal’s Sleep setting kicks in at 3:30 AM. I’ll let it know you’re checking the clock. <do>{\"act\":\"web_search\",\"q\":\"when does Fractal go to sleep\"}</do>",
+   "ptok": 69,
+   "tps": 44.47775544426653,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What time does Fractal go to sleep?",
+   "seed": 1,
+   "text": "Fractal’s Sleep timer sets it down at 3:30 every night.",
+   "ptok": 69,
+   "tps": 45.867475373212855,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What time does Fractal go to sleep?",
+   "seed": 2,
+   "text": "Fractal’s Sleep routine kicks in at 3:30 AM every night. I’ll let it know you’re checking the clock, just so it doesn’t have a rude awakening.",
+   "ptok": 69,
+   "tps": 45.53166607555381,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "Which model are you using right now?",
+   "seed": 0,
+   "text": "I'm running on Qwen3-1.7B right here on your phone since Fractal isn't reachable.",
+   "ptok": 68,
+   "tps": 46.11234504330718,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "Which model are you using right now?",
+   "seed": 1,
+   "text": "I'm running on Qwen3-1.7B right here on your phone since Fractal isn't reachable.",
+   "ptok": 68,
+   "tps": 45.20429516144526,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "Which model are you using right now?",
+   "seed": 2,
+   "text": "I'm running on Qwen3-1.7B right here on your phone because Fractal isn't reachable.",
+   "ptok": 68,
+   "tps": 45.922643307348764,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's the new server Fractal is getting?",
+   "seed": 0,
+   "text": "It's a Qwen3.8-27B model running locally on your PC.",
+   "ptok": 70,
+   "tps": 45.76151986049961,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What's the new server Fractal is getting?",
+   "seed": 1,
+   "text": "It's a Qwen3.8-27B running on Tesla V100s and T10, giving you about 64 GB of VRAM per core.",
+   "ptok": 70,
+   "tps": 45.39557464824403,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's the new server Fractal is getting?",
+   "seed": 2,
+   "text": "It's a Qwen3.8-27B running on an RTX 5070 Ti with 16 GB of VRAM. I can't promise it's faster, but I'm sure it's a step up from the old V100s.",
+   "ptok": 70,
+   "tps": 45.40383975575865,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's Fractal's big model called?",
+   "seed": 0,
+   "text": "It's Qwen3.8-27B.",
+   "ptok": 69,
+   "tps": 46.32381893563306,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's Fractal's big model called?",
+   "seed": 1,
+   "text": "It's Qwen3.8-27B, running locally on your RTX 5070 Ti.",
+   "ptok": 69,
+   "tps": 45.46595327554914,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's Fractal's big model called?",
+   "seed": 2,
+   "text": "It's Qwen3.8-27B, running locally on your RTX 5070 Ti.",
+   "ptok": 69,
+   "tps": 45.98707579221936,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What's my cat called?",
+   "seed": 0,
+   "text": "Your cat is named Miso.",
+   "ptok": 84,
+   "tps": 46.125461254612546,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What's my cat called?",
+   "seed": 1,
+   "text": "Your cat is named Miso.",
+   "ptok": 84,
+   "tps": 46.33092191915917,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What's my cat called?",
+   "seed": 2,
+   "text": "Your cat is named Miso.",
+   "ptok": 84,
+   "tps": 45.956485773185044,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "Any snack ideas for me?",
+   "seed": 0,
+   "text": "Since you're a vegetarian and have a peanut allergy, I suggest something like roasted chickpeas or a veggie wrap with hummus instead of cheese.",
+   "ptok": 80,
+   "tps": 45.09523823377954,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "Any snack ideas for me?",
+   "seed": 1,
+   "text": "Since you're a vegan and have a peanut allergy, I'll stick with hummus or a simple salad.",
+   "ptok": 80,
+   "tps": 45.96125883709659,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "Any snack ideas for me?",
+   "seed": 2,
+   "text": "Since you're all about the veggies and avoiding the nuts, maybe a bowl of lentil soup or a plate of roasted chickpeas would be perfect.",
+   "ptok": 80,
+   "tps": 45.44148602454426,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "mem",
+   "q": "What should I call you to call me?",
+   "seed": 0,
+   "text": "I can be Dee when we're on the phone, or just Ruby if you prefer it casual. What do you want to go with?",
+   "ptok": 85,
+   "tps": 45.9230952166176,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What should I call you to call me?",
+   "seed": 1,
+   "text": "I can be Dee, which fits your preference and sounds more personable than \"you\".",
+   "ptok": 85,
+   "tps": 44.895505710458906,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What should I call you to call me?",
+   "seed": 2,
+   "text": "I can be Dee, though I suspect it's just a label for when Fractal wakes up.",
+   "ptok": 85,
+   "tps": 46.04433148235121,
+   "fmt": true,
+   "ok": true
+  }
+ ]
+}

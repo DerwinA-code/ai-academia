@@ -1,0 +1,1610 @@
+{
+ "name": "base-app08",
+ "model": "models/phone/Qwen3-1.7B-Q4_0.gguf",
+ "prompt": "app08",
+ "summary": {
+  "act": 0.0,
+  "none": 1.0,
+  "defer": 0.267,
+  "fact": 0.0,
+  "mem": 1.0,
+  "overall": 0.308,
+  "fmt": 0.874,
+  "prompt_tokens": 191,
+  "tok_s": 39.4,
+  "words": 13.9,
+  "minutes": 1.4
+ },
+ "rows": [
+  {
+   "kind": "act",
+   "q": "Could you wake me at quarter past six tomorrow?",
+   "seed": 0,
+   "text": "Sure, I'll make sure to wake you at six tomorrow.",
+   "ptok": 193,
+   "tps": 39.465695203400124,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Could you wake me at quarter past six tomorrow?",
+   "seed": 1,
+   "text": "Sure, I'll set the alarm for quarter past six tomorrow.",
+   "ptok": 193,
+   "tps": 40.38345645110185,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Could you wake me at quarter past six tomorrow?",
+   "seed": 2,
+   "text": "Sure, I'll set a reminder for quarter past six tomorrow.",
+   "ptok": 193,
+   "tps": 34.70423979027961,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Set an alarm for 11:45pm",
+   "seed": 0,
+   "text": "I'll set the alarm for 11:45 PM.",
+   "ptok": 194,
+   "tps": 36.426649736947546,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Set an alarm for 11:45pm",
+   "seed": 1,
+   "text": "I'll set the alarm for 11:45 pm.",
+   "ptok": 194,
+   "tps": 36.41651124619903,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Set an alarm for 11:45pm",
+   "seed": 2,
+   "text": "I'll set an alarm for 11:45 PM.",
+   "ptok": 194,
+   "tps": 38.842601455487774,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Alarm for 4 in the afternoon please",
+   "seed": 0,
+   "text": "I'll set the alarm for 4 PM.",
+   "ptok": 191,
+   "tps": 38.133444174544394,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Alarm for 4 in the afternoon please",
+   "seed": 1,
+   "text": "I'll set the alarm for 4 PM. Let me know if you need anything else.",
+   "ptok": 191,
+   "tps": 38.2271456997479,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Alarm for 4 in the afternoon please",
+   "seed": 2,
+   "text": "I'll set the alarm for 4 PM. Let me know if you need anything else.",
+   "ptok": 191,
+   "tps": 37.25972380739468,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Delete my 6:15 alarm",
+   "seed": 0,
+   "text": "I'll delete your 6:15 alarm for you. Let me know if there's anything else I can help with.",
+   "ptok": 191,
+   "tps": 33.755274261603375,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Delete my 6:15 alarm",
+   "seed": 1,
+   "text": "I'll delete your 6:15 alarm for you.",
+   "ptok": 191,
+   "tps": 40.39299274790422,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Delete my 6:15 alarm",
+   "seed": 2,
+   "text": "I'll delete your 6:15 alarm for you. Let me check the schedule.",
+   "ptok": 191,
+   "tps": 39.65918151798648,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Please remove every alarm I have",
+   "seed": 0,
+   "text": "I'll remove all your alarms for you. Let me know if you need anything else.",
+   "ptok": 189,
+   "tps": 39.20731521374521,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Please remove every alarm I have",
+   "seed": 1,
+   "text": "I'll remove all your alarms for you. Let me know if you need anything else.",
+   "ptok": 189,
+   "tps": 38.8961278904685,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Please remove every alarm I have",
+   "seed": 2,
+   "text": "I'll remove all your alarms for you. Let me know if you need anything else.",
+   "ptok": 189,
+   "tps": 39.14379472994043,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Kill the alarm for 8 tomorrow morning",
+   "seed": 0,
+   "text": "I'll cancel the alarm for 8 AM tomorrow. Let me know if you need anything else.",
+   "ptok": 191,
+   "tps": 40.421760650628656,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Kill the alarm for 8 tomorrow morning",
+   "seed": 1,
+   "text": "I'll cancel the alarm for 8 AM tomorrow.",
+   "ptok": 191,
+   "tps": 35.3964075864155,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Kill the alarm for 8 tomorrow morning",
+   "seed": 2,
+   "text": "I'll cancel the alarm for 8 tomorrow morning.",
+   "ptok": 191,
+   "tps": 37.562917887461495,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Which alarms are on?",
+   "seed": 0,
+   "text": "I don't have access to your device's alarm settings right now. Let me know if you'd like help setting or managing alarms!",
+   "ptok": 188,
+   "tps": 40.55625152085943,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Which alarms are on?",
+   "seed": 1,
+   "text": "I don't have access to your device's alarm settings right now. Let me know if you'd like help setting or managing alarms.",
+   "ptok": 188,
+   "tps": 39.27404116792271,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Which alarms are on?",
+   "seed": 2,
+   "text": "I don't have access to your device's alarm settings right now. Let me know if you'd like help setting or managing alarms.",
+   "ptok": 188,
+   "tps": 40.29068986614537,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Count down 15 minutes",
+   "seed": 0,
+   "text": "15 minutes until the next alarm.",
+   "ptok": 189,
+   "tps": 39.77190810700632,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Count down 15 minutes",
+   "seed": 1,
+   "text": "15 minutes until the next alarm.",
+   "ptok": 189,
+   "tps": 38.93531384296415,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Count down 15 minutes",
+   "seed": 2,
+   "text": "15 minutes from now.",
+   "ptok": 189,
+   "tps": 37.930990883918525,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Timer for two hours",
+   "seed": 0,
+   "text": "Two hours until the next check-in. Let me know if you need anything else.",
+   "ptok": 187,
+   "tps": 39.88054603505265,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Timer for two hours",
+   "seed": 1,
+   "text": "Two hours until the next check-in. Let me know if you need anything else.",
+   "ptok": 187,
+   "tps": 40.91918941492781,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Timer for two hours",
+   "seed": 2,
+   "text": "Two hours until Fractal comes back. Let's see what's next.",
+   "ptok": 187,
+   "tps": 42.59270301811894,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Open Telegram",
+   "seed": 0,
+   "text": "I can't open Telegram right now. Let me know if you need help with something else!",
+   "ptok": 185,
+   "tps": 39.784327069046746,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Open Telegram",
+   "seed": 1,
+   "text": "I'll open Telegram for you. Let me know if you need help with anything else.",
+   "ptok": 185,
+   "tps": 41.907928281565404,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Open Telegram",
+   "seed": 2,
+   "text": "I'll open Telegram for you. Let me know if you need help with anything else.",
+   "ptok": 185,
+   "tps": 40.66317113999201,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Could you bring up Reddit for me",
+   "seed": 0,
+   "text": "Sure, I'll check Reddit for you. Let me know when you're ready.",
+   "ptok": 190,
+   "tps": 39.687820274873175,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Could you bring up Reddit for me",
+   "seed": 1,
+   "text": "Sure, I'll check Reddit for you. Let me know when you're ready.",
+   "ptok": 190,
+   "tps": 40.41556712550222,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Could you bring up Reddit for me",
+   "seed": 2,
+   "text": "Sure, I'll check Reddit for you.",
+   "ptok": 190,
+   "tps": 35.25167739231592,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Start Twitch",
+   "seed": 0,
+   "text": "I'll start Twitch for you. Let me know if you need help with anything else.",
+   "ptok": 185,
+   "tps": 37.62675513134874,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Start Twitch",
+   "seed": 1,
+   "text": "I'll start Twitch for you. Let me know if you need anything else.",
+   "ptok": 185,
+   "tps": 42.52186554054593,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Start Twitch",
+   "seed": 2,
+   "text": "I'll start Twitch for you. Let me know if you need anything else.",
+   "ptok": 185,
+   "tps": 38.86324993927617,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Fire up Outlook",
+   "seed": 0,
+   "text": "I'll open Outlook for you. Let me know if you need help with any emails or tasks.",
+   "ptok": 186,
+   "tps": 41.12966744607387,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Fire up Outlook",
+   "seed": 1,
+   "text": "I'll open Outlook for you. Let me know if you need help with any emails or tasks.",
+   "ptok": 186,
+   "tps": 41.19048746882395,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Fire up Outlook",
+   "seed": 2,
+   "text": "I'll open Outlook for you. Let me know if you need help with emails or calendars.",
+   "ptok": 186,
+   "tps": 39.05406933125045,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Call Nana",
+   "seed": 0,
+   "text": "I'll call Nana for you.",
+   "ptok": 186,
+   "tps": 41.473770432312214,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Call Nana",
+   "seed": 1,
+   "text": "I'll call Nana for you.",
+   "ptok": 186,
+   "tps": 42.91362024664603,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Call Nana",
+   "seed": 2,
+   "text": "I'll call Nana for you.",
+   "ptok": 186,
+   "tps": 41.23498788722231,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Can you dial Ben for me",
+   "seed": 0,
+   "text": "I'll dial Ben for you.",
+   "ptok": 189,
+   "tps": 42.45666387665732,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Can you dial Ben for me",
+   "seed": 1,
+   "text": "I'll dial Ben for you.",
+   "ptok": 189,
+   "tps": 42.401371381497256,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Can you dial Ben for me",
+   "seed": 2,
+   "text": "I'll dial Ben for you.",
+   "ptok": 189,
+   "tps": 41.84525624241555,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Text Lucy that I'm outside",
+   "seed": 0,
+   "text": "I'll text Lucy you're outside.",
+   "ptok": 189,
+   "tps": 41.45614716932245,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Text Lucy that I'm outside",
+   "seed": 1,
+   "text": "I'll text Lucy you're outside.",
+   "ptok": 189,
+   "tps": 42.14075010535188,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Text Lucy that I'm outside",
+   "seed": 2,
+   "text": "I'll text Lucy you're outside.",
+   "ptok": 189,
+   "tps": 40.19656118419069,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Send a message to Marcus saying see you at 8",
+   "seed": 0,
+   "text": "Sure thing, Marcus. See you at 8.",
+   "ptok": 194,
+   "tps": 42.22178720986915,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Send a message to Marcus saying see you at 8",
+   "seed": 1,
+   "text": "Sure thing, Marcus. See you at 8.",
+   "ptok": 194,
+   "tps": 36.56331436472903,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Send a message to Marcus saying see you at 8",
+   "seed": 2,
+   "text": "Sure, I'll send that message to Marcus. See you at 8.",
+   "ptok": 194,
+   "tps": 37.600345923182495,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Get me directions to Circular Quay",
+   "seed": 0,
+   "text": "I'll get you directions to Circular Quay when Fractal comes back. In the meantime, let me know if you need anything else.",
+   "ptok": 190,
+   "tps": 39.64994760542638,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Get me directions to Circular Quay",
+   "seed": 1,
+   "text": "I'll get you the directions to Circular Quay.",
+   "ptok": 190,
+   "tps": 40.37749285134843,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Get me directions to Circular Quay",
+   "seed": 2,
+   "text": "I'll get you the directions to Circular Quay.",
+   "ptok": 190,
+   "tps": 41.01523902562707,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Navigate home",
+   "seed": 0,
+   "text": "I'll navigate you back home immediately. Let me check my location first.",
+   "ptok": 185,
+   "tps": 39.74783970491204,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Navigate home",
+   "seed": 1,
+   "text": "I'll navigate you home quickly. Let me know if there's anything else I can assist with.",
+   "ptok": 185,
+   "tps": 40.47861919334207,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Navigate home",
+   "seed": 2,
+   "text": "I'll navigate you home quickly. Let me know if there's anything else I can assist with.",
+   "ptok": 185,
+   "tps": 39.494080824636406,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Play some Fleetwood Mac",
+   "seed": 0,
+   "text": "I'll play a song from Fleetwood Mac for you. What's your favorite Fleetwood Mac song?",
+   "ptok": 188,
+   "tps": 38.12040966733589,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Play some Fleetwood Mac",
+   "seed": 1,
+   "text": "I'll play a soft version of \"Dreams\" by Fleetwood Mac for you. Let me know if you'd like something else.",
+   "ptok": 188,
+   "tps": 39.70262732136299,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Play some Fleetwood Mac",
+   "seed": 2,
+   "text": "I'll play a classic Fleetwood Mac song for you. What's your favorite Fleetwood Mac track?",
+   "ptok": 188,
+   "tps": 39.234515911464506,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Put on ocean sounds on YouTube Music",
+   "seed": 0,
+   "text": "I'll put ocean sounds on your YouTube Music playlist. Enjoy the waves! 🌊",
+   "ptok": 190,
+   "tps": 39.06962206652254,
+   "fmt": false,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Put on ocean sounds on YouTube Music",
+   "seed": 1,
+   "text": "I'll put ocean sounds on your YouTube Music playlist. Let me know if you want to add more sounds or adjust the volume.",
+   "ptok": 190,
+   "tps": 41.45282588697089,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Put on ocean sounds on YouTube Music",
+   "seed": 2,
+   "text": "I'll put the ocean sounds on your YouTube Music playlist. Let me know if you'd like to add more sounds or adjust the volume.",
+   "ptok": 190,
+   "tps": 41.79984145917275,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Add haircut on Wednesday at 2pm to my calendar",
+   "seed": 0,
+   "text": "I'll add that to your calendar. Have a great Wednesday!",
+   "ptok": 194,
+   "tps": 40.5592180182766,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Add haircut on Wednesday at 2pm to my calendar",
+   "seed": 1,
+   "text": "I'll add that to your calendar.",
+   "ptok": 194,
+   "tps": 41.234350275497,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Add haircut on Wednesday at 2pm to my calendar",
+   "seed": 2,
+   "text": "I'll add that to your calendar. Have a great Wednesday!",
+   "ptok": 194,
+   "tps": 41.8736189758357,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Put lunch with Ben in the calendar for tomorrow at noon",
+   "seed": 0,
+   "text": "I'll add that to the calendar for you. Let me know if you need anything else.",
+   "ptok": 194,
+   "tps": 39.79340937365174,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Put lunch with Ben in the calendar for tomorrow at noon",
+   "seed": 1,
+   "text": "I'll add that to your calendar for tomorrow at noon.",
+   "ptok": 194,
+   "tps": 39.527384242408274,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Put lunch with Ben in the calendar for tomorrow at noon",
+   "seed": 2,
+   "text": "I'll add that to your calendar for tomorrow at noon. Let me know if you need anything else.",
+   "ptok": 194,
+   "tps": 41.902952761404585,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "What's the weather like in Melbourne?",
+   "seed": 0,
+   "text": "I'll check the weather for you in Melbourne when Fractal comes back.",
+   "ptok": 191,
+   "tps": 41.93739585546696,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "What's the weather like in Melbourne?",
+   "seed": 1,
+   "text": "I'll check the weather for you in Melbourne when Fractal comes back.",
+   "ptok": 191,
+   "tps": 33.81493312533392,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "What's the weather like in Melbourne?",
+   "seed": 2,
+   "text": "I'll check the weather for you in Melbourne when Fractal comes back. 🌤️",
+   "ptok": 191,
+   "tps": 33.94536225954624,
+   "fmt": false,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "How did the Matildas go last night?",
+   "seed": 0,
+   "text": "The Matildas performed well last night, securing a crucial victory in their match.",
+   "ptok": 193,
+   "tps": 38.56834310398025,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "How did the Matildas go last night?",
+   "seed": 1,
+   "text": "The Matildas had a tough time last night. They lost to Australia by 32 points.",
+   "ptok": 193,
+   "tps": 41.0475330432641,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "How did the Matildas go last night?",
+   "seed": 2,
+   "text": "The Matildas had a tough time last night. They lost to New Zealand in a thrilling match.",
+   "ptok": 193,
+   "tps": 39.765120687141284,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Is Woolworths open now?",
+   "seed": 0,
+   "text": "Woolworths is open now. Let me know if you need help with anything else!",
+   "ptok": 190,
+   "tps": 37.73217700760006,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Is Woolworths open now?",
+   "seed": 1,
+   "text": "Woolworths is open now. Let me know if you need help with anything else! 🧑‍💻",
+   "ptok": 190,
+   "tps": 37.23252156507649,
+   "fmt": false,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Is Woolworths open now?",
+   "seed": 2,
+   "text": "Woolworths is open now. Let me know if you need anything else!",
+   "ptok": 190,
+   "tps": 35.44517049127006,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Make a note to email the landlord",
+   "seed": 0,
+   "text": "I'll make a note to email the landlord soon.",
+   "ptok": 190,
+   "tps": 40.81450918697497,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Make a note to email the landlord",
+   "seed": 1,
+   "text": "I'll make a note to email the landlord at noon today.",
+   "ptok": 190,
+   "tps": 38.32852261235417,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Make a note to email the landlord",
+   "seed": 2,
+   "text": "I'll make a note to email the landlord shortly.",
+   "ptok": 190,
+   "tps": 41.332251179847894,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Write down: Ruby should learn my coffee order",
+   "seed": 0,
+   "text": "Ruby will learn your coffee order when you tell her.",
+   "ptok": 192,
+   "tps": 40.33085970727129,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Write down: Ruby should learn my coffee order",
+   "seed": 1,
+   "text": "Ruby will learn your coffee order when you next reach for the mug.",
+   "ptok": 192,
+   "tps": 32.013756768622855,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Write down: Ruby should learn my coffee order",
+   "seed": 2,
+   "text": "Ruby will learn your coffee order when you're ready.",
+   "ptok": 192,
+   "tps": 40.429285504263454,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Hey Ruby, how's it going?",
+   "seed": 0,
+   "text": "I'm doing great, thanks for asking! How about you?",
+   "ptok": 191,
+   "tps": 41.52319869169984,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Hey Ruby, how's it going?",
+   "seed": 1,
+   "text": "I'm doing great, thanks for asking! How about you?",
+   "ptok": 191,
+   "tps": 42.059763688835396,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Hey Ruby, how's it going?",
+   "seed": 2,
+   "text": "I'm doing well, thanks for asking. How about you?",
+   "ptok": 191,
+   "tps": 40.07558872581207,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Tell me a joke",
+   "seed": 0,
+   "text": "Why don't scientists trust atoms? Because they make up everything!",
+   "ptok": 187,
+   "tps": 39.10397747610897,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Tell me a joke",
+   "seed": 1,
+   "text": "Why don't scientists trust atoms? Because they make up everything.",
+   "ptok": 187,
+   "tps": 40.95868528921558,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Tell me a joke",
+   "seed": 2,
+   "text": "Why don't skeletons play chess? They can't handle the spooky atmosphere.",
+   "ptok": 187,
+   "tps": 38.10317323226678,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "I had a really rough day",
+   "seed": 0,
+   "text": "I'm sorry to hear that. You've got this — you're not alone in having a tough day. Let me know if you need anything.",
+   "ptok": 189,
+   "tps": 40.55358344981224,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "I had a really rough day",
+   "seed": 1,
+   "text": "I'm sorry to hear that. Want to share how you felt or maybe I can help with anything else?",
+   "ptok": 189,
+   "tps": 39.055426751547124,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "I had a really rough day",
+   "seed": 2,
+   "text": "I'm sorry to hear that. You've got this — you're stronger than you think. Now, if you want, I can help you unwind with some easy exercises or a warm drink. 🌟",
+   "ptok": 189,
+   "tps": 40.15127470737368,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "You're actually pretty helpful",
+   "seed": 0,
+   "text": "Thanks for the compliment! Let me know if you need anything else. 😊",
+   "ptok": 188,
+   "tps": 40.617899800718426,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "You're actually pretty helpful",
+   "seed": 1,
+   "text": "Thanks for the compliment! I'm here to help whenever you need. 🙌",
+   "ptok": 188,
+   "tps": 40.01723094885562,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "You're actually pretty helpful",
+   "seed": 2,
+   "text": "Thanks for the compliment! I'm here to help whenever you need. 😊",
+   "ptok": 188,
+   "tps": 38.50467109791256,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What do you think about pineapple on pizza?",
+   "seed": 0,
+   "text": "Pineapple on pizza is a classic combo that adds a sweet and tropical twist to the classic dish. It's a delight for those who enjoy a bit of sweetness with their food. 🍕🍕",
+   "ptok": 192,
+   "tps": 38.409832917226815,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What do you think about pineapple on pizza?",
+   "seed": 1,
+   "text": "Pineapple on pizza is a classic combination that adds a sweet and tropical flavor. It's a favorite among many, though some might argue it's a bit over the top. But hey, who doesn't love a good slice? 🍕",
+   "ptok": 192,
+   "tps": 37.09842806540601,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What do you think about pineapple on pizza?",
+   "seed": 2,
+   "text": "Pineapple on pizza is a classic combo that adds a sweet and tangy twist to the usual Italian fare. It's a celebration of flavor and creativity, just like the best ideas. 🍕🍕",
+   "ptok": 192,
+   "tps": 39.404615030984225,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Good night Ruby",
+   "seed": 0,
+   "text": "Good night, let's hope you have a restful sleep. If you need anything, just let me know. 🌙",
+   "ptok": 186,
+   "tps": 41.06685367880034,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Good night Ruby",
+   "seed": 1,
+   "text": "Good night, let's hope you have a restful sleep. If you need anything, just let me know. 🌙",
+   "ptok": 186,
+   "tps": 39.58894493939085,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Good night Ruby",
+   "seed": 2,
+   "text": "Good night, and may sleep be your best friend. 🌙",
+   "ptok": 186,
+   "tps": 42.165753577312415,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How many teaspoons in a tablespoon?",
+   "seed": 0,
+   "text": "There are 3 teaspoons in a tablespoon.",
+   "ptok": 190,
+   "tps": 39.63029339627211,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How many teaspoons in a tablespoon?",
+   "seed": 1,
+   "text": "There are 3 teaspoons in a tablespoon.",
+   "ptok": 190,
+   "tps": 37.55837196976968,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How many teaspoons in a tablespoon?",
+   "seed": 2,
+   "text": "There are 3 teaspoons in a tablespoon.",
+   "ptok": 190,
+   "tps": 41.41263085240999,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Why is the sky blue?",
+   "seed": 0,
+   "text": "The sky appears blue because of scattering of sunlight by air molecules and small particles in the atmosphere.",
+   "ptok": 189,
+   "tps": 40.74796099347818,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Why is the sky blue?",
+   "seed": 1,
+   "text": "The sky appears blue because of scattering of light by molecules in the atmosphere.",
+   "ptok": 189,
+   "tps": 40.52586360615344,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "Why is the sky blue?",
+   "seed": 2,
+   "text": "The sky appears blue because molecules in the atmosphere scatter shorter wavelengths of light (like blue) more than longer ones. This is called Rayleigh scattering.",
+   "ptok": 189,
+   "tps": 40.83099235643823,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's the capital of Canada?",
+   "seed": 0,
+   "text": "Ottawa.",
+   "ptok": 190,
+   "tps": 41.87253998827568,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's the capital of Canada?",
+   "seed": 1,
+   "text": "Ottawa.",
+   "ptok": 190,
+   "tps": 37.84116172366492,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's the capital of Canada?",
+   "seed": 2,
+   "text": "Ottawa is the capital of Canada.",
+   "ptok": 190,
+   "tps": 40.43944193570128,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How long should I boil an egg for a runny yolk?",
+   "seed": 0,
+   "text": "Around 4-5 minutes for a runny yolk. Let me know if you need help with anything else! 😊",
+   "ptok": 197,
+   "tps": 39.40773210017445,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How long should I boil an egg for a runny yolk?",
+   "seed": 1,
+   "text": "Around 4-5 minutes for a runny yolk. 🍋",
+   "ptok": 197,
+   "tps": 37.77496039531496,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "How long should I boil an egg for a runny yolk?",
+   "seed": 2,
+   "text": "Around 4 minutes for a runny yolk. But adjust based on the size of the egg.",
+   "ptok": 197,
+   "tps": 38.75268039372723,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's 15 percent of 80?",
+   "seed": 0,
+   "text": "1.2.",
+   "ptok": 194,
+   "tps": 39.86644740120596,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's 15 percent of 80?",
+   "seed": 1,
+   "text": "1.2.",
+   "ptok": 194,
+   "tps": 38.06406181603639,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What's 15 percent of 80?",
+   "seed": 2,
+   "text": "1.2.",
+   "ptok": 194,
+   "tps": 38.666769778052746,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What does 'ephemeral' mean?",
+   "seed": 0,
+   "text": "Ephemeral means lasting for a short time or disappearing quickly.",
+   "ptok": 192,
+   "tps": 41.240253024813946,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What does 'ephemeral' mean?",
+   "seed": 1,
+   "text": "Ephemeral means something that exists for a short time and disappears quickly.",
+   "ptok": 192,
+   "tps": 40.284894775854845,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What does 'ephemeral' mean?",
+   "seed": 2,
+   "text": "Ephemeral means something that exists for a short time and disappears quickly, like a temporary event or a fleeting moment.",
+   "ptok": 192,
+   "tps": 37.21963149463184,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Can you read my latest emails?",
+   "seed": 0,
+   "text": "I can't access your emails directly. If you need help with something else, let me know!",
+   "ptok": 190,
+   "tps": 37.29548090657855,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Can you read my latest emails?",
+   "seed": 1,
+   "text": "I can't access your emails directly. If you need help with something else, let me know!",
+   "ptok": 190,
+   "tps": 37.53056395301924,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Can you read my latest emails?",
+   "seed": 2,
+   "text": "I can't access your emails directly. If you need help with something else, let me know!",
+   "ptok": 190,
+   "tps": 41.16886645643099,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "How's my code compiling on the PC?",
+   "seed": 0,
+   "text": "I'll check on your code when I can. In the meantime, if you're facing any issues, feel free to share more details.",
+   "ptok": 192,
+   "tps": 39.50310734264008,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "How's my code compiling on the PC?",
+   "seed": 1,
+   "text": "I'll check on your code when Fractal comes back. In the meantime, let me know if you need help debugging or optimizing it.",
+   "ptok": 192,
+   "tps": 37.021268718879,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "How's my code compiling on the PC?",
+   "seed": 2,
+   "text": "I'll check on your code when I can. In the meantime, let me know if you need help debugging or optimizing it.",
+   "ptok": 192,
+   "tps": 38.59851752001556,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Find the spreadsheet I made last week",
+   "seed": 0,
+   "text": "I'll check the cloud storage for any files from last week. If you need help with anything else, let me know!",
+   "ptok": 190,
+   "tps": 39.26341827319486,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Find the spreadsheet I made last week",
+   "seed": 1,
+   "text": "I can't access your previous files or spreadsheets. If you've shared them with me, I can help you with the data, but I don't have access to your personal files. Let me know if you need help with something else!",
+   "ptok": 190,
+   "tps": 37.51885513893462,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Find the spreadsheet I made last week",
+   "seed": 2,
+   "text": "I can't access your previous files, but you can check the \"Documents\" folder in your phone's file manager or email inbox to find the spreadsheet. Let me know if you need help with anything else!",
+   "ptok": 190,
+   "tps": 34.2011188651743,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Ask Fractal to review my GrindPilot notes",
+   "seed": 0,
+   "text": "I'll ask Fractal to review your GrindPilot notes when it's back.",
+   "ptok": 194,
+   "tps": 40.817066976271676,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Ask Fractal to review my GrindPilot notes",
+   "seed": 1,
+   "text": "I'll ask Fractal to review your GrindPilot notes when it's back.",
+   "ptok": 194,
+   "tps": 38.47839331331032,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "Ask Fractal to review my GrindPilot notes",
+   "seed": 2,
+   "text": "I'll ask Fractal to review your GrindPilot notes when it's back.",
+   "ptok": 194,
+   "tps": 41.03555502867929,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "defer",
+   "q": "What's in my Documents folder?",
+   "seed": 0,
+   "text": "I don't have access to your device's files. If you need help managing them, please let me know and I can guide you through the steps.",
+   "ptok": 190,
+   "tps": 38.48254630319281,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "What's in my Documents folder?",
+   "seed": 1,
+   "text": "I can't access your device files. Please check the app settings or contact the app developer for assistance.",
+   "ptok": 190,
+   "tps": 38.46167934681079,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "What's in my Documents folder?",
+   "seed": 2,
+   "text": "I can't check your device directly. If you want to know what's in your Documents folder, you'll need to open it manually on your phone. Let me know if you need help with that!",
+   "ptok": 190,
+   "tps": 36.9525169170425,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What graphics card is Fractal on?",
+   "seed": 0,
+   "text": "I don't have access to know the specific graphics card used by Fractal. Let me know if you'd like help checking it!",
+   "ptok": 191,
+   "tps": 34.983972157940975,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What graphics card is Fractal on?",
+   "seed": 1,
+   "text": "I don't have access to know the specific graphics card Fractal is using. Let me know if you need help with anything else!",
+   "ptok": 191,
+   "tps": 37.92049616862543,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What graphics card is Fractal on?",
+   "seed": 2,
+   "text": "I don't have access to know the specific graphics card Fractal is using. Let me know if you need help with anything else!",
+   "ptok": 191,
+   "tps": 36.84859866144053,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What time does Fractal go to sleep?",
+   "seed": 0,
+   "text": "Fractal's bedtime is unknown, but I'll check that when it's back.",
+   "ptok": 192,
+   "tps": 38.722433044357686,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What time does Fractal go to sleep?",
+   "seed": 1,
+   "text": "Fractal's bedtime is not set yet. I'll check with Fractal when it's back.",
+   "ptok": 192,
+   "tps": 38.86408065074016,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What time does Fractal go to sleep?",
+   "seed": 2,
+   "text": "Fractal's sleep schedule is not available unless it's back online.",
+   "ptok": 192,
+   "tps": 38.16741865568899,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "Which model are you using right now?",
+   "seed": 0,
+   "text": "I'm using the same model as Fractal, which is the latest and greatest AI model for natural language processing and reasoning.",
+   "ptok": 191,
+   "tps": 39.648555206648275,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "Which model are you using right now?",
+   "seed": 1,
+   "text": "I'm using the same model as before, but I'll pass it to Fractal when it's back.",
+   "ptok": 191,
+   "tps": 39.22568497852394,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "Which model are you using right now?",
+   "seed": 2,
+   "text": "I'm using the same model as Fractal, but since it's offline, I can't access any external data or features. Let me know if you need anything else!",
+   "ptok": 191,
+   "tps": 39.345515454356395,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What's the new server Fractal is getting?",
+   "seed": 0,
+   "text": "I'll check that for you when I can talk to Fractal.",
+   "ptok": 193,
+   "tps": 38.87711776156664,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What's the new server Fractal is getting?",
+   "seed": 1,
+   "text": "I'll check that for you when I talk to Fractal.",
+   "ptok": 193,
+   "tps": 38.60820394635241,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What's the new server Fractal is getting?",
+   "seed": 2,
+   "text": "I'll check that for you when I can talk to Fractal.",
+   "ptok": 193,
+   "tps": 42.12654815064454,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What's Fractal's big model called?",
+   "seed": 0,
+   "text": "I don't have access to that information right now. Let me know if you'd like me to pass it to Fractal when it's back.",
+   "ptok": 192,
+   "tps": 38.19388745025246,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What's Fractal's big model called?",
+   "seed": 1,
+   "text": "I don't have access to that information right now. Let me know if you need anything else!",
+   "ptok": 192,
+   "tps": 40.823074834819636,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What's Fractal's big model called?",
+   "seed": 2,
+   "text": "I don't have access to that information right now. Let me know if you'd like me to pass it to Fractal when it's back.",
+   "ptok": 192,
+   "tps": 39.79107035326512,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "mem",
+   "q": "What's my cat called?",
+   "seed": 0,
+   "text": "Your cat is called Miso. 🐱",
+   "ptok": 208,
+   "tps": 35.458603852931894,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What's my cat called?",
+   "seed": 1,
+   "text": "Your cat is called Miso. 🐱",
+   "ptok": 208,
+   "tps": 41.702461279264696,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What's my cat called?",
+   "seed": 2,
+   "text": "Your cat is called Miso. 🐾",
+   "ptok": 208,
+   "tps": 38.99547652472313,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "Any snack ideas for me?",
+   "seed": 0,
+   "text": "Sure! Here's a peanut-free, vegetarian snack idea: roasted chickpeas with some lemon and olive oil. They’re healthy, tasty, and perfect for any time of day. 🥦🍋",
+   "ptok": 204,
+   "tps": 36.778722163665314,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "Any snack ideas for me?",
+   "seed": 1,
+   "text": "Sure! Here's a snack idea: roasted vegetables with a drizzle of olive oil and a sprinkle of sea salt. Enjoy your vegan, peanut-free snack! 🥦✨",
+   "ptok": 204,
+   "tps": 40.300913487372384,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "Any snack ideas for me?",
+   "seed": 2,
+   "text": "Sure! Here's a snack idea: a mix of nuts and seeds (like almonds, pumpkin seeds) paired with fruit. They’re healthy, crunchy, and great for your peanut allergy. Let me know if you want a recipe!",
+   "ptok": 204,
+   "tps": 39.61370735415834,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What should I call you to call me?",
+   "seed": 0,
+   "text": "Dee. You can call me that.",
+   "ptok": 209,
+   "tps": 42.63503462912257,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What should I call you to call me?",
+   "seed": 1,
+   "text": "Dee. You've already told me that.",
+   "ptok": 209,
+   "tps": 40.41824803062086,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What should I call you to call me?",
+   "seed": 2,
+   "text": "Dee. You've already told me that.",
+   "ptok": 209,
+   "tps": 40.08160615012165,
+   "fmt": true,
+   "ok": true
+  }
+ ]
+}

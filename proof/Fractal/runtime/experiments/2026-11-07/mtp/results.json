@@ -1,0 +1,78 @@
+[
+ {
+  "name": "q4-36K ngram (now)",
+  "ctx": 36864,
+  "reason": 50.7,
+  "prose": 50.6,
+  "code": 183.5,
+  "code_accept": 0.84,
+  "recall_20k": 12,
+  "read_tok_s": 1980,
+  "vram_mb": 14592
+ },
+ {
+  "name": "q4-36K mtp2",
+  "ctx": 36864,
+  "reason": 50.7,
+  "reason_accept": 0.93,
+  "prose": 36.2,
+  "prose_accept": 0.85,
+  "code": 178.3,
+  "code_accept": 0.85,
+  "recall_20k": 12,
+  "read_tok_s": 1696,
+  "vram_mb": 15188
+ },
+ {
+  "name": "q4-36K mtp1",
+  "ctx": 36864,
+  "reason": 75.4,
+  "reason_accept": 0.97,
+  "prose": 56.3,
+  "prose_accept": 0.87,
+  "code": 248.7,
+  "code_accept": 0.85,
+  "recall_20k": 12,
+  "read_tok_s": 1871,
+  "vram_mb": 15336
+ },
+ {
+  "name": "q8K/q4V-32K mtp2",
+  "ctx": 32768,
+  "reason": 51.2,
+  "reason_accept": 0.96,
+  "prose": 37.4,
+  "prose_accept": 0.84,
+  "code": 177.4,
+  "code_accept": 0.85,
+  "recall_20k": 12,
+  "read_tok_s": 1690,
+  "vram_mb": 15332
+ },
+ {
+  "name": "q8-28K mtp2",
+  "ctx": 28672,
+  "reason": 41.9,
+  "reason_accept": 0.96,
+  "prose": 31.3,
+  "prose_accept": 0.84,
+  "code": 147.0,
+  "code_accept": 0.85,
+  "recall_20k": 12,
+  "read_tok_s": 1611,
+  "vram_mb": 15230
+ },
+ {
+  "name": "q4-24K mtp2",
+  "ctx": 24576,
+  "reason": 93.4,
+  "reason_accept": 0.94,
+  "prose": 56.9,
+  "prose_accept": 0.83,
+  "code": 289.4,
+  "code_accept": 0.85,
+  "recall_20k": 12,
+  "read_tok_s": 1868,
+  "vram_mb": 15152
+ }
+]

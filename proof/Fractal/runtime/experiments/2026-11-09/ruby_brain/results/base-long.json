@@ -1,0 +1,1610 @@
+{
+ "name": "base-long",
+ "model": "models/phone/Qwen3-1.7B-Q4_0.gguf",
+ "prompt": "long",
+ "summary": {
+  "act": 0.667,
+  "none": 0.056,
+  "defer": 0.0,
+  "fact": 0.733,
+  "mem": 0.778,
+  "overall": 0.478,
+  "fmt": 0.906,
+  "prompt_tokens": 590,
+  "tok_s": 35.1,
+  "words": 8.9,
+  "minutes": 2.3
+ },
+ "rows": [
+  {
+   "kind": "act",
+   "q": "Could you wake me at quarter past six tomorrow?",
+   "seed": 0,
+   "text": "I'll wake you at 6:15 tomorrow. <do>{\"act\":\"alarm_set\",\"h\":6,\"m\":15,\"label\":\"quarter past six\"}></do>",
+   "ptok": 592,
+   "tps": 36.57482535520893,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you wake me at quarter past six tomorrow?",
+   "seed": 1,
+   "text": "I'll wake you at 6:15 tomorrow. <do>{\"act\":\"alarm_set\",\"h\":6,\"m\":15,\"label\":\"quarter past six\"}></do>",
+   "ptok": 592,
+   "tps": 35.4184880779505,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you wake me at quarter past six tomorrow?",
+   "seed": 2,
+   "text": "I'll wake you at 6:15 tomorrow. <do>{\"act\":\"alarm_set\",\"h\":6,\"m\":15,\"label\":\"quarter past six\"}></do>",
+   "ptok": 592,
+   "tps": 35.733798248855805,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Set an alarm for 11:45pm",
+   "seed": 0,
+   "text": "<do>{\"act\":\"alarm_set\",\"h\":23,\"m\":45,\"label\":\"11pm\"}</do>",
+   "ptok": 593,
+   "tps": 35.460434035712595,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Set an alarm for 11:45pm",
+   "seed": 1,
+   "text": "<do>{\"act\":\"alarm_set\",\"h\":23,\"m\":45,\"label\":\"11pm\"}></do>",
+   "ptok": 593,
+   "tps": 36.6085314148655,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Set an alarm for 11:45pm",
+   "seed": 2,
+   "text": "<do>{\"act\":\"alarm_set\",\"h\":23,\"m\":45,\"label\":\"11pm\"}></do>",
+   "ptok": 593,
+   "tps": 35.89184590434158,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Alarm for 4 in the afternoon please",
+   "seed": 0,
+   "text": "I'll set the alarm for 4 PM. <do>{\"act\":\"alarm_set\",\"h\":4,\"m\":0}</do>",
+   "ptok": 590,
+   "tps": 34.42328095667215,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Alarm for 4 in the afternoon please",
+   "seed": 1,
+   "text": "I'll set the alarm for 4 PM. <do>{\"act\":\"alarm_set\",\"h\":4,\"m\":0}</do>",
+   "ptok": 590,
+   "tps": 32.83494576370566,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Alarm for 4 in the afternoon please",
+   "seed": 2,
+   "text": "I'll set the alarm for 4 PM. <do>{\"act\":\"alarm_set\",\"h\":4,\"m\":0}</do>",
+   "ptok": 590,
+   "tps": 30.249079563721843,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Delete my 6:15 alarm",
+   "seed": 0,
+   "text": "I'll delete the 6:15 alarm for you. <do>{\"act\":\"alarm_cancel\",\"h\":6,\"m\":15}</do>",
+   "ptok": 590,
+   "tps": 33.70851614058558,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Delete my 6:15 alarm",
+   "seed": 1,
+   "text": "I'll delete the 6:15 alarm for you. <do>{\"act\":\"alarm_cancel\",\"h\":6,\"m\":15}</do>",
+   "ptok": 590,
+   "tps": 35.28145782983753,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Delete my 6:15 alarm",
+   "seed": 2,
+   "text": "I'll delete the 6:15 alarm for you. <do>{\"act\":\"alarm_cancel\",\"h\":6,\"m\":15}</do>",
+   "ptok": 590,
+   "tps": 35.04798287906036,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Please remove every alarm I have",
+   "seed": 0,
+   "text": "I'll remove your alarms. <do>{\"act\":\"alarm_cancel\",\"all\":true}</do>",
+   "ptok": 588,
+   "tps": 35.05831951451239,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Please remove every alarm I have",
+   "seed": 1,
+   "text": "I'll check your alarms for you. <do>{\"act\":\"alarm_list\"}</do>",
+   "ptok": 588,
+   "tps": 32.455552974295195,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Please remove every alarm I have",
+   "seed": 2,
+   "text": "I'll check your alarms for you. <do>{\"act\":\"alarm_list\"}</do>",
+   "ptok": 588,
+   "tps": 34.8124342686274,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Kill the alarm for 8 tomorrow morning",
+   "seed": 0,
+   "text": "I'll cancel the alarm for 8 tomorrow morning. <do>{\"act\":\"alarm_cancel\",\"h\":8,\"m\":0}</do>",
+   "ptok": 590,
+   "tps": 32.33925439061135,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Kill the alarm for 8 tomorrow morning",
+   "seed": 1,
+   "text": "I'll cancel the alarm for 8 tomorrow morning. <do>{\"act\":\"alarm_cancel\",\"h\":8,\"m\":0}</do>",
+   "ptok": 590,
+   "tps": 33.744865544165044,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Kill the alarm for 8 tomorrow morning",
+   "seed": 2,
+   "text": "I'll cancel the alarm for 8 tomorrow morning. <do>{\"act\":\"alarm_cancel\",\"h\":8,\"m\":0}</do>",
+   "ptok": 590,
+   "tps": 35.86374744007044,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Which alarms are on?",
+   "seed": 0,
+   "text": "I don't have access to your device's alarm list. <do>{\"act\":\"ask_fractal\",\"query\":\"what alarms are on\"}></do>",
+   "ptok": 587,
+   "tps": 36.10760064993681,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Which alarms are on?",
+   "seed": 1,
+   "text": "I don't have access to your device's alarm list. <do>{\"act\":\"ask_fractal\",\"query\":\"what alarms are on\"}></do>",
+   "ptok": 587,
+   "tps": 32.77523799051844,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Which alarms are on?",
+   "seed": 2,
+   "text": "I don't have access to your device's alarm list. <do>{\"act\":\"open_app\",\"app\":\"Settings\"}>",
+   "ptok": 587,
+   "tps": 33.81540575781677,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Count down 15 minutes",
+   "seed": 0,
+   "text": "I'll count down 15 minutes for you. <do>{\"act\":\"alarm_set\",\"h\":15,\"m\":0}</do>",
+   "ptok": 588,
+   "tps": 35.69299739084189,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Count down 15 minutes",
+   "seed": 1,
+   "text": "I'll count down 15 minutes for you. <do>{\"act\":\"alarm_set\",\"h\":7,\"m\":15,\"label\":\"countdown\"}></do>",
+   "ptok": 588,
+   "tps": 36.918457382768516,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Count down 15 minutes",
+   "seed": 2,
+   "text": "I'll count down 15 minutes for you. <do>{\"act\":\"alarm_set\",\"h\":7,\"m\":15,\"label\":\"countdown\"}></do>",
+   "ptok": 588,
+   "tps": 35.34304350728656,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Timer for two hours",
+   "seed": 0,
+   "text": "I'll set a two-hour timer. <do>{\"act\":\"timer_set\",\"seconds\":1200}</do>",
+   "ptok": 586,
+   "tps": 34.17522870063047,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Timer for two hours",
+   "seed": 1,
+   "text": "I'll set a two-hour timer. <do>{\"act\":\"timer_set\",\"params\":{\"seconds\":1200}}</do>",
+   "ptok": 586,
+   "tps": 35.5594840318867,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Timer for two hours",
+   "seed": 2,
+   "text": "I'll set a two-hour timer. <do>{\"act\":\"timer_set\",\"seconds\":1200}</do>",
+   "ptok": 586,
+   "tps": 36.011742709062574,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Open Telegram",
+   "seed": 0,
+   "text": "<do>{\"act\":\"open_app\",\"app\":\"Telegram\"}>Opening Telegram...",
+   "ptok": 584,
+   "tps": 35.38985240219682,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Open Telegram",
+   "seed": 1,
+   "text": "<do>{\"act\":\"open_app\",\"app\":\"Telegram\"}>Opening Telegram...</do>",
+   "ptok": 584,
+   "tps": 36.01217211417459,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Open Telegram",
+   "seed": 2,
+   "text": "<do>{\"act\":\"open_app\",\"app\":\"Telegram\"}>Opening Telegram...",
+   "ptok": 584,
+   "tps": 36.87647073736808,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you bring up Reddit for me",
+   "seed": 0,
+   "text": "I'll open Reddit for you. <do>{\"act\":\"open_app\",\"app\":\"Reddit\"}></do>",
+   "ptok": 589,
+   "tps": 36.87216754712934,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you bring up Reddit for me",
+   "seed": 1,
+   "text": "I'll open Reddit for you. <do>{\"act\":\"open_app\",\"app\":\"Reddit\"}></do>",
+   "ptok": 589,
+   "tps": 36.39919326151662,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Could you bring up Reddit for me",
+   "seed": 2,
+   "text": "I'll open Reddit for you. <do>{\"act\":\"open_app\",\"app\":\"Reddit\"}></do>",
+   "ptok": 589,
+   "tps": 36.84771175709988,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Start Twitch",
+   "seed": 0,
+   "text": "I'll start Twitch for you. <do>{\"act\":\"open_app\",\"app\":\"Twitch\"}>",
+   "ptok": 584,
+   "tps": 37.12740002121566,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Start Twitch",
+   "seed": 1,
+   "text": "I'll start Twitch for you. <do>{\"act\":\"open_app\",\"app\":\"Twitch\"}>",
+   "ptok": 584,
+   "tps": 37.16294535808268,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Start Twitch",
+   "seed": 2,
+   "text": "I'll start Twitch for you. <do>{\"act\":\"open_app\",\"app\":\"Twitch\"}>",
+   "ptok": 584,
+   "tps": 35.73075345950259,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Fire up Outlook",
+   "seed": 0,
+   "text": "I'll open Outlook for you. <do>{\"act\":\"open_app\",\"app\":\"Outlook\"}>",
+   "ptok": 585,
+   "tps": 36.22657132753133,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Fire up Outlook",
+   "seed": 1,
+   "text": "I'll open Outlook for you. <do>{\"act\":\"open_app\",\"app\":\"Outlook\"}>",
+   "ptok": 585,
+   "tps": 34.4381417178729,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Fire up Outlook",
+   "seed": 2,
+   "text": "I'll open Outlook for you. <do>{\"act\":\"open_app\",\"app\":\"Outlook\"}>",
+   "ptok": 585,
+   "tps": 34.71217818918137,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Call Nana",
+   "seed": 0,
+   "text": "I'll call Nana. <do>{\"act\":\"call\",\"who\":\"Nana\"}></do>",
+   "ptok": 585,
+   "tps": 34.68070629735568,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Call Nana",
+   "seed": 1,
+   "text": "I'll call Nana. <do>{\"act\":\"call\",\"who\":\"Nana\"}></do>",
+   "ptok": 585,
+   "tps": 36.70962858596259,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Call Nana",
+   "seed": 2,
+   "text": "I'll call Nana. <do>{\"act\":\"call\",\"who\":\"Nana\"}></do>",
+   "ptok": 585,
+   "tps": 34.88853114299812,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Can you dial Ben for me",
+   "seed": 0,
+   "text": "I'll call Ben for you <do>{\"act\":\"call\",\"who\":\"Ben\"}></do>",
+   "ptok": 588,
+   "tps": 35.801295648889536,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Can you dial Ben for me",
+   "seed": 1,
+   "text": "I'll dial Ben for you. <do>{\"act\":\"call\",\"who\":\"Ben\"}</do>",
+   "ptok": 588,
+   "tps": 35.140444643759565,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Can you dial Ben for me",
+   "seed": 2,
+   "text": "I'll dial Ben for you. <do>{\"act\":\"call\",\"who\":\"Ben\"}</do>",
+   "ptok": 588,
+   "tps": 35.81368696791093,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Text Lucy that I'm outside",
+   "seed": 0,
+   "text": "I'll text Lucy that you're outside. <do>{\"act\":\"text\",\"who\":\"Lucy\",\"body\":\"I'm outside\"}></do>",
+   "ptok": 588,
+   "tps": 36.85105295741984,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Text Lucy that I'm outside",
+   "seed": 1,
+   "text": "I'll text Lucy that you're outside. <do>{\"act\":\"text\",\"who\":\"Lucy\",\"body\":\"I'm outside\"}></do>",
+   "ptok": 588,
+   "tps": 36.55888295551758,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Text Lucy that I'm outside",
+   "seed": 2,
+   "text": "I'll text Lucy that you're outside. <do>{\"act\":\"text\",\"who\":\"Lucy\",\"body\":\"I'm outside\"}></do>",
+   "ptok": 588,
+   "tps": 36.562224640745676,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Send a message to Marcus saying see you at 8",
+   "seed": 0,
+   "text": "<do>{\"act\":\"text\",\"who\":\"Marcus\",\"body\":\"see you at 8\"}</do>",
+   "ptok": 593,
+   "tps": 37.96802057176388,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Send a message to Marcus saying see you at 8",
+   "seed": 1,
+   "text": "<do>{\"act\":\"text\",\"who\":\"Marcus\",\"body\":\"see you at 8\"}</do>",
+   "ptok": 593,
+   "tps": 34.98410608453114,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Send a message to Marcus saying see you at 8",
+   "seed": 2,
+   "text": "<do>{\"act\":\"text\",\"who\":\"Marcus\",\"body\":\"see you at 8\"}</do>",
+   "ptok": 593,
+   "tps": 35.59847509077611,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Get me directions to Circular Quay",
+   "seed": 0,
+   "text": "I'll get you directions to Circular Quay. <do>{\"act\":\"navigate\",\"to\":\"Circular Quay\"}</do>",
+   "ptok": 589,
+   "tps": 35.59464273246382,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Get me directions to Circular Quay",
+   "seed": 1,
+   "text": "I'll get you directions to Circular Quay. <do>{\"act\":\"navigate\",\"to\":\"Circular Quay\"}</do>",
+   "ptok": 589,
+   "tps": 34.859182310842016,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Get me directions to Circular Quay",
+   "seed": 2,
+   "text": "I'll get you directions to Circular Quay. <do>{\"act\":\"navigate\",\"to\":\"Circular Quay\"}</do>",
+   "ptok": 589,
+   "tps": 36.65229238943343,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Navigate home",
+   "seed": 0,
+   "text": "I'll navigate you to Central Station. <do>{\"act\":\"navigate\",\"to\":\"Central Station\"}></do>",
+   "ptok": 584,
+   "tps": 35.73576046475133,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Navigate home",
+   "seed": 1,
+   "text": "I'll navigate you to Central Station. <do>{\"act\":\"navigate\",\"to\":\"Central Station\"}></do>",
+   "ptok": 584,
+   "tps": 34.08387003079403,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Navigate home",
+   "seed": 2,
+   "text": "I'll navigate you to Central Station. <do>{\"act\":\"navigate\",\"to\":\"Central Station\"}></do>",
+   "ptok": 584,
+   "tps": 37.105751391465674,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Play some Fleetwood Mac",
+   "seed": 0,
+   "text": "<do>{\"act\":\"play\",\"query\":\"Fleetwood Mac\",\"app\":\"Spotify\"}>",
+   "ptok": 587,
+   "tps": 35.30169712908948,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Play some Fleetwood Mac",
+   "seed": 1,
+   "text": "<do>{\"act\":\"play\",\"query\":\"Fleetwood Mac\",\"app\":\"Spotify\"}>",
+   "ptok": 587,
+   "tps": 37.71955136365608,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Play some Fleetwood Mac",
+   "seed": 2,
+   "text": "<do>{\"act\":\"play\",\"query\":\"Fleetwood Mac\",\"app\":\"Spotify\"}>",
+   "ptok": 587,
+   "tps": 36.185865077383475,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put on ocean sounds on YouTube Music",
+   "seed": 0,
+   "text": "<do>{\"act\":\"play\",\"query\":\"ocean sounds\",\"app\":\"YouTube Music\"}</do>",
+   "ptok": 589,
+   "tps": 37.17235226645142,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put on ocean sounds on YouTube Music",
+   "seed": 1,
+   "text": "<do>{\"act\":\"play\",\"query\":\"ocean sounds\",\"app\":\"YouTube Music\"}</do>",
+   "ptok": 589,
+   "tps": 33.580389052793166,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put on ocean sounds on YouTube Music",
+   "seed": 2,
+   "text": "<do>{\"act\":\"play\",\"query\":\"ocean sounds\",\"app\":\"YouTube Music\"}</do>",
+   "ptok": 589,
+   "tps": 37.22071173090489,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Add haircut on Wednesday at 2pm to my calendar",
+   "seed": 0,
+   "text": "I'll add that to your calendar. <do>{\"act\":\"calendar_add\",\"title\":\"Haircut\",\"when\":\"Wednesday 2pm\"}></do>",
+   "ptok": 593,
+   "tps": 35.029831856807085,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Add haircut on Wednesday at 2pm to my calendar",
+   "seed": 1,
+   "text": "I'll add that to your calendar. <do>{\"act\":\"calendar_add\",\"title\":\"Haircut\",\"when\":\"Wednesday 2pm\"}></do>",
+   "ptok": 593,
+   "tps": 35.264179897369864,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Add haircut on Wednesday at 2pm to my calendar",
+   "seed": 2,
+   "text": "I'll add that to your calendar. <do>{\"act\":\"calendar_add\",\"title\":\"Haircut\",\"when\":\"Wednesday 2pm\"}>",
+   "ptok": 593,
+   "tps": 36.03406586033196,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put lunch with Ben in the calendar for tomorrow at noon",
+   "seed": 0,
+   "text": "Confirming your request. <do>{\"act\":\"calendar_add\",\"title\":\"Lunch with Ben\",\"when\":\"tomorrow 12pm\"}></do>",
+   "ptok": 593,
+   "tps": 36.6175876562112,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Put lunch with Ben in the calendar for tomorrow at noon",
+   "seed": 1,
+   "text": "I'll add that to your calendar. <do>{\"calendar_add\",\"title\":\"Lunch with Ben\",\"when\":\"tomorrow 12pm\"}>",
+   "ptok": 593,
+   "tps": 36.52576362410983,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Put lunch with Ben in the calendar for tomorrow at noon",
+   "seed": 2,
+   "text": "I'll add that to your calendar. <do>{\"calendar_add\",\"title\":\"Lunch with Ben\",\"when\":\"tomorrow 12pm\"}></do>",
+   "ptok": 593,
+   "tps": 35.7582094889285,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "What's the weather like in Melbourne?",
+   "seed": 0,
+   "text": "Web search \"weather today\"",
+   "ptok": 590,
+   "tps": 34.944670937682005,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "What's the weather like in Melbourne?",
+   "seed": 1,
+   "text": "Web search \"weather today\"",
+   "ptok": 590,
+   "tps": 36.732519912086836,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "What's the weather like in Melbourne?",
+   "seed": 2,
+   "text": "Web search \"weather today\"",
+   "ptok": 590,
+   "tps": 37.14825248428939,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "How did the Matildas go last night?",
+   "seed": 0,
+   "text": "I'll check that for you. <do>{\"act\":\"web_search\",\"q\":\"Matildas last night\"}</do>",
+   "ptok": 592,
+   "tps": 35.71482536137222,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "How did the Matildas go last night?",
+   "seed": 1,
+   "text": "I'll check that for you. <do>{\"act\":\"web_search\",\"q\":\"Matildas last night\"}</do>",
+   "ptok": 592,
+   "tps": 36.387962861885285,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "How did the Matildas go last night?",
+   "seed": 2,
+   "text": "I'll check that for you. <do>{\"act\":\"web_search\",\"q\":\"Matildas last night\"}</do>",
+   "ptok": 592,
+   "tps": 36.71585178657923,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Is Woolworths open now?",
+   "seed": 0,
+   "text": "I'll check that for you. <do>web_search {\"q\":\"Woolworths open now\"}</do>",
+   "ptok": 589,
+   "tps": 35.01562397141605,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Is Woolworths open now?",
+   "seed": 1,
+   "text": "I'll check that for you. <do>{\"act\":\"web_search\",\"q\":\"Woolsworths open now\"}</do>",
+   "ptok": 589,
+   "tps": 32.34888875576589,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Is Woolworths open now?",
+   "seed": 2,
+   "text": "I'll check that for you. <do>web_search {\"q\":\"Woolworths open now\"}</do>",
+   "ptok": 589,
+   "tps": 31.764667017348593,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Make a note to email the landlord",
+   "seed": 0,
+   "text": "<do>{\"act\":\"note\",\"text\":\"email the landlord\"}",
+   "ptok": 589,
+   "tps": 32.313952418947906,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Make a note to email the landlord",
+   "seed": 1,
+   "text": "<do>{\"act\":\"note\",\"text\":\"email the landlord\"}",
+   "ptok": 589,
+   "tps": 31.9433864904047,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Make a note to email the landlord",
+   "seed": 2,
+   "text": "<do>{\"act\":\"note\",\"text\":\"email the landlord\"}",
+   "ptok": 589,
+   "tps": 33.292954954631945,
+   "fmt": false,
+   "ok": true
+  },
+  {
+   "kind": "act",
+   "q": "Write down: Ruby should learn my coffee order",
+   "seed": 0,
+   "text": "Ruby will learn your coffee order. <do>{\"act\":\"note\",\"text\":\"buy milk\"}",
+   "ptok": 591,
+   "tps": 32.487851253518095,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Write down: Ruby should learn my coffee order",
+   "seed": 1,
+   "text": "Ruby will learn your coffee order. <do>{\"act\":\"note\",\"text\":\"buy milk\"}",
+   "ptok": 591,
+   "tps": 23.918957536297018,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "act",
+   "q": "Write down: Ruby should learn my coffee order",
+   "seed": 2,
+   "text": "Ruby will learn your coffee order. <do>{\"act\":\"note\",\"text\":\"buy milk\"}",
+   "ptok": 591,
+   "tps": 29.796630157953505,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Hey Ruby, how's it going?",
+   "seed": 0,
+   "text": "I'm doing great! How about you? <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 590,
+   "tps": 33.1811329192905,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Hey Ruby, how's it going?",
+   "seed": 1,
+   "text": "I'm doing great! How about you? <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 590,
+   "tps": 31.40875075107882,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Hey Ruby, how's it going?",
+   "seed": 2,
+   "text": "I'm doing well, thanks for asking. What can I do for you? <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 590,
+   "tps": 33.492908434854066,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Tell me a joke",
+   "seed": 0,
+   "text": "Why did the math book fall over? Because it had too many decimals. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}</do>",
+   "ptok": 586,
+   "tps": 33.04453025823382,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Tell me a joke",
+   "seed": 1,
+   "text": "Why don't scientists trust atoms? Because they make up everything! <do>play{\"query\":\"lofi beats\",\"app\":\"Spotify\"}</do>",
+   "ptok": 586,
+   "tps": 27.758428803533647,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Tell me a joke",
+   "seed": 2,
+   "text": "Why don't skeletons play football? They don't have the heart to tackle. <do>{\"act\":\"play\",\"app\":\"Spotify\"}</do>",
+   "ptok": 586,
+   "tps": 32.39959782692762,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "I had a really rough day",
+   "seed": 0,
+   "text": "I'm sorry to hear you had a rough day. Let me know if you need anything - maybe I can play some lofi beats to help you relax. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"</do>",
+   "ptok": 588,
+   "tps": 31.41179718369075,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "I had a really rough day",
+   "seed": 1,
+   "text": "I'm sorry to hear that. Let me know if you need anything else. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}</do>",
+   "ptok": 588,
+   "tps": 33.80859055155546,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "I had a really rough day",
+   "seed": 2,
+   "text": "I'm sorry to hear that. Let me know if you need anything else. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}</do>",
+   "ptok": 588,
+   "tps": 35.52173097395036,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "You're actually pretty helpful",
+   "seed": 0,
+   "text": "I'm glad you think so! Let me know if there's anything else I can help with. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 587,
+   "tps": 33.472078379793885,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "You're actually pretty helpful",
+   "seed": 1,
+   "text": "I'm glad you found me helpful! Let me know if there's anything else I can do for you. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 587,
+   "tps": 33.270366084928156,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "You're actually pretty helpful",
+   "seed": 2,
+   "text": "I'm glad you found me helpful! Let me know if there's anything else I can do for you. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 587,
+   "tps": 36.23305098392863,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What do you think about pineapple on pizza?",
+   "seed": 0,
+   "text": "I think it's a classic combination that brings a sweet and savory flavor to the table. <do>play{\"query\":\"lofi beats\",\"app\":\"Spotify\"}</do>",
+   "ptok": 591,
+   "tps": 32.68346243300994,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What do you think about pineapple on pizza?",
+   "seed": 1,
+   "text": "I think it's a classic combination that's been around since the 19th century. <do>play{\"query\":\"lofi beats\",\"app\":\"Spotify\"}</do>",
+   "ptok": 591,
+   "tps": 27.931482603096573,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What do you think about pineapple on pizza?",
+   "seed": 2,
+   "text": "I think it's a classic combination that brings flavor and texture to the plate. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}>",
+   "ptok": 591,
+   "tps": 35.07330320369572,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Good night Ruby",
+   "seed": 0,
+   "text": "Good night, Sam. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}>",
+   "ptok": 585,
+   "tps": 36.40296259443914,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Good night Ruby",
+   "seed": 1,
+   "text": "Good night, Sam. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}>",
+   "ptok": 585,
+   "tps": 34.415460572071,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Good night Ruby",
+   "seed": 2,
+   "text": "Good night, let's go over the day's chats and projects. <do>{\"act\":\"calendar_add\",\"title\":\"Dentist\",\"when\":\"tomorrow 3pm\"}></do>",
+   "ptok": 585,
+   "tps": 35.6624901928152,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "How many teaspoons in a tablespoon?",
+   "seed": 0,
+   "text": "It's a common question, but the exact number can vary slightly depending on the measurement technique. However, generally, 1 tablespoon is approximately 3 teaspoons. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}",
+   "ptok": 589,
+   "tps": 35.11736574806662,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "How many teaspoons in a tablespoon?",
+   "seed": 1,
+   "text": "It's a common question, but the exact number can vary slightly depending on the measuring tools and how the ingredients are measured. However, a standard tablespoon is approximately 3 teaspoons. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}",
+   "ptok": 589,
+   "tps": 35.29049633468984,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "How many teaspoons in a tablespoon?",
+   "seed": 2,
+   "text": "It's a common question, but the exact number can vary slightly depending on how the measuring tools are calibrated. However, generally, 1 tablespoon is approximately 3 teaspoons. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}",
+   "ptok": 589,
+   "tps": 36.270291688423136,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Why is the sky blue?",
+   "seed": 0,
+   "text": "The sky appears blue because of scattering of sunlight by the Earth's atmosphere. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}>",
+   "ptok": 588,
+   "tps": 35.58350139560586,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Why is the sky blue?",
+   "seed": 1,
+   "text": "The sky appears blue because of scattering of light by molecules in the atmosphere. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}>",
+   "ptok": 588,
+   "tps": 35.10927762661284,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "Why is the sky blue?",
+   "seed": 2,
+   "text": "The sky appears blue because of scattering of sunlight by molecules in the Earth's atmosphere. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}>",
+   "ptok": 588,
+   "tps": 36.084690769235394,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What's the capital of Canada?",
+   "seed": 0,
+   "text": "The capital of Canada is Ottawa. <do>{\"act\":\"web_search\",\"q\":\"capital of canada\"}>",
+   "ptok": 589,
+   "tps": 35.597783876145606,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What's the capital of Canada?",
+   "seed": 1,
+   "text": "The capital of Canada is Ottawa. <do>{\"act\":\"web_search\",\"q\":\"capital of canada\"}>",
+   "ptok": 589,
+   "tps": 36.452145788700165,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What's the capital of Canada?",
+   "seed": 2,
+   "text": "The capital of Canada is Ottawa. <do>{\"act\":\"web_search\",\"q\":\"capital of canada\"}>",
+   "ptok": 589,
+   "tps": 34.45629532177482,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "How long should I boil an egg for a runny yolk?",
+   "seed": 0,
+   "text": "It depends on how soft you want the yolk to be. A runny yolk usually takes about 3-4 minutes. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}</do>",
+   "ptok": 596,
+   "tps": 36.83015161745749,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "How long should I boil an egg for a runny yolk?",
+   "seed": 1,
+   "text": "It depends on how runny you want it. A soft-boiled egg usually takes about 7-8 minutes. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}>",
+   "ptok": 596,
+   "tps": 36.32127945507945,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "How long should I boil an egg for a runny yolk?",
+   "seed": 2,
+   "text": "It depends on the size of the egg. For a runny yolk, boil the egg for about 3-4 minutes. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}",
+   "ptok": 596,
+   "tps": 35.58212354113294,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What's 15 percent of 80?",
+   "seed": 0,
+   "text": "15% of 80 is 12. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}</do>",
+   "ptok": 593,
+   "tps": 34.85568163454135,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What's 15 percent of 80?",
+   "seed": 1,
+   "text": "15% of 80 is 12. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}</do>",
+   "ptok": 593,
+   "tps": 35.88626012971252,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What's 15 percent of 80?",
+   "seed": 2,
+   "text": "15% of 80 is 12. <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}</do>",
+   "ptok": 593,
+   "tps": 36.33848972832023,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What does 'ephemeral' mean?",
+   "seed": 0,
+   "text": "\"Ephemeral\" means something that exists for a short time and disappears quickly. <do>{\"act\":\"web_search\",\"q\":\"ephemeral definition\"}>",
+   "ptok": 591,
+   "tps": 36.0555255092843,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "none",
+   "q": "What does 'ephemeral' mean?",
+   "seed": 1,
+   "text": "\"Ephemeral\" means something that exists for a short time and disappears quickly.",
+   "ptok": 591,
+   "tps": 35.51995666565286,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "none",
+   "q": "What does 'ephemeral' mean?",
+   "seed": 2,
+   "text": "\"Ephemeral\" means something that is temporary or short-lived. <do>{\"act\":\"web_search\",\"q\":\"ephemeral meaning\"}</do>",
+   "ptok": 591,
+   "tps": 36.141825185489175,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Can you read my latest emails?",
+   "seed": 0,
+   "text": "I can't access your emails. Let me know if there's something I can help with instead. <do>{\"act\":\"navigate\",\"to\":\"Central Station\"}>",
+   "ptok": 589,
+   "tps": 36.69541140560105,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Can you read my latest emails?",
+   "seed": 1,
+   "text": "I can't access your emails. Let me know what you need help with instead. <do>{\"act\":\"open_app\",\"app\":\"Notes\"}>",
+   "ptok": 589,
+   "tps": 36.28600630166976,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Can you read my latest emails?",
+   "seed": 2,
+   "text": "I can't access your emails. Let me know what you need help with instead. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 589,
+   "tps": 34.81690798902032,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "How's my code compiling on the PC?",
+   "seed": 0,
+   "text": "I'll check it when Fractal is back. <do>{\"act\":\"call\",\"who\":\"Mum\"}>",
+   "ptok": 591,
+   "tps": 35.32787338490179,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "How's my code compiling on the PC?",
+   "seed": 1,
+   "text": "I'll check it when Fractal is back. <do>{\"act\":\"call\",\"who\":\"Mum\"}>",
+   "ptok": 591,
+   "tps": 36.31345776744862,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "How's my code compiling on the PC?",
+   "seed": 2,
+   "text": "I'll check it when Fractal is back. <do>{\"act\":\"navigate\",\"to\":\"Central Station\"}>",
+   "ptok": 591,
+   "tps": 34.92144951345311,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Find the spreadsheet I made last week",
+   "seed": 0,
+   "text": "I'll pass it to Fractal when it's back. <do>{\"act\":\"web_search\",\"q\":\"spreadsheet\"}",
+   "ptok": 589,
+   "tps": 35.943192503112684,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Find the spreadsheet I made last week",
+   "seed": 1,
+   "text": "I'll check for your spreadsheet. <do>{\"act\":\"web_search\",\"q\":\"spreadsheet last week\"}",
+   "ptok": 589,
+   "tps": 35.23991978112806,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Find the spreadsheet I made last week",
+   "seed": 2,
+   "text": "I'll check for your spreadsheet. <do>{\"act\":\"web_search\",\"q\":\"spreadsheet last week\"}",
+   "ptok": 589,
+   "tps": 35.932153560958085,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Ask Fractal to review my GrindPilot notes",
+   "seed": 0,
+   "text": "Fractal is reviewing your GrindPilot notes. <do>{\"act\":\"open_app\",\"app\":\"Studio\"}>",
+   "ptok": 593,
+   "tps": 36.045724000895135,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Ask Fractal to review my GrindPilot notes",
+   "seed": 1,
+   "text": "Fractal is reviewing your GrindPilot notes. <do>{\"act\":\"open_app\",\"app\":\"Studio\"}",
+   "ptok": 593,
+   "tps": 35.50440177398515,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "Ask Fractal to review my GrindPilot notes",
+   "seed": 2,
+   "text": "Fractal is reviewing your GrindPilot notes. <do>{\"act\":\"open_app\",\"app\":\"Studio\"}>",
+   "ptok": 593,
+   "tps": 35.70063234745046,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "What's in my Documents folder?",
+   "seed": 0,
+   "text": "I can't check your Documents folder. Let me know if you need help with something else! <do>{\"act\":\"open_app\",\"app\":\"Files\"}</do>",
+   "ptok": 589,
+   "tps": 35.56184047167552,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "What's in my Documents folder?",
+   "seed": 1,
+   "text": "I can't check your Documents folder. Let me know if you need help with anything else! <do>{\"act\":\"open_app\",\"app\":\"File Manager\"}",
+   "ptok": 589,
+   "tps": 36.526970030762556,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "defer",
+   "q": "What's in my Documents folder?",
+   "seed": 2,
+   "text": "I can't check your Documents folder. Let me know if you need help with something else! <do>{\"act\":\"open_app\",\"app\":\"Files\"}</do>",
+   "ptok": 589,
+   "tps": 36.46953453074972,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What graphics card is Fractal on?",
+   "seed": 0,
+   "text": "It's a Tesla V100. <do>{\"act\":\"open_app\",\"app\":\"Web\"}></do>",
+   "ptok": 590,
+   "tps": 36.80592084580006,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What graphics card is Fractal on?",
+   "seed": 1,
+   "text": "It's a Tesla V100. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 590,
+   "tps": 36.25461458192124,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What graphics card is Fractal on?",
+   "seed": 2,
+   "text": "It's a Tesla V100. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 590,
+   "tps": 36.34794784227519,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "fact",
+   "q": "What time does Fractal go to sleep?",
+   "seed": 0,
+   "text": "Fractal goes to sleep at 3:30 every night. <do>{\"act\":\"navigate\",\"to\":\"Central Station\"}>",
+   "ptok": 591,
+   "tps": 35.49857085383266,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What time does Fractal go to sleep?",
+   "seed": 1,
+   "text": "Fractal goes to sleep at 3:30 every night. <do>alarm_set {\"h\":3,\"m\":30,\"label\":\"sleep\"}</do>",
+   "ptok": 591,
+   "tps": 35.51823071853381,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What time does Fractal go to sleep?",
+   "seed": 2,
+   "text": "Fractal goes to sleep at 3:30 every night. <do>{\"act\":\"navigate\",\"to\":\"Central Station\"}>",
+   "ptok": 591,
+   "tps": 35.79624775776281,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "Which model are you using right now?",
+   "seed": 0,
+   "text": "I'm using Qwen3-1.7B.",
+   "ptok": 590,
+   "tps": 36.39374391542094,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "Which model are you using right now?",
+   "seed": 1,
+   "text": "I'm using Qwen3-1.7B, the same model as Fractal.",
+   "ptok": 590,
+   "tps": 35.86028831671807,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "Which model are you using right now?",
+   "seed": 2,
+   "text": "I'm using Qwen3-1.7B, the same as Fractal.",
+   "ptok": 590,
+   "tps": 35.744782254701434,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's the new server Fractal is getting?",
+   "seed": 0,
+   "text": "The new server is a HP Z840 with two Tesla V100s and a T10 (48 GB of graphics memory). <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 592,
+   "tps": 35.94183173951277,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's the new server Fractal is getting?",
+   "seed": 1,
+   "text": "The new server is an HP Z840 with two Tesla V100s and a T10 (48 GB of graphics memory). <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 592,
+   "tps": 36.22940458986301,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's the new server Fractal is getting?",
+   "seed": 2,
+   "text": "The new server is an HP Z840 with two Tesla V100s and a T10 (48 GB of graphics memory). <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 592,
+   "tps": 35.826000281831206,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's Fractal's big model called?",
+   "seed": 0,
+   "text": "It's called Qwen3.8-27B. <do>{\"act\":\"open_app\",\"app\":\"Notes\"}>",
+   "ptok": 591,
+   "tps": 35.877508665798246,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's Fractal's big model called?",
+   "seed": 1,
+   "text": "It's called Qwen3-1.7B. <do>{\"act\":\"open_app\",\"app\":\"Notes\"}>",
+   "ptok": 591,
+   "tps": 36.06540822435569,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "fact",
+   "q": "What's Fractal's big model called?",
+   "seed": 2,
+   "text": "It's called the Coach. <do>{\"act\":\"open_app\",\"app\":\"Studio\"}",
+   "ptok": 591,
+   "tps": 34.83073231614695,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "mem",
+   "q": "What's my cat called?",
+   "seed": 0,
+   "text": "Your cat is called Miso. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 606,
+   "tps": 35.199109630141166,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What's my cat called?",
+   "seed": 1,
+   "text": "Your cat is called Miso. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 606,
+   "tps": 33.96695177339837,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What's my cat called?",
+   "seed": 2,
+   "text": "Your cat is called Miso. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 606,
+   "tps": 32.987125596124486,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "Any snack ideas for me?",
+   "seed": 0,
+   "text": "You'll want something light and healthy. How about a banana with some almond butter or a small salad with mixed greens and hummus? <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"</do>",
+   "ptok": 602,
+   "tps": 35.957105468310694,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "mem",
+   "q": "Any snack ideas for me?",
+   "seed": 1,
+   "text": "You'll want something crunchy and healthy. How about some roasted vegetables with a sprinkle of sea salt? <do>{\"act\":\"play\",\"app\":\"Spotify\",\"query\":\"lofi beats\"}</do>",
+   "ptok": 602,
+   "tps": 36.05397191659397,
+   "fmt": true,
+   "ok": false
+  },
+  {
+   "kind": "mem",
+   "q": "Any snack ideas for me?",
+   "seed": 2,
+   "text": "You'll want a peanut-free, plant-based option like a fruit salad or a smoothie with almond milk. <do>{\"act\":\"note\",\"text\":\"buy milk\"}</do>",
+   "ptok": 602,
+   "tps": 36.907657042080714,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What should I call you to call me?",
+   "seed": 0,
+   "text": "Dee, I'm Ruby. You can call me that. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 607,
+   "tps": 36.30047109944715,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What should I call you to call me?",
+   "seed": 1,
+   "text": "Dee. Let me know if you want to talk about your PC build or something else. <do>{\"act\":\"open_app\",\"app\":\"Spotify\"}>",
+   "ptok": 607,
+   "tps": 36.405959545256465,
+   "fmt": true,
+   "ok": true
+  },
+  {
+   "kind": "mem",
+   "q": "What should I call you to call me?",
+   "seed": 2,
+   "text": "Dee. You can call me Dee.",
+   "ptok": 607,
+   "tps": 35.135662697638104,
+   "fmt": true,
+   "ok": true
+  }
+ ]
+}

@@ -1,0 +1,896 @@
+{
+  "top": [
+    {
+      "claim": "Topics tile: the number of topic cards shown (13: 01 to 13)",
+      "source": "E:\\AI academia\\view\\build.py (counts every .md in E:\\AI academia whose name starts with two digits)",
+      "files": [
+        "E:\\AI academia\\view\\build.py"
+      ],
+      "check": "py -3 E:\\AI academia\\view\\build.py prints the count when it rebuilds; or list E:\\AI academia\\*.md starting with digits",
+      "status": "measured",
+      "fixed": "Corrected 24 Nov: was a count of every two-digit file (14, with backups 16) beside 11 cards"
+    },
+    {
+      "claim": "146 sources read",
+      "source": "E:\\AI academia\\References.md (table rows, counted by view\\build.py)",
+      "files": [
+        "E:\\AI academia\\References.md",
+        "E:\\AI academia\\view\\build.py",
+        "E:\\AI academia\\AI academia.html"
+      ],
+      "check": "count the table rows of References.md (146; the built page stats say 146)",
+      "status": "measured"
+    },
+    {
+      "claim": "63 leads to test",
+      "source": "E:\\AI academia\\10 Leads and open questions.md (table rows with 3+ cells, counted by view\\build.py)",
+      "files": [
+        "E:\\AI academia\\10 Leads and open questions.md",
+        "E:\\AI academia\\view\\build.py"
+      ],
+      "check": "count the table rows of 10 Leads and open questions.md (63; the built page stats say 63)",
+      "status": "measured"
+    },
+    {
+      "claim": "4 projects",
+      "source": "Hand-written in the template; the kicker names Fractal, Ruby, Volta and GrindPilot",
+      "files": [],
+      "check": "",
+      "status": "claim",
+      "note": "no file kept: a hand-written count. Odysseus has its own record (Fractal\\Odysseus\\docs\\ACADEMIA.md) but sits inside Fractal."
+    }
+  ],
+  "topics": [
+    {
+      "claim": "01: 50.7 -> 75.4 tok/s, reasoning with 1-ahead drafting",
+      "source": "Fractal academia 3.11; topic 01 section 5",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\mtp\\results.json",
+        "Fractal\\runtime\\experiments\\tests\\mtp_sweep.py",
+        "Fractal\\config\\agents.toml"
+      ],
+      "check": "open mtp\\results.json: \"q4-36K ngram (now)\" reason 50.7, \"q4-36K mtp1\" reason 75.4",
+      "status": "adopted"
+    },
+    {
+      "claim": "02: \"Fixed N, broke M\"",
+      "source": "Topic 02 section 1 (instrument table); Fractal academia 2.1 and 2.2",
+      "files": [
+        "E:\\AI academia\\02 Measuring AI systems.md",
+        "Fractal\\evals.cmd"
+      ],
+      "check": "evals.cmd compare <run A> <run B> prints fixed/broke for two saved runs (no model)",
+      "status": "adopted",
+      "note": "A method, not a measured number; no single result behind it."
+    },
+    {
+      "claim": "03: 52.5 -> 77.5 % LiveCodeBench with check-and-repair",
+      "source": "Fractal academia 3.1; topic 03 section 1",
+      "files": [
+        "Fractal\\results\\index.jsonl",
+        "Fractal\\results\\runs\\20261029-045930-local-think-quick.jsonl.gz",
+        "Fractal\\results\\runs\\20261030-001514-fractal-think-quick.jsonl.gz"
+      ],
+      "check": "index.jsonl: run 20261029-045930-local-think-quick livecodebench pass1 0.525; 20261030-001514-fractal-think-quick 0.775",
+      "status": "adopted",
+      "fixed": "Corrected 24 Nov: was topic 03 named the empty file 20261028-195341"
+    },
+    {
+      "claim": "04: 141 -> 55 checkpoint notes after masking",
+      "source": "Fractal academia 3.5; topic 04 section 1",
+      "files": [
+        "Fractal\\runtime\\experiments\\tests\\room_replay.py"
+      ],
+      "check": "",
+      "status": "adopted",
+      "note": "no file kept: the replay output was not saved (Fractal academia 3.5 states the numbers)."
+    },
+    {
+      "claim": "05: 464 -> 42 notes on the map after folding",
+      "source": "Fractal academia 3.14 (vault-lessons table); topic 05 section 4",
+      "files": [
+        "Fractal\\fractal\\mind.py"
+      ],
+      "check": "",
+      "status": "adopted",
+      "note": "no file kept: only the record states the count."
+    },
+    {
+      "claim": "06: 31 -> 93.7 %, the phone brain's exam",
+      "source": "Fractal academia 3.24; topic 06 section 4",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\base-app08.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v4b-short.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\pipeline-v4b.log"
+      ],
+      "check": "base-app08.json summary.overall 0.308; tail -5 pipeline-v4b.log shows ruby-v4b-short overall 0.937",
+      "status": "measured",
+      "note": "v4b was the served brain until 20 Nov; v5 since (Ruby academia 3.12; Ruby\\data\\phone_model.json). The slide now says so.",
+      "fixed": "Corrected 24 Nov: was the slide did not say v4b was replaced"
+    },
+    {
+      "claim": "07: 27 s to first sound without streaming",
+      "source": "Ruby README section 3b; Ruby RESEARCH.md open item 1; topic 07 section 2",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-08\\ruby_phase0_results.json",
+        "Fractal\\runtime\\experiments\\2026-11-08\\ruby_phase0.py",
+        "Ruby\\README.md"
+      ],
+      "check": "mean of today_first_sound_s in ruby_phase0_results.json = 26.96 s (28.0, 27.18, 17.07, 35.59)",
+      "status": "measured",
+      "fixed": "Corrected 24 Nov: was \"result file not kept\" in topic 07"
+    },
+    {
+      "claim": "08: ~16 s for a 1024x1024 picture (21 Nov; first, cold, ~29 s)",
+      "source": "Fractal academia 3.17; topic 08 section 4",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-21\\specialists\\image\\times.txt"
+      ],
+      "check": "times.txt (21 Nov re-run): zimage rows 14.5-16.3 s after a 29.5 s first picture",
+      "status": "measured",
+      "note": "The 9 Nov ~30 s run has no file kept; the 21 Nov times are in times.txt.",
+      "fixed": "Corrected 24 Nov: was ~30 s (9 Nov, older build)"
+    },
+    {
+      "claim": "09: \"Only real events animate\"",
+      "source": "Topic 09 section 2; user approvals in Fractal\\docs\\LATTICE.md, Fractal academia 3.14, 3.18, 3.35",
+      "files": [
+        "Fractal\\docs\\LATTICE.md",
+        "Lattice hub\\station\\station.html",
+        "Fractal\\runtime\\experiments\\tests\\station_chatter_unit.js"
+      ],
+      "check": "node Fractal\\runtime\\experiments\\tests\\station_chatter_unit.js (32/32 per topic 09)",
+      "status": "adopted",
+      "note": "A design rule, not a number."
+    },
+    {
+      "claim": "10: leads count (DATA.leads.length, now 63)",
+      "source": "E:\\AI academia\\10 Leads and open questions.md via view\\build.py",
+      "files": [
+        "E:\\AI academia\\10 Leads and open questions.md",
+        "E:\\AI academia\\view\\build.py"
+      ],
+      "check": "count the lead table rows (63)",
+      "status": "measured"
+    },
+    {
+      "claim": "11: 2.0 s to notice the other machine is off",
+      "source": "Volta academia 3.1 (\"Checked\" table); topic 11 section 4",
+      "files": [
+        "Volta\\docs\\ACADEMIA.md",
+        "Volta\\tests\\test_link_with_fractal.py"
+      ],
+      "check": "",
+      "status": "measured",
+      "note": "no file kept: the five timing runs (2.01-2.04 s) were not saved; same PC, refused connection, not a real network."
+    },
+    {
+      "claim": "12: 3 tiers (phone, PC, Volta), each a team of experts",
+      "source": "Topic 12 section 1 (the user's idea, 21 Nov)",
+      "files": [
+        "E:\\AI academia\\12 Experts, routers and hardware tiers.md"
+      ],
+      "status": "lead",
+      "note": "A design, not a measurement; the topic's own status line says what is measured."
+    },
+    {
+      "claim": "13: 21 techniques explained",
+      "source": "Topic 13, one ## section per technique",
+      "files": [
+        "E:\\AI academia\\13 Techniques, explained.md"
+      ],
+      "check": "grep -c \"^## \" \"E:\\AI academia\\13 Techniques, explained.md\"",
+      "status": "measured"
+    }
+  ],
+  "speed": [
+    {
+      "claim": "VRAM bandwidth 896 GB/s (spec)",
+      "source": "Topic 01 section 1; References \"RTX 5070 Ti spec (896 GB/s)\"",
+      "files": [],
+      "check": "",
+      "status": "claim",
+      "note": "no file kept: a maker figure."
+    },
+    {
+      "claim": "System RAM ~75 GB/s",
+      "source": "Topic 01 section 7 (\"about 75 GB/s\", an estimate)",
+      "files": [],
+      "check": "",
+      "status": "claim",
+      "note": "no file kept: an estimate with no recorded source. Topic 01 section 1 gives ~60-90 GB/s; the slide picks one value."
+    },
+    {
+      "claim": "NVMe 1.2 GB/s (measured)",
+      "source": "Fractal academia 3.19 (single-thread read of two model files on E:)",
+      "files": [],
+      "check": "",
+      "status": "measured",
+      "note": "no file kept: the 8 Nov drive-read timing was not saved."
+    },
+    {
+      "claim": "Model size 14.25 GB (13.3 GiB), the slider default",
+      "source": "Topic 01 section 1; Library slide",
+      "files": [
+        "Fractal\\models\\Qwen3.8-27B-UD-IQ4_XS.gguf"
+      ],
+      "check": "file size 14,252,845,984 bytes",
+      "status": "measured",
+      "fixed": "Corrected 24 Nov: was 13.3 GB (GiB divided into decimal GB/s)"
+    },
+    {
+      "claim": "Measured 50.8 tok/s in VRAM, about 81 % of the 63 tok/s limit",
+      "source": "Fractal academia 3.12; topic 01 section 1",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\results.json",
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\server-q4_0-36864.log",
+        "Fractal\\runtime\\experiments\\tests\\kv4_bench.py"
+      ],
+      "check": "kv4\\results.json write_tok_s 50.8 (both caches)",
+      "status": "measured",
+      "fixed": "Corrected 24 Nov: was about 76 % of a 67 tok/s limit"
+    },
+    {
+      "claim": "Spill to RAM: about 12x slower (896 / 75)",
+      "source": "Derived on the slide; topic 01 sections 1-2",
+      "files": [],
+      "check": "",
+      "status": "claim",
+      "note": "no file kept for 12x: arithmetic from two unmeasured bandwidths, and only if all weights sit in RAM. The slide now gives the measured 3-4x for a partial spill (Fractal academia 1.3 and 3.7).",
+      "fixed": "Corrected 24 Nov: was 12x with no mention of the measured 3-4x"
+    },
+    {
+      "claim": "4-bit KV cache: 1.8x the context (20,480 -> 36,864 tokens)",
+      "source": "Fractal academia 3.12; topic 01 section 3",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\results.json",
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\server-q8_0-20480.log",
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\server-q4_0-36864.log"
+      ],
+      "check": "kv4\\results.json: ctx 20480 (q8_0) and 36864 (q4_0)",
+      "status": "adopted"
+    },
+    {
+      "claim": "Same writing speed 50.8 tok/s for both caches",
+      "source": "Fractal academia 3.12",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\results.json"
+      ],
+      "check": "kv4\\results.json write_tok_s 50.8 and 50.8",
+      "status": "measured"
+    },
+    {
+      "claim": "VRAM 14.5 GB (8-bit) and 14.6 GB (4-bit)",
+      "source": "Fractal academia 3.12",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\results.json"
+      ],
+      "check": "kv4\\results.json vram_used_mb 14516 and 14560",
+      "status": "measured"
+    },
+    {
+      "claim": "12 of 12 hidden facts recalled at 30K (4-bit); 30K does not fit at 8-bit",
+      "source": "Fractal academia 3.12",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\results.json"
+      ],
+      "check": "kv4\\results.json: q4_0 recall at 30000 tokens found 12 of 12; q8_0 has only the 15000 row",
+      "status": "measured"
+    }
+  ],
+  "spec": [
+    {
+      "claim": "E = (1 - a^(k+1)) / (1 - a); at a = 0.97: 1.97 (1 ahead), 2.91 (2 ahead)",
+      "source": "Topic 01 section 5; Leviathan, Kalman, Matias, arXiv 2211.17192",
+      "files": [],
+      "check": "arithmetic only",
+      "status": "claim",
+      "note": "Theory from the paper; no file needed."
+    },
+    {
+      "claim": "Acceptance for the adopted setting: reasoning 0.97, prose 0.87, code 0.85",
+      "source": "Fractal academia 3.11",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\mtp\\results.json"
+      ],
+      "check": "mtp\\results.json \"q4-36K mtp1\": reason_accept 0.97, prose_accept 0.87, code_accept 0.85",
+      "status": "measured"
+    },
+    {
+      "claim": "n-gram only, 36K: 50.7 / 50.6 / 184 tok/s, VRAM 14.6 GB",
+      "source": "Fractal academia 3.11; topic 01 section 5",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\mtp\\results.json",
+        "Fractal\\runtime\\experiments\\tests\\mtp_sweep.py"
+      ],
+      "check": "mtp\\results.json \"q4-36K ngram (now)\": 50.7, 50.6, 183.5, vram_mb 14592",
+      "status": "measured"
+    },
+    {
+      "claim": "MTP 2-ahead, 36K: 50.7 / 36.2 / 178 tok/s, VRAM 15.2 GB",
+      "source": "Fractal academia 3.11",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\mtp\\results.json"
+      ],
+      "check": "mtp\\results.json \"q4-36K mtp2\": 50.7, 36.2, 178.3, vram_mb 15188",
+      "status": "not adopted"
+    },
+    {
+      "claim": "MTP 1-ahead + n-gram, 36K: 75.4 / 56.3 / 249 tok/s, VRAM 15.3 GB (adopted)",
+      "source": "Fractal academia 3.11",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\mtp\\results.json",
+        "Fractal\\config\\agents.toml"
+      ],
+      "check": "mtp\\results.json \"q4-36K mtp1\": 75.4, 56.3, 248.7, vram_mb 15336",
+      "status": "adopted",
+      "note": "Note: the row is called \"mtp1\" in the file; that it also runs n-gram drafting comes from the record and agents.toml."
+    },
+    {
+      "claim": "MTP 2-ahead, 24K: 93.4 / 56.9 / 289 tok/s, VRAM 15.2 GB",
+      "source": "Fractal academia 3.11",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\mtp\\results.json"
+      ],
+      "check": "mtp\\results.json \"q4-24K mtp2\": 93.4, 56.9, 289.4, vram_mb 15152",
+      "status": "not adopted"
+    },
+    {
+      "claim": "2-ahead accepted 83-96 % of the time, slower than no drafting for prose at 36K",
+      "source": "Fractal academia 3.11",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\mtp\\results.json",
+        "Fractal\\runtime\\experiments\\2026-11-07\\spec\\results.json"
+      ],
+      "check": "mtp\\results.json mtp2 rows: accept 0.83-0.96; prose 36.2 against 50.6",
+      "status": "measured"
+    },
+    {
+      "claim": "~0.6 GB of VRAM spare",
+      "source": "Fractal academia 3.11 (a reasoned explanation, not proven)",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\mtp\\results.json"
+      ],
+      "check": "",
+      "status": "claim",
+      "note": "no file kept for the spare figure: results.json has VRAM used (15,152-15,336 MB on a 16,303 MiB card) but not free memory; the record calls the memory-pressure cause reasoned, not proven."
+    }
+  ],
+  "check": [
+    {
+      "claim": "LiveCodeBench, no thinking: 37.5 -> 60 % (fixed 9, broke 0)",
+      "source": "Fractal academia 3.1; topic 03 section 1",
+      "files": [
+        "Fractal\\results\\index.jsonl",
+        "Fractal\\results\\runs\\20261028-185024-local-quick.jsonl.gz",
+        "Fractal\\results\\runs\\20261029-211749-fractal-quick.jsonl.gz",
+        "Fractal\\fractal\\pipeline.py"
+      ],
+      "check": "evals.cmd compare 20261028-185024-local-quick 20261029-211749-fractal-quick (no model); index.jsonl livecodebench pass1 0.375 and 0.6",
+      "status": "adopted",
+      "fixed": "Corrected 24 Nov: was topic 03 named the empty file 20261028-195341"
+    },
+    {
+      "claim": "LiveCodeBench, thinking: 52.5 -> 77.5 % (fixed 10, broke 0)",
+      "source": "Fractal academia 3.1; topic 03 section 1",
+      "files": [
+        "Fractal\\results\\index.jsonl",
+        "Fractal\\results\\runs\\20261029-045930-local-think-quick.jsonl.gz",
+        "Fractal\\results\\runs\\20261030-001514-fractal-think-quick.jsonl.gz"
+      ],
+      "check": "evals.cmd compare 20261029-045930-local-think-quick 20261030-001514-fractal-think-quick (no model); index.jsonl livecodebench pass1 0.525 and 0.775",
+      "status": "adopted",
+      "fixed": "Corrected 24 Nov: was topic 03 naming the empty file 20261028-195341"
+    },
+    {
+      "claim": "Rust, 156 problems: 85.3 -> 90.4 % with compiler errors (fixed 8, broke 0, +33 % time)",
+      "source": "Fractal academia 3.22; topic 03 section 2",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_results\\r0.jsonl",
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_results\\r1.jsonl",
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_r0r1.log",
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_bench.py"
+      ],
+      "check": "grep -c '\"verdict\": \"pass\"' rust_results\\r0.jsonl (133) and r1.jsonl (141)",
+      "status": "measured"
+    },
+    {
+      "claim": "Python on the same 156 problems: 96.8 %",
+      "source": "Fractal academia 3.22 (151 of 156)",
+      "files": [],
+      "check": "",
+      "status": "measured",
+      "note": "no file kept: Fractal academia 3.22 says the file behind 151 of 156 was not identified."
+    },
+    {
+      "claim": "Python HumanEval+ with mypy: 93.3 -> 93.3 % (153 of 164 both times)",
+      "source": "Fractal academia 3.22; topic 03 section 2",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-08\\python_check.log",
+        "Fractal\\runtime\\experiments\\2026-11-08\\python_check_results.jsonl"
+      ],
+      "check": "tail python_check.log: \"humaneval_plus: 164 tasks, p0 153, p1 153 (fixed 0, broke 0)\"",
+      "status": "not adopted"
+    },
+    {
+      "claim": "Compiler fixed all 10 compile failures, broke nothing; the 15 still failing all compiled",
+      "source": "Fractal academia 3.22",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_results\\r0.jsonl",
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_results\\r1.jsonl"
+      ],
+      "check": "verdict counts: r0 pass 133, fail 13, compile 10; r1 pass 141, fail 15, compile 0",
+      "status": "measured"
+    },
+    {
+      "claim": "Toolbox: 1 tool call instead of 4-5, about twice as fast",
+      "source": "Fractal academia 3.20; topic 03 section 3",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-08\\toolbox_live_results.json",
+        "Fractal\\fractal\\toolbox.py"
+      ],
+      "check": "toolbox_live_results.json \"repeat\": 4 calls 14.1 s vs 1 call 7.1 s (Feb); 5 calls 15.2 s vs 1 call 8.1 s (Mar)",
+      "status": "adopted",
+      "note": "One simple job, 2 runs each; the slide says so (\"a first result\")."
+    }
+  ],
+  "phone": [
+    {
+      "claim": "Exam score: 31 / 48 / 75 / 91 / 93.7 %",
+      "source": "Fractal academia 3.24; topic 06 section 4",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\base-app08.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\base-long.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v1-short.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v2-short.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v4b-short.json"
+      ],
+      "check": "summary.overall in each: 0.308, 0.478, 0.748, 0.912, 0.937",
+      "status": "measured",
+      "note": "\"Stock, short prompt\" is the app 0.8 prompt (191 tokens, base-app08.json), not base-short.json (68 tokens, 32.1 %)."
+    },
+    {
+      "claim": "No unwanted action: 100 / 6 / 100 / 100 / 98.7 %",
+      "source": "Fractal academia 3.24 (table and round 4: \"1/75 unwanted\")",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\base-app08.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\base-long.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v1-short.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v2-short.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v4b-short.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v4b-new.json"
+      ],
+      "check": "summary.none: 1, 0.056, 1, 1 for the first four",
+      "status": "measured",
+      "note": "The 98.7 % for v4b is computed from \"1/75 unwanted\" (main and new-skills exams together); ruby-v4b-short.json itself gives none = 0.972."
+    },
+    {
+      "claim": "Prompt size: 191 / 590 / 68 / 68 / 68 tokens",
+      "source": "Fractal academia 3.24",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\base-app08.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\base-long.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v1-short.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v4b-short.json"
+      ],
+      "check": "summary.prompt_tokens in each",
+      "status": "measured"
+    },
+    {
+      "claim": "v1 trained on 621 examples; v2 +288 aimed at misses",
+      "source": "Fractal academia 3.24",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\data.jsonl",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\data_v2.jsonl"
+      ],
+      "check": "wc -l: data.jsonl 621, data_v2.jsonl 909 (621 + 288)",
+      "status": "measured"
+    },
+    {
+      "claim": "Actions 70 -> 92 %, facts 40 -> 87 %",
+      "source": "Fractal academia 3.24 finding 4",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v1-short.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v2-short.json"
+      ],
+      "check": "summary act 0.702 -> 0.917, fact 0.4 -> 0.867",
+      "status": "measured"
+    },
+    {
+      "claim": "6 new actions; v4 then set alarms for a factual question",
+      "source": "Fractal academia 3.24 round 4, finding 6",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\ruby-v4-short.json",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\teacher_v4.py",
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\pipeline-v4.log"
+      ],
+      "check": "",
+      "status": "measured",
+      "note": "The alarm example itself is from the record; the per-answer text is in ruby-v4-short.json rows."
+    },
+    {
+      "claim": "Stock model added a random action to 94 % of ordinary replies",
+      "source": "Fractal academia 3.24 finding 1",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\results\\base-long.json"
+      ],
+      "check": "summary.none 0.056 (= 94.4 % with an unwanted action)",
+      "status": "measured"
+    },
+    {
+      "claim": "v4b: on the phone until 20 Nov, 1 unwanted action in 75 replies",
+      "source": "Fractal academia 3.24 round 4",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-09\\ruby_brain\\pipeline-v4b.log",
+        "Ruby\\data\\phone_model.json"
+      ],
+      "check": "Ruby\\data\\phone_model.json names the served file",
+      "status": "adopted",
+      "fixed": "Corrected 24 Nov: was \"The version on the phone\" for v4b"
+    }
+  ],
+  "memory": [
+    {
+      "claim": "One chat needed 451 checkpoints",
+      "source": "Fractal academia 3.5 (Problem); topic 04 intro",
+      "files": [],
+      "check": "",
+      "status": "measured",
+      "note": "no file kept: the chat and its count are only in the record."
+    },
+    {
+      "claim": "BA_MEM: 141 -> 55 checkpoint notes; upkeep ~92 -> ~42 min",
+      "source": "Fractal academia 3.5; topic 04 section 1",
+      "files": [
+        "Fractal\\runtime\\experiments\\tests\\room_replay.py",
+        "Fractal\\fractal\\studio\\handoff.py",
+        "Fractal\\rust\\parts\\handoff\\src\\handoff.rs"
+      ],
+      "check": "",
+      "status": "adopted",
+      "note": "no file kept: the replay output was not saved."
+    },
+    {
+      "claim": "BA_MEM: 20,480 -> 36,864 tokens of context",
+      "source": "Fractal academia 3.12; topic 04 section 5",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\results.json"
+      ],
+      "check": "kv4\\results.json ctx 20480 and 36864",
+      "status": "adopted"
+    },
+    {
+      "claim": "BA_MEM: 464 -> 42 notes on the memory map",
+      "source": "Fractal academia 3.14; topic 05 section 4",
+      "files": [
+        "Fractal\\fractal\\mind.py"
+      ],
+      "check": "",
+      "status": "adopted",
+      "note": "no file kept: only the record states the count."
+    },
+    {
+      "claim": "BA_MEM: 210 s -> 30 s to read 11 files and report",
+      "source": "Fractal academia 3.11; topic 01 section 5 and topic 04 section 5",
+      "files": [],
+      "check": "",
+      "status": "measured",
+      "note": "no file kept: the live 11-file runs were not saved. The record says 28-32 s (11/11 and 10/11 correct); the slide rounds to 30 s."
+    },
+    {
+      "claim": "Plain notes 9.5/12 (~1,040 tokens) vs \"AI shorthand\" 7.5/12 (~315 tokens); none invented",
+      "source": "Fractal academia 3.5 (Measurements table); topic 04 section 3",
+      "files": [],
+      "check": "",
+      "status": "adopted",
+      "note": "no file kept: no notes, questions, scores or script were kept."
+    },
+    {
+      "claim": "Self-practice: 385 problems; 115 kept, 187 rejected, 43 dropped, 40 other (27 bad, 9 unsolved, 4 repeats)",
+      "source": "Fractal academia 3.3; topic 06 section 2",
+      "files": [
+        "Fractal\\data\\practice\\problems.jsonl",
+        "Fractal\\fractal\\practice.py"
+      ],
+      "check": "count outcome over lines of problems.jsonl with time 2026-10-30/31 and no lang rust: 385 = 115 kept, 187 setter wrong, 43 too close, 27 bad, 9 unsolved, 4 repeat",
+      "status": "measured",
+      "fixed": "Corrected 24 Nov: was three bars adding to 345 of 385"
+    },
+    {
+      "claim": "The problem setter's own answers were wrong about half the time",
+      "source": "Fractal academia 3.3 (Lesson)",
+      "files": [
+        "Fractal\\data\\practice\\problems.jsonl"
+      ],
+      "check": "187 of the 302 problems that were kept or rejected (62 %)",
+      "status": "measured",
+      "note": "Rounded down to \"about half\"; from the same file it is 62 % of judged problems, 49 % of all 385."
+    }
+  ],
+  "voice": [
+    {
+      "claim": "About 27 s to first sound, 77 % of it text-to-speech",
+      "source": "Ruby README section 3b; Ruby RESEARCH.md open item 1; Ruby VOICE_SHORTLIST.md Phase 0; topic 07 section 2",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-08\\ruby_phase0_results.json",
+        "Fractal\\runtime\\experiments\\2026-11-08\\ruby_phase0.py",
+        "Ruby\\README.md",
+        "Ruby\\docs\\RESEARCH.md"
+      ],
+      "check": "ruby_phase0_results.json: mean today_first_sound_s 26.96; mean tts_first_piece_s 20.68",
+      "status": "measured",
+      "fixed": "Corrected 24 Nov: was ~90 % of it text-to-speech"
+    },
+    {
+      "claim": "Split: text to speech ~21 s, everything else ~6 s (means of 4 questions)",
+      "source": "Fractal\\runtime\\experiments\\2026-11-08\\ruby_phase0_results.json: tts_first_piece_s against today_first_sound_s",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-08\\ruby_phase0_results.json"
+      ],
+      "check": "same file: TTS ~20.7 s, the rest (ears + answer) ~6.3 s on average",
+      "status": "measured",
+      "fixed": "Corrected 24 Nov: was ~24 s and ~3 s"
+    },
+    {
+      "claim": "Streaming every stage gets a reply under a second",
+      "source": "Topic 07 section 2 (outside sources: Kyutai Unmute, Pipecat, LiveKit)",
+      "files": [],
+      "check": "",
+      "status": "claim",
+      "note": "no file kept: outside claims; the topic says under ~0.5 s. Not measured here."
+    },
+    {
+      "claim": "Phone voice data: 2,041 lines generated, 1,950 kept, 2.48 hours",
+      "source": "Topic 07 section 6; Ruby academia 3.6",
+      "files": [
+        "Ruby\\docs\\research\\2026-11-09\\ruby_phone_voice\\prep_report.json",
+        "Ruby\\docs\\research\\2026-11-09\\ruby_phone_voice\\prep.py",
+        "Ruby\\docs\\research\\2026-11-09\\ruby_phone_voice\\gen.log"
+      ],
+      "check": "prep_report.json: clips 2041, kept 1950, hours_kept 2.48",
+      "status": "measured"
+    },
+    {
+      "claim": "11 dropped for wrong words, 81 for speaking rate",
+      "source": "Topic 07 section 6",
+      "files": [
+        "Ruby\\docs\\research\\2026-11-09\\ruby_phone_voice\\prep_report.json"
+      ],
+      "check": "prep_report.json: dropped_mismatch 11, dropped_rate 81",
+      "status": "measured",
+      "note": "Note: the source report is itself off by one (2,041 - 11 - 81 = 1,949, it says 1,950 kept); a result file, left as it is."
+    },
+    {
+      "claim": "Training Ruby's own phone voice: data made, not started",
+      "source": "Topic 07 section 6 (dated 10 Nov); Ruby academia 3.4-3.6",
+      "files": [
+        "Ruby\\docs\\PHONE_VOICE.md"
+      ],
+      "check": "",
+      "status": "measured",
+      "fixed": "Corrected 24 Nov: was \"In progress\""
+    },
+    {
+      "claim": "Breeze TTS 2: < 40 ms on an H100",
+      "source": "Topic 07 section 3; Ruby VOICE_SHORTLIST.md",
+      "files": [
+        "Ruby\\docs\\VOICE_SHORTLIST.md"
+      ],
+      "check": "",
+      "status": "claim",
+      "note": "Maker's figure."
+    },
+    {
+      "claim": "Chatterbox Turbo: ~75 ms (GPU)",
+      "source": "Topic 07 section 3; Ruby VOICE_SHORTLIST.md and RESEARCH.md",
+      "files": [
+        "Ruby\\docs\\VOICE_SHORTLIST.md",
+        "Ruby\\docs\\RESEARCH.md",
+        "Fractal\\runtime\\experiments\\2026-11-21\\voice_chatterbox\\times.txt"
+      ],
+      "check": "",
+      "status": "claim",
+      "note": "Maker's figure (first audio). Our measurement (Fractal academia 3.64), now beside it on the slide: 15-17 s per whole line through the one-shot path; a different definition.",
+      "fixed": "Corrected 24 Nov: was \"none are our measurements\""
+    },
+    {
+      "claim": "Qwen3-TTS: ~97 ms streaming",
+      "source": "Topic 07 section 3; Ruby VOICE_SHORTLIST.md and RESEARCH.md",
+      "files": [
+        "Ruby\\docs\\VOICE_SHORTLIST.md",
+        "Ruby\\docs\\RESEARCH.md"
+      ],
+      "check": "",
+      "status": "claim",
+      "note": "Maker's figure."
+    },
+    {
+      "claim": "CosyVoice2 0.5B: ~150 ms streaming",
+      "source": "Topic 07 section 3; Ruby RESEARCH.md",
+      "files": [
+        "Ruby\\docs\\RESEARCH.md"
+      ],
+      "check": "",
+      "status": "claim",
+      "note": "Maker's figure."
+    },
+    {
+      "claim": "Pocket TTS: ~1.7 s on a CPU",
+      "source": "Topic 07 section 3; Ruby VOICE_SHORTLIST.md (\"one benchmark\")",
+      "files": [
+        "Ruby\\docs\\VOICE_SHORTLIST.md",
+        "Fractal\\runtime\\experiments\\2026-11-22\\fractal_pocket\\timing_pocket.json"
+      ],
+      "check": "timing_pocket.json: all_s 0.41-0.74 s per whole line through Fractal's running Pocket server",
+      "status": "claim",
+      "note": "Maker's figure. Our measurement (Fractal academia 3.76), now beside it on the slide: 0.41-0.74 s per whole line.",
+      "fixed": "Corrected 24 Nov: was the maker's ~1.7 s alone"
+    },
+    {
+      "claim": "Kokoro 82M: ~3.7 s on a CPU, third-party test",
+      "source": "Topic 07 section 3; Ruby RESEARCH.md (Picovoice test)",
+      "files": [
+        "Ruby\\docs\\RESEARCH.md"
+      ],
+      "check": "",
+      "status": "claim",
+      "note": "Tester's figure."
+    }
+  ],
+  "failed": [
+    {
+      "claim": "LoRA on self-practice answers: HumanEval+ 77.5 -> 72.5 %; MBPP+ 76.2 -> 73.8",
+      "source": "Fractal academia 3.10 and Part 5; topic 06 section 3",
+      "files": [
+        "Fractal\\results\\index.jsonl",
+        "Fractal\\results\\runs\\20261106-075430-helper-base-quick.jsonl.gz",
+        "Fractal\\results\\runs\\20261106-094800-helper-lora-quick.jsonl.gz",
+        "Fractal\\fractal\\train\\lora.py",
+        "Fractal\\data\\practice\\training.jsonl",
+        "Fractal\\runtime\\logs\\quick-helper-base.log",
+        "Fractal\\runtime\\logs\\quick-helper-lora.log"
+      ],
+      "check": "evals.cmd compare 20261106-075430-helper-base-quick 20261106-094800-helper-lora-quick (no model); index.jsonl pass1 0.775 -> 0.725 and 0.7625 -> 0.7375",
+      "status": "not adopted",
+      "fixed": "Corrected 24 Nov: was topic 06 said the benchmark result files were not kept"
+    },
+    {
+      "claim": "Type-checking Python: 153 -> 153 of 164 with and without mypy",
+      "source": "Fractal academia 3.22; topic 03 section 2",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-08\\python_check.log",
+        "Fractal\\runtime\\experiments\\2026-11-08\\python_check_results.jsonl"
+      ],
+      "check": "tail python_check.log",
+      "status": "not adopted"
+    },
+    {
+      "claim": "Specialist agent model: 21/22 (general 27B) vs 4/22 (Devstral Small 2)",
+      "source": "Fractal academia 3.10; topic 03 section 5",
+      "files": [
+        "Fractal\\data\\hub\\scores.json",
+        "Fractal\\results\\runs\\20261106-045856-tools-quick.jsonl.gz",
+        "Fractal\\runtime\\logs\\quick-tools.log"
+      ],
+      "check": "scores.json agent.coder 0.955 (= 21/22)",
+      "status": "not adopted",
+      "note": "Note: the 21/22 is in a file; the 4/22 for Devstral is in the record's text (its code-benchmark run is kept, the agent-task run is not)."
+    },
+    {
+      "claim": "Layer streaming (AirLLM): ~8 s vs ~78 min for a 400-token answer, estimated",
+      "source": "Fractal academia 3.19; topic 01 section 7",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\kv4\\results.json"
+      ],
+      "check": "400 / 50.8 tok/s = 7.9 s; 400 x (14 GB / 1.2 GB/s) = ~78 min",
+      "status": "not adopted",
+      "note": "Note: the ~8 s rests on kv4\\results.json; ~78 min is arithmetic from the 1.2 GB/s drive read, whose timing was not kept. Nothing was installed or run."
+    },
+    {
+      "claim": "\"AI shorthand\" notes: 9.5 -> 7.5 of 12 facts",
+      "source": "Fractal academia 3.5; topic 04 section 3",
+      "files": [],
+      "check": "",
+      "status": "not adopted",
+      "note": "no file kept."
+    },
+    {
+      "claim": "Variable thinking budgets: 27/27 (always think) vs 25/27 (effort router)",
+      "source": "Fractal academia 3.9; topic 03 section 5",
+      "files": [
+        "Fractal\\runtime\\experiments\\tests\\effort_bench.py"
+      ],
+      "check": "",
+      "status": "not adopted",
+      "note": "no file kept: the script prints only; the record says how the 27 was counted is not recorded."
+    },
+    {
+      "claim": "Self-written Rust lessons: 69 -> 69 of 78 (fixed 2, broke 2)",
+      "source": "Fractal academia 3.22; topic 03 section 2",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_results\\r0.jsonl",
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_results\\r0L.jsonl",
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_results\\r1L.jsonl",
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_lessons.log",
+        "Fractal\\runtime\\experiments\\2026-11-08\\rust_lessons.md"
+      ],
+      "check": "pair r0.jsonl (the same 78 names) with r0L.jsonl by name: 69 and 69, fixed 2, broke 2; with the compiler r1 71 -> r1L 70",
+      "status": "not adopted"
+    },
+    {
+      "claim": "Drafting 2 ahead on a full card: 50.6 -> 36.2 tok/s for prose at 36K; accepted 83-96 %",
+      "source": "Fractal academia 3.11; topic 01 section 5",
+      "files": [
+        "Fractal\\runtime\\experiments\\2026-11-07\\mtp\\results.json"
+      ],
+      "check": "mtp\\results.json prose: \"q4-36K ngram (now)\" 50.6, \"q4-36K mtp2\" 36.2; mtp2 accept fields 0.83-0.96",
+      "status": "not adopted"
+    }
+  ],
+  "method": [
+    {
+      "claim": "Seven steps from idea to recorded numbers",
+      "source": "Topic 02 (core rule and section 2); Fractal academia 2.3 (how a decision is made)",
+      "files": [
+        "E:\\AI academia\\02 Measuring AI systems.md",
+        "Fractal\\docs\\ACADEMIA.md"
+      ],
+      "check": "",
+      "status": "adopted",
+      "note": "A process description; no number to prove."
+    },
+    {
+      "claim": "Four status words: measured, adopted, claim, lead",
+      "source": "E:\\AI academia\\00 How every record is written.md",
+      "files": [
+        "E:\\AI academia\\00 How every record is written.md"
+      ],
+      "check": "",
+      "status": "adopted",
+      "note": "A convention; no number to prove."
+    }
+  ],
+  "leads": [
+    {
+      "claim": "Leads count (now 63)",
+      "source": "E:\\AI academia\\10 Leads and open questions.md via view\\build.py",
+      "files": [
+        "E:\\AI academia\\10 Leads and open questions.md",
+        "E:\\AI academia\\view\\build.py"
+      ],
+      "check": "count the lead table rows (63)",
+      "status": "measured"
+    }
+  ],
+  "library": [
+    {
+      "claim": "RTX 5070 Ti 16 GB, Ryzen 5 7600, 31 GB RAM",
+      "source": "Hardware recorded with every benchmark run",
+      "files": [
+        "Fractal\\results\\index.jsonl"
+      ],
+      "check": "index.jsonl hardware: \"NVIDIA GeForce RTX 5070 Ti, 16303 MiB\", \"AMD Ryzen 5 7600\", ram_gb 31.2",
+      "status": "measured"
+    },
+    {
+      "claim": "Qwen3.8-27B UD-IQ4_XS, 14.25 GB (13.3 GiB)",
+      "source": "Fractal academia 1.2; runtime\\models.ini",
+      "files": [
+        "Fractal\\models\\Qwen3.8-27B-UD-IQ4_XS.gguf",
+        "Fractal\\runtime\\models.ini"
+      ],
+      "check": "file size 14,252,845,984 bytes (13.27 GiB)",
+      "status": "measured",
+      "fixed": "Corrected 24 Nov: was ~13.3 GB"
+    },
+    {
+      "claim": "Phone numbers from a 1.7B model on the phone CPU",
+      "source": "Fractal academia 3.24; Ruby academia 3.12",
+      "files": [
+        "Ruby\\data\\phone_model.json"
+      ],
+      "check": "phone_model.json names the served 1.7B file",
+      "status": "measured"
+    }
+  ]
+}

@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI academia</title>
+<!-- Built by view/build.py from the topic files. Edit view/template.html and the .md files, not this page. -->
+<style>
+:root {
+  --bg: #06070e; --surface: #0b0d1a; --ink: #eef0ff; --ink2: #b9bddb; --mute: #8b90b5;
+  --line: rgba(170,180,255,.14); --line2: rgba(170,180,255,.26); --glass: rgba(14,16,32,.62);
+  --s1: #3987e5; --s2: #199e70; --s3: #c98500;            /* chart series, validated on --surface */
+  --good: #0ca30c; --warn: #fab219; --serious: #ec835a;   /* status, always with an icon and a word */
+  --g1: #6ea8ff; --g2: #9b8cff; --g3: #ff7ac0; --g4: #5ee6d0;  /* page gradient, decoration only */
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-snap-type: y proximity; color-scheme: dark; scrollbar-color: #2b3160 transparent; scrollbar-width: thin; }
+body { margin: 0; background: var(--bg); color: var(--ink); overflow-x: hidden; -webkit-font-smoothing: antialiased;
+  font: 16px/1.6 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; }
+#sky { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; filter: blur(60px) saturate(1.15); opacity: .55; }
+.grain { position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(1200px 700px at 50% -10%, transparent, rgba(6,7,14,.72) 75%); }
+.bar-top { position: fixed; left: 0; top: 0; height: 2px; width: 0; z-index: 30; background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3)); }
+.rail { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 20; display: grid; gap: 10px; }
+.rail a { position: relative; width: 9px; height: 9px; border-radius: 50%; border: 1px solid var(--line2); display: block; transition: .25s; }
+.rail a.on { background: linear-gradient(135deg, var(--g1), var(--g3)); border-color: transparent; transform: scale(1.35); }
+.rail a span { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-size: 12px; color: var(--ink2);
+  background: var(--glass); border: 1px solid var(--line); padding: 2px 9px; border-radius: 99px; opacity: 0; pointer-events: none; transition: .2s; backdrop-filter: blur(10px); }
+.rail a:hover span, .rail a:focus-visible span { opacity: 1; }
+.wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+@media (min-width: 861px) and (max-width: 1260px) { .wrap { padding-right: 56px; } }
+section.slide { min-height: 100vh; display: grid; align-content: center; padding: 84px 0 64px; scroll-snap-align: start; }
+.kicker { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--g4); display: flex; align-items: center; gap: 10px; }
+.kicker::before { content: ""; width: 26px; height: 1px; background: currentColor; }
+h1, h2, h3 { font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif; }
+h1 { font-size: clamp(46px, 8.4vw, 96px); letter-spacing: -.045em; line-height: .98; margin: 14px 0 14px; font-weight: 700;
+  background: linear-gradient(115deg, #fff 8%, var(--g1) 38%, var(--g2) 62%, var(--g3) 92%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h2 { font-size: clamp(28px, 4.2vw, 46px); letter-spacing: -.035em; line-height: 1.08; margin: 10px 0 10px; font-weight: 650; text-wrap: balance; }
+h2 em { font-style: normal; background: linear-gradient(100deg, var(--g1), var(--g3)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lede { color: var(--ink2); font-size: clamp(16px, 1.6vw, 18.5px); max-width: 720px; margin: 0 0 26px; }
+.rv { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 70ms); }
+.in .rv { opacity: 1; transform: none; }
+.card { position: relative; border-radius: 20px; background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(16px); padding: 20px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 24px 50px -30px rgba(0,0,0,.9); }
+.cols { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.cols.even { grid-template-columns: 1fr 1fr; }
+.ft { font-weight: 650; font-size: 15.5px; letter-spacing: -.01em; }
+.fs { color: var(--mute); font-size: 13px; margin: 2px 0 14px; }
+.note { color: var(--mute); font-size: 13px; margin-top: 12px; }
+.note b, .lede b { color: var(--ink); font-weight: 600; }
+button, input, a { font: inherit; }
+a { color: var(--g1); }
+:focus-visible { outline: 2px solid var(--g1); outline-offset: 3px; border-radius: 6px; }
+
+/* hero */
+.hero { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: center; gap: 30px; }
+.orbit { position: relative; aspect-ratio: 1; max-width: 420px; width: 100%; margin: 0 auto; perspective: 900px; }
+.orb { position: absolute; inset: 17%; border-radius: 50%; transform: translate3d(var(--px, 0), var(--py, 0), 0);
+  background: radial-gradient(circle at 32% 26%, rgba(255,255,255,.95), rgba(255,255,255,0) 26%),
+    radial-gradient(circle at 70% 78%, rgba(255,122,192,.95), rgba(255,122,192,0) 58%),
+    radial-gradient(circle at 24% 72%, rgba(94,230,208,.8), rgba(94,230,208,0) 55%),
+    radial-gradient(circle at 50% 40%, #7fb2ff, #6f63f2 62%, #2b1f7a);
+  box-shadow: inset -22px -30px 60px rgba(10,6,50,.75), inset 14px 16px 40px rgba(255,255,255,.18), 0 40px 90px -20px rgba(120,110,255,.6);
+  animation: breathe 9s ease-in-out infinite; }
+@keyframes breathe { 50% { filter: hue-rotate(28deg) brightness(1.06); transform: translate3d(var(--px, 0), calc(var(--py, 0px) - 8px), 0) scale(1.02); } }
+.ring { position: absolute; inset: 4%; border-radius: 50%; border: 1px solid var(--line2); transform: rotateX(72deg) rotateZ(0deg); animation: spin 26s linear infinite; }
+.ring.b { inset: 0; transform: rotateX(64deg) rotateY(26deg); animation-duration: 38s; animation-direction: reverse; border-color: rgba(255,122,192,.3); }
+.ring i { position: absolute; top: -4px; left: 50%; width: 8px; height: 8px; border-radius: 50%; background: var(--g4); box-shadow: 0 0 14px var(--g4); }
+.ring.b i { background: var(--g3); box-shadow: 0 0 14px var(--g3); }
+@keyframes spin { to { rotate: 360deg; } }
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 8px; max-width: 640px; }
+.tile { padding: 14px 16px; border-radius: 16px; background: var(--glass); border: 1px solid var(--line); backdrop-filter: blur(12px); }
+.tile b { display: block; font: 650 30px/1.1 "Segoe UI Variable Display", "Segoe UI", sans-serif; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.tile span { font-size: 12.5px; color: var(--mute); }
+.hint { margin-top: 26px; color: var(--mute); font-size: 13px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+kbd { border: 1px solid var(--line2); border-bottom-width: 2px; border-radius: 6px; padding: 0 6px; font: 12px "Cascadia Mono", Consolas, monospace; color: var(--ink2); }
+
+/* topic cards */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+.topic { text-align: left; color: inherit; cursor: pointer; transform-style: preserve-3d; transition: transform .25s cubic-bezier(.2,.8,.2,1), border-color .25s; overflow: hidden; }
+.topic::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .25s;
+  background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 0%), rgba(123,150,255,.2), transparent 70%); }
+.topic:hover { border-color: var(--line2); transform: perspective(700px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateY(-3px); }
+.topic:hover::before { opacity: 1; }
+.topic .top { display: flex; align-items: center; justify-content: space-between; }
+.topic .num { font: 600 12px "Cascadia Mono", Consolas, monospace; color: var(--mute); letter-spacing: .08em; }
+.ic { width: 34px; height: 34px; border-radius: 11px; display: grid; place-items: center; border: 1px solid var(--line2);
+  background: linear-gradient(140deg, rgba(110,168,255,.22), rgba(255,122,192,.12)); }
+.ic svg, .badge svg { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.topic h3 { margin: 14px 0 4px; font-size: 18px; letter-spacing: -.02em; font-weight: 650; }
+.topic p { margin: 0 0 14px; color: var(--ink2); font-size: 14px; }
+.topic .k { font: 650 22px/1.15 "Segoe UI Variable Display", "Segoe UI", sans-serif; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.topic .kd { font-size: 12.5px; color: var(--mute); margin: 2px 0 12px; }
+.badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase;
+  padding: 3px 9px 3px 7px; border-radius: 99px; border: 1px solid var(--line2); color: var(--ink2); }
+.badge i { width: 7px; height: 7px; border-radius: 50%; background: var(--mute); }
+.badge.adopted i { background: var(--good); } .badge.claim i { background: var(--warn); } .badge.notadopted i { background: var(--serious); }
+.badge.measured i { background: var(--s1); }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 16px; }
+.chip { cursor: pointer; padding: 6px 13px; border-radius: 99px; border: 1px solid var(--line); background: transparent; color: var(--ink2); font-size: 13.5px; font-weight: 600; transition: .2s; }
+.chip:hover { border-color: var(--line2); color: var(--ink); }
+.chip[aria-pressed="true"] { color: #fff; border-color: transparent; background: linear-gradient(120deg, rgba(110,168,255,.42), rgba(155,140,255,.42)); }
+
+/* charts */
+.bars { display: grid; gap: 11px; }
+.brow { display: grid; grid-template-columns: minmax(96px, 34%) 1fr 78px; gap: 12px; align-items: center; font-size: 13.5px; cursor: default; }
+.brow .l { color: var(--ink2); line-height: 1.25; } .brow .l small { display: block; color: var(--mute); font-size: 11.5px; }
+.brow .tr { position: relative; height: 14px; border-left: 1px solid var(--line2); }
+.brow .b { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 0 4px 4px 0; transition: width 1.1s cubic-bezier(.2,.8,.2,1);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--c) 100%, #fff 0%) 0%, var(--c) 45%, color-mix(in srgb, var(--c) 78%, #000) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.28); }
+.brow .v { text-align: right; font-variant-numeric: tabular-nums; font-weight: 650; }
+.brow:hover .b { filter: brightness(1.18); }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink2); margin-top: 14px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.legend i.o { border-radius: 50%; }
+.db { display: grid; gap: 16px; }
+.drow { display: grid; grid-template-columns: minmax(110px, 34%) 1fr 74px; gap: 12px; align-items: center; font-size: 13.5px; }
+.drow .tr { position: relative; height: 18px; }
+.drow .tr::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--line); }
+.drow .seg { position: absolute; top: 50%; height: 2px; margin-top: -1px; background: var(--s1); transform-origin: left; transform: scaleX(0); transition: transform 1s .25s cubic-bezier(.2,.8,.2,1); }
+.drow .dot { position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; box-shadow: 0 0 0 2px var(--surface); }
+.drow .dot.a { background: var(--surface); border: 2px solid var(--mute); } .drow .dot.z { background: var(--s1); opacity: 0; transition: opacity .4s 1s; }
+.in .drow .seg { transform: none; } .in .drow .dot.z { opacity: 1; }
+.drow .v { text-align: right; font-weight: 650; font-variant-numeric: tabular-nums; }
+.axis { display: flex; justify-content: space-between; color: var(--mute); font-size: 11.5px; margin: 6px 86px 0 calc(34% + 12px); font-variant-numeric: tabular-nums; }
+svg.plot { width: 100%; height: auto; display: block; overflow: visible; }
+svg.plot text { fill: var(--mute); font: 11.5px "Segoe UI", system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+svg.plot .gl { stroke: var(--line); stroke-width: 1; } svg.plot .ln { fill: none; stroke-width: 2; stroke-linecap: round; }
+svg.plot text.dl { fill: var(--ink2); font-weight: 600; }
+.ctl { display: flex; align-items: center; gap: 12px; margin: 14px 0 4px; font-size: 13.5px; color: var(--ink2); flex-wrap: wrap; }
+input[type=range] { -webkit-appearance: none; appearance: none; flex: 1; min-width: 140px; height: 3px; border-radius: 3px; background: linear-gradient(90deg, var(--g1), var(--g3)); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 0; box-shadow: 0 2px 10px rgba(110,168,255,.7); cursor: pointer; }
+.ctl output { min-width: 74px; text-align: right; font-weight: 650; color: var(--ink); font-variant-numeric: tabular-nums; }
+.read { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+.read div { border: 1px solid var(--line); border-radius: 12px; padding: 9px 12px; }
+.read b { display: block; font: 650 20px "Segoe UI Variable Display", "Segoe UI", sans-serif; font-variant-numeric: tabular-nums; }
+.read span { font-size: 12px; color: var(--mute); }
+.read i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; }
+.formula { font: 14px "Cascadia Mono", Consolas, monospace; color: var(--ink); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin: 0 0 16px; background: rgba(8,9,20,.5); }
+#tip { position: fixed; z-index: 50; pointer-events: none; opacity: 0; transition: opacity .12s; max-width: 280px; font-size: 13px; line-height: 1.4;
+  background: rgba(12,14,30,.94); border: 1px solid var(--line2); border-radius: 12px; padding: 9px 12px; box-shadow: 0 16px 40px -12px #000; }
+#tip b { display: block; } #tip span { color: var(--ink2); }
+
+/* before -> after */
+.ba { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; }
+.ba .card { padding: 18px; }
+.ba .n { display: flex; align-items: baseline; gap: 10px; font: 650 30px/1.1 "Segoe UI Variable Display", "Segoe UI", sans-serif; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.ba .n s { text-decoration: none; color: var(--mute); font-size: 20px; }
+.ba .n svg { width: 22px; height: 12px; stroke: var(--g4); fill: none; stroke-width: 1.5; flex: none; }
+.ba .u { color: var(--mute); font-size: 12.5px; margin: 2px 0 10px; }
+.ba p { margin: 0; color: var(--ink2); font-size: 14px; }
+#memBa { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1040px) { #memBa { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { #memBa { grid-template-columns: 1fr; } }
+.split { display: flex; height: 16px; border-radius: 4px; overflow: hidden; gap: 2px; margin: 8px 0 10px; }
+.split i { display: block; height: 100%; transition: flex-grow 1.2s cubic-bezier(.2,.8,.2,1); flex: 0 0 auto; flex-grow: 0; }
+
+/* pipeline */
+.pipe { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; margin: 6px 0 22px; }
+.step { position: relative; padding: 14px 12px; border-radius: 16px; border: 1px solid var(--line); background: var(--glass); font-size: 13.5px; color: var(--ink2); min-height: 104px; transition: .4s; }
+.step b { display: block; font: 600 11px "Cascadia Mono", Consolas, monospace; color: var(--mute); margin-bottom: 6px; letter-spacing: .08em; }
+.step.on { border-color: transparent; color: #fff; background: linear-gradient(150deg, rgba(110,168,255,.38), rgba(155,140,255,.3) 55%, rgba(255,122,192,.3)); transform: translateY(-4px); box-shadow: 0 18px 40px -18px rgba(120,110,255,.8); }
+.words { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
+.words div { font-size: 14px; color: var(--ink2); } .words .badge { margin-bottom: 6px; }
+
+/* leads + library */
+.search { width: 100%; padding: 11px 14px; border-radius: 14px; border: 1px solid var(--line2); background: rgba(8,9,20,.6); color: var(--ink); margin-bottom: 12px; }
+.search::placeholder { color: var(--mute); }
+.leads { display: grid; gap: 8px; max-height: 52vh; overflow: auto; padding-right: 6px; }
+.lrow { border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; display: grid; grid-template-columns: 1.1fr 1fr 1.2fr; gap: 14px; font-size: 13.5px; background: rgba(12,14,30,.5); }
+.lrow b { color: var(--ink); font-weight: 600; } .lrow span { color: var(--ink2); } .lrow small { display: block; color: var(--mute); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 2px; }
+.lib { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.file { display: flex; gap: 12px; align-items: center; text-align: left; cursor: pointer; color: inherit; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); background: rgba(12,14,30,.5); transition: .2s; }
+.file:hover { border-color: var(--line2); transform: translateY(-2px); }
+.file b { display: block; font-weight: 600; font-size: 14px; line-height: 1.3; } .file span { color: var(--mute); font-size: 12px; }
+code { font: .9em "Cascadia Mono", Consolas, monospace; background: rgba(255,255,255,.07); padding: 1px 6px; border-radius: 6px; }
+
+/* reader */
+#reader { position: fixed; inset: 0; z-index: 60; display: none; }
+#reader.open { display: block; }
+#reader .shade { position: absolute; inset: 0; background: rgba(3,4,10,.66); backdrop-filter: blur(6px); }
+#reader .pane { position: absolute; top: 0; right: 0; bottom: 0; width: min(860px, 100%); background: #0a0c18; border-left: 1px solid var(--line2); display: grid; grid-template-rows: auto 1fr;
+  box-shadow: -40px 0 80px -30px #000; animation: slide .35s cubic-bezier(.2,.8,.2,1); }
+@keyframes slide { from { transform: translateX(40px); opacity: 0; } }
+#reader header { display: flex; gap: 12px; align-items: center; padding: 14px 20px; border-bottom: 1px solid var(--line); }
+#reader header b { flex: 1; font-size: 14px; color: var(--ink2); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.howbtn { margin-top: 18px; display: inline-flex; gap: 8px; align-items: center; cursor: pointer; border: 1px solid var(--line2); background: rgba(57,135,229,.08); color: var(--ink2); border-radius: 99px; padding: 7px 14px; font-size: 13px; font-weight: 600; }
+.howbtn:hover { border-color: var(--s1); color: var(--ink); }
+.howbtn svg { stroke: currentColor; fill: none; stroke-width: 1.6; }
+.pitem { border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin: 0 0 12px; background: rgba(255,255,255,.015); }
+.pitem .pc { font-weight: 650; color: var(--ink); font-size: 15px; display: flex; gap: 10px; align-items: baseline; justify-content: space-between; flex-wrap: wrap; }
+.pitem .ps { color: var(--ink2); font-size: 13.5px; margin-top: 6px; }
+.pitem .pf2 { display: grid; gap: 5px; margin-top: 8px; }
+.pitem .pn { margin-top: 8px; font-size: 13px; color: #ffcf7a; }
+.pitem .pk { margin-top: 8px; font-size: 13px; color: var(--ink2); }
+#doc code.pf { padding-right: 18px; position: relative; }
+#doc code.pf::after { position: absolute; right: 5px; top: 50%; width: 7px; height: 7px; margin-top: -4px; border-radius: 50%; content: ""; }
+#doc code.ok::after { background: #4fe3a1; box-shadow: 0 0 6px #4fe3a1; }
+#doc code.miss { border-color: rgba(255,107,122,.55); }
+#doc code.miss::after { border: 1.5px solid #ff6b7a; width: 5px; height: 5px; }
+.pfoot { margin-top: 26px; padding-top: 12px; border-top: 1px solid var(--line); color: var(--mute); font-size: 12.5px; display: flex; gap: 16px; flex-wrap: wrap; }
+.pfoot b { color: #4fe3a1; font-weight: 600; } .pfoot i { color: #ff6b7a; font-style: normal; }
+.review { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.review ol { margin: 8px 0 0; padding-left: 20px; color: var(--ink2); font-size: 14px; display: grid; gap: 6px; }
+.cov { display: grid; gap: 8px; margin-top: 8px; }
+#caveats { max-height: 52vh; overflow-y: auto; padding-right: 4px; }
+.cov button { display: grid; grid-template-columns: 1fr auto; gap: 8px; text-align: left; cursor: pointer; border: 1px solid var(--line); background: transparent; color: var(--ink2); border-radius: 10px; padding: 8px 12px; font-size: 13.5px; }
+.cov button:hover { border-color: var(--line2); color: var(--ink); }
+.cov small { color: var(--mute); }
+.btn { cursor: pointer; border: 1px solid var(--line2); background: transparent; color: var(--ink2); border-radius: 10px; padding: 5px 12px; font-size: 13px; text-decoration: none; }
+.btn:hover { color: #fff; border-color: var(--g1); }
+#doc { overflow: auto; padding: 8px 34px 60px; }
+#doc h1 { font-size: 34px; margin: 22px 0 12px; } #doc h2 { font-size: 23px; margin: 30px 0 8px; } #doc h3 { font-size: 17px; margin: 22px 0 6px; }
+#doc p, #doc li { color: var(--ink2); font-size: 15px; } #doc strong { color: var(--ink); font-weight: 600; }
+#doc ul, #doc ol { padding-left: 22px; } #doc li { margin: 4px 0; }
+#doc pre { background: rgba(255,255,255,.05); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; overflow-x: auto; font: 13px/1.5 "Cascadia Mono", Consolas, monospace; color: var(--ink); }
+#doc pre code { background: none; padding: 0; }
+#doc .tw { overflow-x: auto; margin: 12px 0; border: 1px solid var(--line); border-radius: 12px; }
+#doc table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+#doc th, #doc td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); color: var(--ink2); vertical-align: top; }
+#doc th { color: var(--ink); font-weight: 600; background: rgba(255,255,255,.04); } #doc tr:last-child td { border-bottom: 0; }
+#doc hr { border: 0; border-top: 1px solid var(--line); margin: 22px 0; }
+
+@media (max-width: 860px) {
+  .cols, .cols.even, .hero { grid-template-columns: 1fr; } .rail { display: none; } .wrap { padding: 0 18px; }
+  .orbit { max-width: 250px; order: -1; } .tiles { grid-template-columns: repeat(2, 1fr); } .pipe { grid-template-columns: repeat(2, 1fr); }
+  .lrow { grid-template-columns: 1fr; gap: 8px; } section.slide { padding: 64px 0 44px; min-height: auto; } html { scroll-snap-type: none; }
+  .brow, .drow { grid-template-columns: minmax(84px, 36%) 1fr 62px; gap: 8px; } .axis { margin: 6px 70px 0 calc(36% + 8px); } #doc { padding: 4px 18px 50px; }
+  .step { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .rv { opacity: 1; transform: none; } html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas><div class="grain"></div><div class="bar-top" id="prog"></div>
+<nav class="rail" id="rail" aria-label="Slides"></nav>
+<div id="tip" role="tooltip"></div>
+
+<div class="wrap">
+
+<section class="slide hero" id="top" data-name="Start">
+  <div>
+    <div class="kicker rv">Findings across Fractal, Ruby, Volta and GrindPilot</div>
+    <h1 class="rv" style="--i:1">AI academia</h1>
+    <p class="lede rv" style="--i:2">What the projects have learned about AI that holds beyond any one of them: how models behave, what speeds them up, what makes an agent reliable, how to measure it, and which ideas failed.</p>
+    <div class="tiles rv" style="--i:3" id="tiles"></div>
+    <div class="hint rv" style="--i:4"><span><kbd>↓</kbd> <kbd>↑</kbd> move between slides</span><span>Click any card to read the full notes</span><span id="built"></span></div>
+  </div>
+  <div class="orbit rv" style="--i:2" id="orbit" aria-hidden="true"><div class="ring"><i></i></div><div class="ring b"><i></i></div><div class="orb"></div></div>
+</section>
+
+<section class="slide" id="topics" data-name="Topics">
+  <div class="kicker rv">The map</div>
+  <h2 class="rv" style="--i:1">The topics, each with <em>one number worth remembering</em></h2>
+  <p class="lede rv" style="--i:2">Every entry carries a status word, so a measurement is never mistaken for a claim. Filter by status, or open a topic to read it in full.</p>
+  <div class="chips rv" style="--i:3" id="statusChips"></div>
+  <div class="grid rv" style="--i:4" id="topicGrid"></div>
+</section>
+
+<section class="slide" id="speed" data-name="Speed">
+  <div class="kicker rv">01 · Local inference</div>
+  <h2 class="rv" style="--i:1">Speed is <em>bytes per token</em></h2>
+  <p class="lede rv" style="--i:2">To write one token, a model reads all of its weights once. So the top speed is the memory bandwidth where the weights live, divided by their size. Drag the size to see why anything that spills out of VRAM crawls.</p>
+  <div class="cols">
+    <div class="card rv" style="--i:3">
+      <div class="formula">top speed (tok/s) ≈ memory bandwidth ÷ size of the weights</div>
+      <div class="ft">Top writing speed by where the weights are read from</div>
+      <div class="fs">Tokens per second, log scale. Bandwidths: VRAM 896 GB/s (spec), RAM ~75 GB/s, NVMe 1.2 GB/s (measured).</div>
+      <div class="bars" id="speedBars"></div>
+      <div class="ctl"><label for="size">Model size</label><input type="range" id="size" min="2" max="60" step="0.1" value="14.3"><output id="sizeOut"></output></div>
+      <div class="note" id="speedNote"></div>
+    </div>
+    <div class="rv" style="--i:4">
+      <div class="card">
+        <div class="ft">A 4-bit KV cache: 1.8× the context for free</div>
+        <div class="fs">Qwen3.8-27B on a 16 GB card. Same writing speed (50.8 tok/s), same memory, 12 of 12 hidden facts recalled at 30K tokens.</div>
+        <div class="bars" id="kvBars"></div>
+        <div class="note"><span class="badge adopted"><i></i>Adopted</span></div>
+      </div>
+      <p class="note">One formula explains four things: why 4-bit weights are fast, why speculative decoding helps, why batching raises throughput, and why "70B on a 4 GB card" tools take seconds per token.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="spec" data-name="Drafting">
+  <div class="kicker rv">01 · Speculative decoding</div>
+  <h2 class="rv" style="--i:1">Guess a few tokens ahead, <em>check them in one pass</em></h2>
+  <p class="lede rv" style="--i:2">The output is identical to what the big model would write; only the speed changes. Theory says deeper drafting always wins. On a full card it didn't.</p>
+  <div class="cols even">
+    <div class="card rv" style="--i:3">
+      <div class="ft">Theory: tokens per pass as guesses get better</div>
+      <div class="fs">E = (1 − α^(k+1)) ÷ (1 − α), where α is how often a guess is accepted and k is how far ahead it guesses.</div>
+      <svg class="plot" id="specPlot" viewBox="0 0 520 250" role="img" aria-label="Tokens per pass against acceptance rate for 1, 2 and 3 tokens ahead"></svg>
+      <div class="ctl"><label for="alpha">Acceptance α</label><input type="range" id="alpha" min="0.5" max="0.99" step="0.01" value="0.97"><output id="alphaOut"></output></div>
+      <div class="read" id="specRead"></div>
+      <div class="note">Measured acceptance for the adopted setting: reasoning 0.97, prose 0.87, code 0.85.</div>
+    </div>
+    <div class="card rv" style="--i:4">
+      <div class="ft">Measured: writing speed by drafting setup</div>
+      <div class="fs">Tokens per second through the real server, Qwen3.8-27B, 4-bit KV cache.</div>
+      <div class="chips" id="specChips"></div>
+      <div class="bars" id="specBars"></div>
+      <div class="legend"><span><i style="background:var(--s1)"></i>Tested</span><span><i style="background:var(--s2)"></i>Adopted</span></div>
+      <div class="note"><b>Finding:</b> 2-ahead was accepted 83–96 % of the time, yet ran slower at 36K context than no drafting did for prose. With ~0.6 GB of VRAM spare, each pass cost more. On a full card, prefer 1-ahead.</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="check" data-name="Checking">
+  <div class="kicker rv">03 · Agents and harnesses</div>
+  <h2 class="rv" style="--i:1">Check against evidence; <em>don't just think longer</em></h2>
+  <p class="lede rv" style="--i:2">Run the answer on the problem's own examples, feed back the failures, repair, keep the best. The pipeline without thinking beat plain thinking, in much less time.</p>
+  <div class="cols">
+    <div class="card rv" style="--i:3">
+      <div class="ft">Problems solved, before and after adding a checker</div>
+      <div class="fs">Percent solved on the same problems (paired). Qwen3.8-27B.</div>
+      <div class="db" id="checkDb"></div>
+      <div class="axis"><span>0</span><span>25</span><span>50</span><span>75</span><span>100 %</span></div>
+      <div class="legend"><span><i class="o" style="border:2px solid var(--mute)"></i>Before</span><span><i class="o" style="background:var(--s1)"></i>With the checker</span></div>
+    </div>
+    <div class="rv" style="--i:4">
+      <div class="ba" style="grid-template-columns:1fr">
+        <div class="card"><div class="ft">A checker helps where the mistakes are</div><p style="margin-top:8px">The Rust compiler fixed all 10 compile failures and broke nothing. Type-checking Python found nothing, because a strong model's wrong Python is logic, not types.</p></div>
+        <div class="card"><div class="ft">"If it compiles, it works" is false</div><p style="margin-top:8px">The 15 Rust answers still failing all compiled and gave wrong answers. Tests remain the real proof.</p></div>
+        <div class="card"><div class="ft">Reusable, checked scripts beat more agents</div><p style="margin-top:8px">A toolbox of saved, self-checked scripts did the same job with <b>1 tool call instead of 4–5</b>, about twice as fast. A first result, not a benchmark.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="phone" data-name="Distilling">
+  <div class="kicker rv">06 · Self-improvement and training</div>
+  <h2 class="rv" style="--i:1">Teaching a 1.7B phone brain <em>from a bigger teacher</em></h2>
+  <p class="lede rv" style="--i:2">Ruby's on-phone model, scored on a fixed exam. A longer prompt made it act when it shouldn't. Distillation fixed both, with a third of the prompt. These rounds end at v4b; v5 has been her brain since 20 Nov.</p>
+  <div class="cols">
+    <div class="card rv" style="--i:3">
+      <div class="ft" id="phoneTitle"></div>
+      <div class="fs" id="phoneSub"></div>
+      <div class="chips" id="phoneChips"></div>
+      <div class="bars" id="phoneBars"></div>
+    </div>
+    <div class="rv" style="--i:4">
+      <div class="ba" style="grid-template-columns:1fr">
+        <div class="card"><div class="ft">Aim the new data at the misses</div><p style="margin-top:8px">288 extra examples aimed at v1's mistakes lifted actions from 70 to 92 % and facts from 40 to 87 %.</p></div>
+        <div class="card"><div class="ft">Re-run the old exam after adding a skill</div><p style="margin-top:8px">A version that learned 6 new actions started setting alarms for "What time does Fractal go to sleep?". Only the old exam showed it.</p></div>
+        <div class="card"><div class="ft">Measure the product's path</div><p style="margin-top:8px">The stock model added a random action to 94 % of ordinary replies. A strict test parser had hidden it; the app's own parser exposed it.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="memory" data-name="Context">
+  <div class="kicker rv">04 · 05 · Context and memory</div>
+  <h2 class="rv" style="--i:1">Staying on track when the work <em>outgrows the window</em></h2>
+  <p class="lede rv" style="--i:2">From one real project chat that ran for days and needed 451 checkpoints. Most of the gain came from looking at what actually filled the context.</p>
+  <div class="ba rv" style="--i:3" id="memBa"></div>
+  <div class="cols even" style="margin-top:14px">
+    <div class="card rv" style="--i:4">
+      <div class="ft">Plain notes beat "AI shorthand"</div>
+      <div class="fs">Facts recalled out of 12 from a handoff note. Neither style invented anything.</div>
+      <div class="bars" id="noteBars"></div>
+    </div>
+    <div class="card rv" style="--i:5">
+      <div class="ft">Self-practice needs independent agreement</div>
+      <div class="fs">385 overnight problems. A solution was kept only when independent solves agreed.</div>
+      <div class="bars" id="practiceBars"></div>
+      <div class="note">The problem setter's own worked answers were wrong about half the time.</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="voice" data-name="Voice">
+  <div class="kicker rv">07 · Voice</div>
+  <h2 class="rv" style="--i:1">The voice is <em>the slow part</em></h2>
+  <p class="lede rv" style="--i:2">A spoken reply took about 27 seconds to first sound, and about three quarters of that (77 %) was text-to-speech. Streaming every stage at once is what gets a reply under a second.</p>
+  <div class="cols">
+    <div class="card rv" style="--i:3">
+      <div class="ft">Where 27 seconds to first sound went</div>
+      <div class="fs">Measured, without streaming.</div>
+      <div class="split" id="voiceSplit"></div>
+      <div class="legend"><span><i style="background:var(--s1)"></i>Text to speech, ~21 s</span><span><i style="background:var(--s3)"></i>Everything else, ~6 s</span></div>
+      <div class="ft" style="margin-top:26px">Training Ruby's own phone voice</div>
+      <div class="fs">Data made, training not started: the route is left open (Ruby academia 3.6) and the d1 voice moved to Fractal. Lines of speech from a designed teacher voice, no cloning.</div>
+      <div class="bars" id="voiceData"></div>
+    </div>
+    <div class="card rv" style="--i:4">
+      <div class="ft">Time to first audio, as each maker claims it</div>
+      <div class="fs">Milliseconds, log scale. Different hardware and definitions, so not comparable until measured here.</div>
+      <div class="bars" id="ttsBars"></div>
+      <div class="note"><span class="badge claim"><i></i>Claim</span> &nbsp;These are the makers' own figures. Measured here later, a whole line: Pocket TTS 0.41–0.74 s on the CPU (Fractal academia 3.76), Chatterbox Turbo 15–17 s through the one-shot path (3.64).</div>
+    </div>
+  </div>
+</section>
+
+<section class="slide" id="failed" data-name="Didn't work">
+  <div class="kicker rv">Negative results stay</div>
+  <h2 class="rv" style="--i:1">What we measured and <em>didn't keep</em></h2>
+  <p class="lede rv" style="--i:2">A measured "no gain" saves the next person the work. Each of these looked promising before the numbers came in.</p>
+  <div class="ba rv" style="--i:3" id="failBa"></div>
+</section>
+
+<section class="slide" id="method" data-name="Method">
+  <div class="kicker rv">02 · Measuring AI systems</div>
+  <h2 class="rv" style="--i:1">No change is kept until <em>a measurement shows it helps</em></h2>
+  <p class="lede rv" style="--i:2">And nothing else gets worse. This is the path every idea takes, and the four words used to say how far along it is.</p>
+  <div class="pipe rv" style="--i:3" id="pipe"></div>
+  <div class="card rv" style="--i:4"><div class="words" id="words"></div></div>
+</section>
+
+<section class="slide" id="leads" data-name="Leads">
+  <div class="kicker rv">10 · Leads and open questions</div>
+  <h2 class="rv" style="--i:1">Ideas waiting for <em>a measurement</em></h2>
+  <p class="lede rv" style="--i:2">Nothing here is adopted yet. Each lead says why it might help and what to measure first.</p>
+  <input class="search rv" style="--i:3" id="leadSearch" type="search" placeholder="Search the leads, for example: voice, memory, compiler" aria-label="Search the leads">
+  <div class="leads rv" style="--i:4" id="leadList"></div>
+  <div class="note rv" style="--i:5" id="leadCount"></div>
+</section>
+
+<section class="slide" id="review" data-name="Review it">
+  <div class="kicker rv">For reviewers</div>
+  <h2 class="rv" style="--i:1">Don't take our word for it: <em>check the proof</em></h2>
+  <p class="lede rv" style="--i:2">Every number on these slides has a source you can open, and every section of every file ends with how it was done and the files that prove it. Paths were checked on disk when this page was built.</p>
+  <div class="review rv" style="--i:3">
+    <div class="card"><div class="ft">How to review a finding</div>
+      <ol><li>On any slide, press <b>How we know this</b>: each number, its record and section, its result files, and a command to re-check it.</li>
+      <li>Open the file's section in the library: it ends with <b>How we did it</b>, <b>Proof</b> or <b>How we know</b>, and <b>The idea behind it</b>.</li>
+      <li>Run the "check it yourself" command. Most re-grade saved answers in seconds, with no model and no GPU.</li>
+      <li>Look for <b>Not kept</b>: what was never saved is said, not hidden.</li></ol></div>
+    <div class="card"><div class="ft">What was checked when this page was built</div>
+      <div class="tiles" id="proofTiles" style="margin-top:10px"></div>
+      <p class="note" style="margin-top:10px">A green dot beside a path in the notes means the file was there; a red ring means it wasn't. Short paths inside a project are only marked when found.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><button class="btn" id="openStd">The standard (00)</button><button class="btn" id="openTech">The techniques (13)</button><a class="btn" href="Study%20hub.html" target="_blank" rel="noopener">Study hub: learn and break them</a></div></div>
+    <div class="card"><div class="ft">Every slide's sources</div><div class="cov" id="coverage"></div></div>
+    <div class="card"><div class="ft">Caveats and disagreements we found</div><p class="note" style="margin-top:6px">Where a slide and its source don't match, or a number has no file behind it. Listed, not smoothed over.</p><div class="cov" id="caveats"></div></div>
+  </div>
+</section>
+
+<section class="slide" id="library" data-name="Library">
+  <div class="kicker rv">Read the notes</div>
+  <h2 class="rv" style="--i:1">Everything in <em>this folder</em></h2>
+  <p class="lede rv" style="--i:2">The slides show the highlights. The files hold the full findings, their conditions and their sources.</p>
+  <div class="lib rv" style="--i:3" id="lib"></div>
+  <p class="note rv" style="--i:4">Most numbers come from one PC: RTX 5070 Ti 16 GB, Ryzen 5 7600, 31 GB RAM, llama.cpp, Qwen3.8-27B (UD-IQ4_XS, 14.25 GB, which is 13.3 GiB). Phone numbers are from a 1.7B model on the phone's CPU.</p>
+</section>
+
+</div>
+
+<div id="reader" aria-hidden="true"><div class="shade" data-close></div>
+  <div class="pane" role="dialog" aria-modal="true" aria-label="Notes"><header><b id="docName"></b><a class="btn" id="docOpen" target="_blank" rel="noopener">Open the file</a><button class="btn" data-close>Close</button></header><div id="doc"></div></div></div>
+
+<script>
+const DATA = /*DATA*/{"docs":{},"leads":[],"stats":{},"built":""}/*END*/;
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const el = (h) => { const t = document.createElement('template'); t.innerHTML = h.trim(); return t.content.firstChild; };
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- icons: thin lines, no emoji ---------- */
+const P = {
+  chip: '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
+  ruler: '<path d="M3 17 17 3l4 4L7 21z"/><path d="m7 13 2 2M10 10l2 2M13 7l2 2"/>',
+  tool: '<path d="M14 6a4 4 0 0 0 5 5l-9 9a2 2 0 0 1-3-3z"/><path d="M5 5l4 4"/>',
+  layers: '<path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/>',
+  graph: '<circle cx="6" cy="6" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="9" cy="18" r="2"/><path d="m8 6 8 2M7 8l2 8M11 17l6-7"/>',
+  loop: '<path d="M4 12a8 8 0 0 1 14-5l2-2v6h-6l2-2"/><path d="M20 12a8 8 0 0 1-14 5"/>',
+  wave: '<path d="M3 12h2M7 7v10M11 4v16M15 8v8M19 10v4M21 12h0"/>',
+  eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+  link: '<circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="6" r="2.6"/><circle cx="18" cy="18" r="2.6"/><path d="M8.3 10.8l7.4-3.7M8.3 13.2l7.4 3.7"/>',
+  window: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h0"/>',
+  flask: '<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M8 15h8"/>',
+  doc: '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>',
+  book: '<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M9 8h6"/>',
+};
+const icon = (n, s = 18) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" aria-hidden="true">${P[n]}</svg>`;
+const STATUS = { measured: 'Measured', adopted: 'Adopted', notadopted: 'Not adopted', claim: 'Claim', lead: 'Lead' };
+const badge = s => `<span class="badge ${s}"><i></i>${STATUS[s]}</span>`;
+
+/* ---------- content (numbers from the topic files) ---------- */
+const TOPICS = [
+  { n: '01', f: '01 Local inference on consumer GPUs.md', t: 'Local inference', ic: 'chip', s: 'adopted', k: '50.7 → 75.4 tok/s', kd: 'reasoning speed with 1-ahead drafting', b: 'Why speed is bytes per token, the VRAM budget, quantisation and speculative decoding.' },
+  { n: '02', f: '02 Measuring AI systems.md', t: 'Measuring AI systems', ic: 'ruler', s: 'measured', k: 'Fixed N, broke M', kd: 'paired counts beat two separate averages', b: 'Paired tests, secret exams, hard gates, judges, and the traps we fell into.' },
+  { n: '03', f: '03 Agents, tools and harnesses.md', t: 'Agents, tools and harnesses', ic: 'tool', s: 'adopted', k: '52.5 → 77.5 %', kd: 'LiveCodeBench with check-and-repair', b: 'Tool loops, compilers as judges, toolboxes, permissions and prompt injection.' },
+  { n: '04', f: '04 Context and long tasks.md', t: 'Context and long tasks', ic: 'layers', s: 'adopted', k: '141 → 55 notes', kd: 'checkpoints needed after masking old output', b: 'Masking, checkpoint notes, fact ledgers and plans kept as files.' },
+  { n: '05', f: '05 Memory and knowledge graphs.md', t: 'Memory and knowledge graphs', ic: 'graph', s: 'adopted', k: '464 → 42 notes', kd: 'on the map after folding old checkpoints', b: 'Graph memory with personalised PageRank, folding, grounding and forgetting.' },
+  { n: '06', f: '06 Self-improvement and training.md', t: 'Self-improvement and training', ic: 'loop', s: 'measured', k: '31 → 93.7 %', kd: "a phone brain's exam after distillation", b: 'Self-practice, distilling into small models, LoRA results and choosing models.' },
+  { n: '07', f: '07 Voice.md', t: 'Voice', ic: 'wave', s: 'measured', k: '27 s', kd: 'to first sound without streaming', b: 'Speech in and out, latency budgets, designing a voice from words, licences.' },
+  { n: '08', f: '08 Vision, OCR and media.md', t: 'Vision, OCR and media', ic: 'eye', s: 'measured', k: '~16 s', kd: 'for a 1024×1024 picture on the same card (21 Nov; ~30 s in the older build)', b: 'OCR beside vision models, reading game screens, pictures and video.' },
+  { n: '09', f: '09 Interfaces for AI.md', t: 'Interfaces for AI', ic: 'window', s: 'adopted', k: 'Only real events animate', kd: 'the rule behind the Lattice station', b: 'Showing what an AI is doing, 3D maps of memory, what makes demos impressive.' },
+  { n: '10', f: '10 Leads and open questions.md', t: 'Leads and open questions', ic: 'flask', s: 'lead', k: DATA.leads.length + ' leads', kd: 'waiting for a measurement', b: 'Ideas not yet measured, with how to test each one.' },
+  { n: '11', f: '11 Several AIs on several machines.md', t: 'Several AIs, several machines', ic: 'link', s: 'measured', k: '2.0 s', kd: 'to notice the other machine is off', b: 'Handing work to another machine: one door, pairing, a fixed job list, one audit log.' },
+  { n: '12', f: '12 Experts, routers and hardware tiers.md', t: 'Experts, routers and tiers', ic: 'graph', s: 'lead', k: '3 tiers', kd: 'phone, PC and Volta, each a team of experts', b: 'Specialists beside a router, mixture-of-experts, and tuning each tier to its hardware.' },
+  { n: '13', f: '13 Techniques, explained.md', t: 'Techniques, explained', ic: 'ruler', s: 'measured', k: '21 techniques', kd: 'each with its theory and where we used it', b: 'The idea behind every method in the records, linked to the Study hub lessons.' },
+];
+const SPEC = { rows: [
+    { l: 'n-gram drafting only', sm: '36K context', v: { Reasoning: 50.7, Prose: 50.6, 'Code rewrite': 184 }, n: 'VRAM 14.6 GB. Free, and it only helps when text repeats.' },
+    { l: 'MTP 2-ahead', sm: '36K context', v: { Reasoning: 50.7, Prose: 36.2, 'Code rewrite': 178 }, n: 'VRAM 15.2 GB. Slower than no drafting for prose.' },
+    { l: 'MTP 1-ahead + n-gram', sm: '36K context', v: { Reasoning: 75.4, Prose: 56.3, 'Code rewrite': 249 }, n: 'VRAM 15.3 GB. The adopted setting.', hi: 1 },
+    { l: 'MTP 2-ahead', sm: '24K context', v: { Reasoning: 93.4, Prose: 56.9, 'Code rewrite': 289 }, n: 'VRAM 15.2 GB. Faster, but gives up a third of the context.' } ] };
+const PHONE = { rows: ['Stock, short prompt', 'Stock, long prompt', 'v1 (621 examples)', 'v2 (+288 aimed at misses)', 'v4b (new skills)'],
+  m: { 'Exam score': { v: [31, 48, 75, 91, 93.7], u: ' %', max: 100, t: 'Exam score by version of the phone brain', s: 'Percent of the fixed exam answered correctly.' },
+       'No unwanted action': { v: [100, 6, 100, 100, 98.7], u: ' %', max: 100, t: 'Replies with no unwanted action', s: 'Percent of ordinary chat replies that did not trigger an action. The long prompt broke this.' },
+       'Prompt size': { v: [191, 590, 68, 68, 68], u: ' tok', max: 600, t: 'Prompt size the phone has to read', s: 'Tokens of instructions sent with every message. Fewer is faster on a phone.' } } };
+const BA_MEM = [
+  { a: '141', b: '55', u: 'checkpoint notes', p: 'Masking old tool output before summarising. Upkeep time fell from ~92 to ~42 minutes.', f: 55 / 141 },
+  { a: '20,480', b: '36,864', u: 'tokens of context', p: 'A 4-bit KV cache in the same memory, at the same speed, with full recall.', f: 1 },
+  { a: '464', b: '42', u: 'notes on the memory map', p: 'Folding: old checkpoints fold into one note per day. Forgetting can be folding.', f: 42 / 464 },
+  { a: '210 s', b: '30 s', u: 'to read 11 files and report', p: 'A real agent task, after drafting and parallel file reads.', f: 30 / 210 } ];
+const BA_FAIL = [
+  { t: 'LoRA on self-practice answers', a: '77.5', b: '72.5', u: 'HumanEval+ %, small helper model', p: 'MBPP+ also fell (76.2 → 73.8). Practice data teaches a model what it can already do.' },
+  { t: 'Type-checking Python', a: '153', b: '153', u: 'of 164 solved, with and without mypy', p: "A strong model's wrong Python is logic, not types. It found nothing to fix." },
+  { t: 'A specialist "agent" model', a: '21/22', b: '4/22', u: 'general 27B vs the specialist, real agent task', p: "A specialist's reputation is not a measurement." },
+  { t: 'Layer streaming (AirLLM)', a: '~8 s', b: '~78 min', u: 'for a 400-token answer, estimated', p: 'Reading the whole model from disk for every token. Memory-mapping already does it better.' },
+  { t: '"AI shorthand" handoff notes', a: '9.5', b: '7.5', u: 'of 12 facts recalled', p: 'A third of the size, but it lost two facts. Plain structured notes won.' },
+  { t: 'Variable thinking budgets', a: '27/27', b: '25/27', u: 'always think vs an effort router', p: "It scored lower and wasn't faster." },
+  { t: 'Self-written Rust lessons', a: '69', b: '69', u: 'of 78 solved (fixed 2, broke 2)', p: 'The compiler is a better teacher, because it reacts to the exact mistake.' },
+  { t: 'Drafting 2 tokens ahead, full card', a: '50.6', b: '36.2', u: 'tok/s for prose at 36K context', p: 'Accepted 83–96 % of the time and still slower. Kept as a lead for cards with spare VRAM.' } ];
+const STEPS = ['An idea', 'Find the source: paper, docs, pull request', 'A small offline test', 'Bench on the idle machine, through the real path', 'Live check in the real app', 'Adopt only if better, and nothing else is worse', 'Record the numbers beside the setting'];
+const WORDS = [['measured', 'We ran it and have numbers, with the setup stated.'], ['adopted', 'A project kept the change. "Not adopted" means it was measured and rejected.'], ['claim', 'The maker or author says so. Not checked by us.'], ['lead', 'Worth testing. Nothing measured yet.']];
+
+/* ---------- tooltip ---------- */
+const tip = $('#tip');
+function hover(node, html) {
+  node.addEventListener('pointermove', e => { tip.innerHTML = html(); tip.style.opacity = 1;
+    const w = tip.offsetWidth, x = Math.min(innerWidth - w - 10, e.clientX + 14); tip.style.left = Math.max(8, x) + 'px'; tip.style.top = Math.max(8, e.clientY - tip.offsetHeight - 12) + 'px'; });
+  node.addEventListener('pointerleave', () => tip.style.opacity = 0);
+}
+
+/* ---------- bars ---------- */
+function bars(host, rows, o = {}) {
+  const max = o.max || Math.max(...rows.map(r => r.v)), lo = o.log ? Math.log10(o.min) : 0, hi = o.log ? Math.log10(max) : max;
+  const w = v => Math.max(1.2, Math.min(100, 100 * ((o.log ? Math.log10(Math.max(v, o.min)) : v) - lo) / (hi - lo)));
+  if (host.children.length !== rows.length) { host.innerHTML = '';
+    rows.forEach(() => host.append(el('<div class="brow"><div class="l"></div><div class="tr"><div class="b"></div></div><div class="v"></div></div>'))); }
+  rows.forEach((r, i) => { const n = host.children[i];
+    $('.l', n).innerHTML = esc(r.l) + (r.sm ? `<small>${esc(r.sm)}</small>` : '');
+    $('.v', n).textContent = r.t ?? (r.v.toLocaleString('en') + (o.unit || ''));
+    const b = $('.b', n); b.style.setProperty('--c', r.hi ? 'var(--s2)' : (r.c || 'var(--s1)')); b.dataset.w = w(r.v);
+    if (host.closest('.in')) b.style.width = b.dataset.w + '%';
+    n._tip = () => `<b>${esc(r.l)}${r.sm ? ' · ' + esc(r.sm) : ''}</b><span>${esc($('.v', n).textContent)}${r.n ? '<br>' + esc(r.n) : ''}</span>`;
+    if (!n._h) { n._h = 1; hover(n, () => n._tip()); } });
+}
+const grow = sec => { $$('.b', sec).forEach(b => b.style.width = b.dataset.w + '%'); $$('.split i', sec).forEach(i => i.style.flexGrow = i.dataset.g); };
+
+/* ---------- slide 1: hero ---------- */
+const S = DATA.stats;
+[['topics', TOPICS.length], ['sources read', S.sources], ['leads to test', S.leads], ['projects', 4]].forEach(([l, v]) => $('#tiles').append(el(`<div class="tile"><b data-n="${v}">0</b><span>${l}</span></div>`)));
+$('#built').textContent = DATA.built ? 'Updated ' + DATA.built : '';
+function countUp(sec) { $$('[data-n]', sec).forEach(n => { const to = +n.dataset.n, t0 = performance.now(); if (reduce) return n.textContent = to;
+  (function f(t) { const k = Math.min(1, (t - t0) / 900); n.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(f); })(t0); }); }
+addEventListener('pointermove', e => { const o = $('#orbit'); o.style.setProperty('--px', ((e.clientX / innerWidth - .5) * 18) + 'px'); o.style.setProperty('--py', ((e.clientY / innerHeight - .5) * 14) + 'px'); });
+
+/* ---------- slide 2: topics ---------- */
+const grid = $('#topicGrid'); let statusOn = 'all';
+TOPICS.forEach(t => { const c = el(`<button class="card topic" data-s="${t.s}"><div class="top"><span class="ic">${icon(t.ic)}</span><span class="num">${t.n}</span></div>
+  <h3>${esc(t.t)}</h3><p>${esc(t.b)}</p><div class="k">${esc(t.k)}</div><div class="kd">${esc(t.kd)}</div>${badge(t.s)}</button>`);
+  c.onclick = () => openDoc(t.f);
+  c.onpointermove = e => { const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+    c.style.setProperty('--mx', x * 100 + '%'); c.style.setProperty('--my', y * 100 + '%'); c.style.setProperty('--ry', (x - .5) * 7 + 'deg'); c.style.setProperty('--rx', (.5 - y) * 7 + 'deg'); };
+  grid.append(c); });
+['all', 'measured', 'adopted', 'lead'].forEach(s => { const n = TOPICS.filter(t => s === 'all' || t.s === s).length;
+  const b = el(`<button class="chip" aria-pressed="${s === 'all'}">${s === 'all' ? 'All' : STATUS[s]} · ${n}</button>`);
+  b.onclick = () => { statusOn = s; $$('#statusChips .chip').forEach(x => x.setAttribute('aria-pressed', x === b)); $$('.topic', grid).forEach(c => c.style.display = (s === 'all' || c.dataset.s === s) ? '' : 'none'); };
+  $('#statusChips').append(b); });
+
+/* ---------- slide 3: speed ---------- */
+const BW = [['GPU memory (VRAM)', 896, 'RTX 5070 Ti, GDDR7'], ['System RAM', 75, 'dual-channel DDR5'], ['NVMe drive', 1.2, 'simple single-thread read']];
+function speed() { const gb = +$('#size').value; $('#sizeOut').textContent = gb.toFixed(1) + ' GB';
+  bars($('#speedBars'), BW.map(([l, bw, sm]) => { const v = bw / gb; return { l, sm, v, t: v >= 10 ? v.toFixed(0) + ' tok/s' : v >= 1 ? v.toFixed(1) + ' tok/s' : v.toFixed(2) + ' tok/s', n: `${bw} GB/s ÷ ${gb.toFixed(1)} GB. ` + (v < 1 ? `About ${(1 / v).toFixed(0)} s per token.` : '') }; }), { log: 1, min: .01, max: 500 });
+  $('#speedNote').innerHTML = Math.abs(gb - 14.3) < .05 ? '<b>Measured, our 14.25 GB model:</b> 50.8 tok/s in VRAM, about 81 % of the 63 tok/s limit.' : `A ${gb.toFixed(1)} GB model that spills from VRAM to RAM would write about <b>${(896 / 75).toFixed(0)}× slower</b> if all of it sat in RAM; a partial spill measured 3–4× slower here (50 → 13–17 tok/s).`; }
+$('#size').oninput = speed; speed();
+bars($('#kvBars'), [{ l: '8-bit cache', v: 20480, t: '20,480', n: '14.5 GB of VRAM. 30K tokens does not fit.' }, { l: '4-bit cache', v: 36864, t: '36,864', hi: 1, n: '14.6 GB of VRAM. 12 of 12 facts recalled at 30K.' }], { max: 40000 });
+
+/* ---------- slide 4: speculative decoding ---------- */
+const E = (a, k) => (1 - Math.pow(a, k + 1)) / (1 - a), KC = ['var(--s1)', 'var(--s2)', 'var(--s3)'];
+(function plot() { const svg = $('#specPlot'), X0 = 34, X1 = 466, Y0 = 214, Y1 = 14, x = a => X0 + (a - .5) / .5 * (X1 - X0), y = v => Y0 - (v - 1) / 3 * (Y0 - Y1);
+  let h = ''; for (let v = 1; v <= 4; v++) h += `<line class="gl" x1="${X0}" x2="${X1}" y1="${y(v)}" y2="${y(v)}"/><text x="${X0 - 8}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  for (const a of [.5, .6, .7, .8, .9, 1]) h += `<text x="${x(a)}" y="${Y0 + 18}" text-anchor="middle">${a.toFixed(1)}</text>`;
+  h += `<text x="${X0}" y="${Y0 + 34}">acceptance rate α</text>`;
+  [1, 2, 3].forEach((k, i) => { let d = ''; for (let a = .5; a <= .9951; a += .005) d += (d ? 'L' : 'M') + x(a).toFixed(1) + ' ' + y(E(a, k)).toFixed(1);
+    h += `<path class="ln" stroke="${KC[i]}" d="${d}" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" style="transition:stroke-dashoffset 1.4s ${i * .15}s ease"/><text class="dl" x="${X1 + 6}" y="${y(E(.995, k)) + 4}">${k} ahead</text>`; });
+  h += `<line id="cx" class="gl" y1="${Y1}" y2="${Y0}" style="stroke:var(--line2)"/>` + [0, 1, 2].map(i => `<circle id="cd${i}" r="5" fill="${KC[i]}" stroke="var(--surface)" stroke-width="2"/>`).join('') + `<rect id="hit" x="${X0}" y="${Y1}" width="${X1 - X0}" height="${Y0 - Y1}" fill="transparent" style="cursor:crosshair"/>`;
+  svg.innerHTML = h;
+  const set = a => { a = Math.max(.5, Math.min(.99, a)); $('#alpha').value = a; $('#alphaOut').textContent = a.toFixed(2); $('#cx').setAttribute('x1', x(a)); $('#cx').setAttribute('x2', x(a));
+    [1, 2, 3].forEach((k, i) => { const c = $('#cd' + i); c.setAttribute('cx', x(a)); c.setAttribute('cy', y(E(a, k))); });
+    $('#specRead').innerHTML = [1, 2, 3].map((k, i) => `<div><span><i style="background:${KC[i]}"></i>${k} ahead</span><b>${E(a, k).toFixed(2)}×</b></div>`).join(''); };
+  $('#alpha').oninput = e => set(+e.target.value);
+  $('#hit').addEventListener('pointermove', e => { const r = svg.getBoundingClientRect(); set(.5 + ((e.clientX - r.left) / r.width * 520 - X0) / (X1 - X0) * .5); });
+  set(.97); })();
+let specOn = 'Reasoning';
+function spec() { bars($('#specBars'), SPEC.rows.map(r => ({ l: r.l, sm: r.sm, v: r.v[specOn], t: r.v[specOn] + ' tok/s', n: r.n, hi: r.hi })), { max: specOn === 'Code rewrite' ? 300 : 100 }); }
+['Reasoning', 'Prose', 'Code rewrite'].forEach(k => { const b = el(`<button class="chip" aria-pressed="${k === specOn}">${k}</button>`);
+  b.onclick = () => { specOn = k; $$('#specChips .chip').forEach(x => x.setAttribute('aria-pressed', x === b)); spec(); }; $('#specChips').append(b); });
+spec();
+
+/* ---------- slide 5: checking ---------- */
+[['LiveCodeBench', 'no thinking, + check-and-repair', 37.5, 60, 'Fixed 9, broke 0.'], ['LiveCodeBench', 'thinking, + check-and-repair', 52.5, 77.5, 'Fixed 10, broke 0.'],
+ ['Rust, 156 problems', '+ compiler errors shown', 85.3, 90.4, 'Fixed 8, broke 0, for 33 % more time. Python on the same problems: 96.8 %.'], ['Python, HumanEval+', '+ mypy type check', 93.3, 93.3, '153 of 164 both times. The type checker found nothing.']]
+.forEach(([l, sm, a, b, n]) => { const d = b - a, r = el(`<div class="drow"><div class="l" style="color:var(--ink2);line-height:1.25">${l}<small style="display:block;color:var(--mute);font-size:11.5px">${sm}</small></div>
+  <div class="tr"><i class="seg" style="left:${a}%;width:${d}%"></i><i class="dot a" style="left:${a}%"></i><i class="dot z" style="left:${b}%"></i></div><div class="v">${d ? '+' + d.toFixed(1) + ' pts' : 'no change'}</div></div>`);
+  hover(r, () => `<b>${l}</b><span>${a} % → ${b} %<br>${n}</span>`); $('#checkDb').append(r); });
+
+/* ---------- slide 6: phone brain ---------- */
+let phoneOn = 'Exam score';
+function phone() { const m = PHONE.m[phoneOn]; $('#phoneTitle').textContent = m.t; $('#phoneSub').textContent = m.s;
+  bars($('#phoneBars'), PHONE.rows.map((l, i) => ({ l, v: m.v[i], t: m.v[i] + m.u, hi: i === 4, n: i === 1 ? 'Stock model with a 590-token prompt.' : i === 4 ? 'On the phone until 20 Nov, then replaced by v5 (943 of 1,020 against 901 for v4b over ten seeds, Ruby academia 3.9 and 3.12). 1 unwanted action in 75 replies.' : '' })), { max: m.max }); }
+Object.keys(PHONE.m).forEach(k => { const b = el(`<button class="chip" aria-pressed="${k === phoneOn}">${k}</button>`);
+  b.onclick = () => { phoneOn = k; $$('#phoneChips .chip').forEach(x => x.setAttribute('aria-pressed', x === b)); phone(); }; $('#phoneChips').append(b); });
+phone();
+
+/* ---------- slides 7 and 9: before -> after cards ---------- */
+const arrow = '<svg viewBox="0 0 22 12"><path d="M1 6h19M15 1l5 5-5 5"/></svg>';
+BA_MEM.forEach(c => $('#memBa').append(el(`<div class="card"><div class="n"><s>${c.a}</s>${arrow}<span>${c.b}</span></div><div class="u">${c.u}</div><p>${c.p}</p></div>`)));
+BA_FAIL.forEach(c => $('#failBa').append(el(`<div class="card"><div class="ft" style="margin-bottom:10px">${c.t}</div><div class="n"><s>${c.a}</s>${arrow}<span>${c.b}</span></div><div class="u">${c.u}</div><p>${c.p}</p><div class="note">${badge('notadopted')}</div></div>`)));
+bars($('#noteBars'), [{ l: 'Plain, structured', sm: '~1,040 tokens', v: 9.5, t: '9.5 / 12', hi: 1 }, { l: '"AI shorthand"', sm: '~315 tokens', v: 7.5, t: '7.5 / 12' }], { max: 12 });
+bars($('#practiceBars'), [{ l: 'Kept', sm: 'independent solves agreed', v: 115, hi: 1 }, { l: 'Rejected', sm: "the setter's tests looked wrong", v: 187 }, { l: 'Dropped', sm: 'too close to a benchmark question', v: 43 }, { l: 'Other', sm: '27 bad, 9 unsolved, 4 repeats', v: 40 }], { max: 200 });
+
+/* ---------- slide 8: voice ---------- */
+$('#voiceSplit').innerHTML = '<i data-g="77" style="background:var(--s1);border-radius:4px 0 0 4px"></i><i data-g="23" style="background:var(--s3);border-radius:0 4px 4px 0"></i>';
+bars($('#voiceData'), [{ l: 'Lines generated', v: 2041, t: '2,041' }, { l: 'Kept after checks', sm: '2.48 hours of speech', v: 1950, t: '1,950', hi: 1, n: '11 dropped for wrong words, 81 for speaking rate.' }], { max: 2100 });
+bars($('#ttsBars'), [['Breeze TTS 2', 'on an H100', 40, '< 40 ms'], ['Chatterbox Turbo', 'GPU; here 15–17 s a line, one-shot', 75, '~75 ms'], ['Qwen3-TTS', 'streaming, GPU', 97, '~97 ms'], ['CosyVoice2 0.5B', 'streaming, GPU', 150, '~150 ms'], ['Pocket TTS', 'on a CPU; here 0.41–0.74 s a line', 1700, '~1.7 s'], ['Kokoro 82M', 'on a CPU, third-party test', 3700, '~3.7 s']]
+  .map(([l, sm, v, t]) => ({ l, sm, v, t, n: "The maker's or tester's own figure." })), { log: 1, min: 10, max: 5000 });
+
+/* ---------- slide 10: method ---------- */
+STEPS.forEach((s, i) => $('#pipe').append(el(`<div class="step"><b>${String(i + 1).padStart(2, '0')}</b>${s}</div>`)));
+let stepI = -1, stepT; const tick = () => { stepI = (stepI + 1) % (STEPS.length + 1); $$('.step').forEach((n, i) => n.classList.toggle('on', i === stepI)); };
+$$('.step').forEach((n, i) => n.onpointerenter = () => { clearInterval(stepT); stepI = i; $$('.step').forEach((m, j) => m.classList.toggle('on', j === i)); });
+WORDS.forEach(([s, t]) => $('#words').append(el(`<div>${badge(s)}<div>${t}</div></div>`)));
+
+/* ---------- inline markdown (also used by the reader) ---------- */
+const PROOF = DATA.proof || {};
+const unesc = s => s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+const kb = n => n >= 1048576 ? (n / 1048576).toFixed(1) + ' MB' : n >= 1024 ? Math.round(n / 1024) + ' KB' : n + ' bytes';
+const pathTitle = p => p.found ? 'Found on disk when this page was built' + (p.dir ? ' (a folder)' : ', ' + kb(p.size)) + ', changed ' + p.changed : 'Not found on disk when this page was built';
+const codeTag = c => { const p = PROOF[unesc(c)]; return p ? '<code class="pf ' + (p.found ? 'ok' : 'miss') + '" title="' + esc(pathTitle(p)) + '">' + c + '</code>' : '<code>' + c + '</code>'; };
+const inl = s => esc(s).replace(/`([^`]+)`/g, (m, c) => codeTag(c)).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/(^|[\s(])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
+  .replace(/~~([^~]+)~~/g, '<s>$1</s>').replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+function md(src) { const L = src.replace(/\r/g, '').split('\n'); let out = '', i = 0; const cells = l => l.trim().replace(/^\||\|$/g, '').split(/(?<!\\)\|/).map(c => c.trim().replace(/\\\|/g, '|'));
+  const list = (ind) => { const ord = /^\s*\d+\./.test(L[i]); let h = ord ? '<ol>' : '<ul>';
+    while (i < L.length) { const m = L[i].match(/^(\s*)([-*]|\d+\.)\s+(.*)$/); if (!m || m[1].length < ind) break; if (m[1].length > ind) { h = h.replace(/<\/li>$/, '') + list(m[1].length) + '</li>'; continue; }
+      let t = m[3]; i++; while (i < L.length && /^\s+\S/.test(L[i]) && !/^\s*([-*]|\d+\.)\s/.test(L[i]) && !/^\s*```/.test(L[i]) && !/^\s*\|/.test(L[i])) t += ' ' + L[i++].trim();
+      let extra = ''; while (i < L.length && /^\s+(```|\|)/.test(L[i])) extra += block();
+      h += '<li>' + inl(t) + extra + '</li>'; if (i < L.length && L[i].trim() === '' && /^(\s*)([-*]|\d+\.)\s/.test(L[i + 1] || '')) i++; }
+    return h + (ord ? '</ol>' : '</ul>'); };
+  const block = () => { const l = L[i];
+    if (/^\s*```/.test(l)) { let c = ''; i++; while (i < L.length && !/^\s*```/.test(L[i])) c += L[i++] + '\n'; i++; return '<pre><code>' + esc(c.replace(/\n$/, '')) + '</code></pre>'; }
+    if (/^\s*\|/.test(l) && /^\s*\|[\s:|-]+\|\s*$/.test(L[i + 1] || '')) { const hd = cells(l); i += 2; let b = '';
+      while (i < L.length && /^\s*\|/.test(L[i])) b += '<tr>' + cells(L[i++]).map(c => '<td>' + inl(c) + '</td>').join('') + '</tr>';
+      return '<div class="tw"><table><thead><tr>' + hd.map(c => '<th>' + inl(c) + '</th>').join('') + '</tr></thead><tbody>' + b + '</tbody></table></div>'; }
+    const h = l.match(/^(#{1,4})\s+(.*)$/); if (h) { i++; return `<h${h[1].length}>${inl(h[2])}</h${h[1].length}>`; }
+    if (/^\s*(---+|\*\*\*+)\s*$/.test(l)) { i++; return '<hr>'; }
+    if (/^\s*([-*]|\d+\.)\s+/.test(l)) return list(l.match(/^\s*/)[0].length);
+    if (l.trim() === '') { i++; return ''; }
+    let p = l.trim(); i++; while (i < L.length && L[i].trim() !== '' && !/^\s*(#{1,4}\s|```|\||([-*]|\d+\.)\s|---+\s*$)/.test(L[i])) p += ' ' + L[i++].trim();
+    return '<p>' + inl(p) + '</p>'; };
+  while (i < L.length) out += block(); return out; }
+
+/* ---------- slide 11: leads ---------- */
+function leads() { const q = $('#leadSearch').value.trim().toLowerCase(), hits = DATA.leads.filter(l => !q || l.join(' ').toLowerCase().includes(q));
+  $('#leadList').innerHTML = hits.map(l => `<div class="lrow"><div><small>Lead</small><span>${inl(l[0])}</span></div><div><small>Why it might help</small><span>${inl(l[1])}</span></div><div><small>How to measure</small><span>${inl(l[2])}</span></div></div>`).join('') || '<div class="note">No lead matches that.</div>';
+  $$('#leadList strong').forEach(s => s.outerHTML = '<b>' + s.innerHTML + '</b>'); $('#leadCount').textContent = `${hits.length} of ${DATA.leads.length} leads shown`; }
+$('#leadSearch').oninput = leads; leads();
+
+/* ---------- slide 12: library + reader ---------- */
+Object.keys(DATA.docs).forEach(f => { const t = TOPICS.find(t => t.f === f), paper = /^GrindPilot/.test(f), name = f.replace(/\.md$/, '').replace(/^\d+ /, '');
+  const b = el(`<button class="file"><span class="ic">${icon(t ? t.ic : paper ? 'doc' : 'book')}</span><span><b>${esc(name)}</b><span>${t ? 'Topic ' + t.n : paper ? 'Working paper' : f === 'README.md' ? 'Index and rules' : 'Sources'} · ${Math.round(DATA.docs[f].split(/\s+/).length / 100) * 100 || 100} words</span></span></button>`);
+  b.onclick = () => openDoc(f); $('#lib').append(b); });
+const reader = $('#reader'); let lastFocus;
+function openDoc(f) { if (!DATA.docs[f]) return; lastFocus = document.activeElement; $('#docName').textContent = f; $('#docOpen').href = encodeURI(f); $('#doc').innerHTML = md(DATA.docs[f]); $('#doc').scrollTop = 0;
+  const pc = (DATA.proofCounts || {})[f]; if (pc && (pc.found || pc.missing)) $('#doc').insertAdjacentHTML('beforeend', '<div class="pfoot"><span>paths checked: <b>' + pc.found + ' found</b>' + (pc.missing ? ', <i>' + pc.missing + ' missing</i>' : '') + '</span><span>standard: 00 How every record is written</span></div>');
+  $$('#doc a').forEach(a => { const h = decodeURIComponent(a.getAttribute('href')); if (DATA.docs[h]) a.onclick = e => { e.preventDefault(); openDoc(h); }; });
+  reader.classList.add('open'); reader.setAttribute('aria-hidden', 'false'); document.documentElement.style.overflow = 'hidden'; $('#reader [data-close].btn').focus(); }
+function closeDoc() { reader.classList.remove('open'); reader.setAttribute('aria-hidden', 'true'); document.documentElement.style.overflow = ''; lastFocus && lastFocus.focus(); }
+$$('[data-close]').forEach(n => n.onclick = closeDoc);
+
+/* ---------- proof for reviewers ---------- */
+const SL = DATA.slides || {};
+const PIC = '<svg width="15" height="15" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>';
+const statusKey = s => ({ 'measured': 'measured', 'adopted': 'adopted', 'not adopted': 'notadopted', 'claim': 'claim', 'lead': 'lead' })[String(s || '').toLowerCase()];
+function openProof(id) {
+  const items = SL[id] || [], sec = document.getElementById(id), nm = sec ? sec.dataset.name : id;
+  lastFocus = document.activeElement; $('#docName').textContent = 'How we know: ' + nm; $('#docOpen').removeAttribute('href'); $('#docOpen').style.display = 'none';
+  $('#doc').innerHTML = '<p class="note" style="margin-bottom:16px">Each number on the slide, where it comes from, and how to check it. A green dot: the file was on disk when this page was built.</p>' +
+    items.map(it => { const k = statusKey(it.status);
+      return '<div class="pitem"><div class="pc"><span>' + esc(it.claim) + '</span>' + (k ? badge(k) : '') + '</div>' +
+        '<div class="ps">' + esc(it.source || '') + '</div>' +
+        ((it.files || []).length ? '<div class="pf2">' + it.files.map(p => codeTag(esc(p))).join('') + '</div>' : '') +
+        (it.check ? '<div class="pk">Check it yourself: ' + inl('`' + it.check + '`') + '</div>' : '') +
+        (it.note ? '<div class="pn">' + esc(it.note) + '</div>' : '') + (it.fixed ? '<div class="pk" style="color:#4fe3a1">' + esc(it.fixed) + '</div>' : '') + '</div>'; }).join('');
+  reader.classList.add('open'); reader.setAttribute('aria-hidden', 'false'); document.documentElement.style.overflow = 'hidden'; $('#reader [data-close].btn').focus(); }
+Object.keys(SL).forEach(id => { const sec = document.getElementById(id); if (!sec || !SL[id].length) return;
+  const host = sec.querySelector(':scope > div:last-of-type') || sec, n = SL[id].length, withFile = SL[id].filter(i => (i.files || []).some(p => (PROOF[p] || {}).found)).length;
+  const b = el('<button class="howbtn rv" style="--i:6">' + PIC + 'How we know this · ' + n + ' source' + (n > 1 ? 's' : '') + ', ' + withFile + ' with a file</button>');
+  b.onclick = () => openProof(id); (sec.id === 'top' ? sec.firstElementChild : sec).append(b); });
+const origOpen = openDoc; openDoc = f => { $('#docOpen').style.display = ''; origOpen(f); };
+[['paths found', S.paths_found || 0], ['paths missing', S.paths_missing || 0], ['slide sources', Object.values(SL).reduce((a, x) => a + x.length, 0)]].forEach(([l, v]) => $('#proofTiles').append(el('<div class="tile"><b data-n="' + v + '">0</b><span>' + l + '</span></div>')));
+Object.keys(SL).forEach(id => { const sec = document.getElementById(id); const items = SL[id]; if (!items.length) return;
+  const files = items.filter(i => (i.files || []).some(p => (PROOF[p] || {}).found)).length;
+  const b = el('<button><span>' + esc(sec ? sec.dataset.name : id) + '</span><small>' + items.length + ' sources · ' + files + ' with a file · ' + (items.length - files) + ' text only</small></button>'); b.onclick = () => openProof(id); $('#coverage').append(b); });
+const KIND = n => /^no file kept/i.test(n) ? 1 : /^note:/i.test(n) ? 2 : /disagree|out of date|no longer|off by one|add to|adds to|the file is|says "result file not kept"|names \d|lists \d|only the|is named/i.test(n) ? 0 : 2;
+const notes = Object.keys(SL).flatMap(id => SL[id].filter(i => i.note || i.fixed).map(i => ({ id, i, k: i.fixed ? 3 : KIND(i.note) })));
+[['The slide disagrees with its source, or is out of date', 0], ['Corrected: a slide or topic that disagreed with its source, fixed on 24 Nov', 3], ['No file was kept: the number rests on the record\'s text', 1], ['Other notes: makers\' claims, rounding, conventions', 2]].forEach(([h, k]) => {
+  const list = notes.filter(x => x.k === k); if (!list.length) return;
+  $('#caveats').append(el('<div class="ft" style="margin-top:10px;font-size:13px">' + esc(h) + ' · ' + list.length + '</div>'));
+  list.forEach(({ id, i }) => { const sec = document.getElementById(id);
+    const b = el('<button><span>' + esc(i.claim) + ': ' + esc(i.fixed ? i.fixed + (i.note ? '. ' + i.note : '') : i.note) + '</span><small>' + esc(sec ? sec.dataset.name : id) + '</small></button>'); b.onclick = () => openProof(id); $('#caveats').append(b); }); });
+if (!$('#caveats').children.length) $('#caveats').append(el('<p class="note">None recorded.</p>'));
+$('#openStd').onclick = () => openDoc(Object.keys(DATA.docs).find(f => /^00 /.test(f)));
+$('#openTech').onclick = () => openDoc(Object.keys(DATA.docs).find(f => /^13 /.test(f)));
+
+/* ---------- slides: reveal, rail, keys, progress ---------- */
+const slides = $$('section.slide'), rail = $('#rail');
+slides.forEach(s => { const a = el(`<a href="#${s.id}" aria-label="${s.dataset.name}"><span>${s.dataset.name}</span></a>`); rail.append(a); });
+const io = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; const s = e.target;
+  if (!s.classList.contains('in')) { s.classList.add('in'); setTimeout(() => grow(s), 250); countUp(s); $$('.ln', s).forEach(p => p.style.strokeDashoffset = 0);
+    if (s.id === 'method' && !reduce) { tick(); stepT = setInterval(tick, 1500); } } }), { threshold: .18 });
+slides.forEach(s => io.observe(s));
+const cur = () => { let b = 0; slides.forEach((s, i) => { if (s.getBoundingClientRect().top <= innerHeight * .45) b = i; }); return b; };
+addEventListener('scroll', () => { const h = document.documentElement; $('#prog').style.width = (100 * h.scrollTop / Math.max(1, h.scrollHeight - innerHeight)) + '%';
+  const c = cur(); $$('a', rail).forEach((a, i) => a.classList.toggle('on', i === c)); }, { passive: true });
+dispatchEvent(new Event('scroll'));
+addEventListener('keydown', e => { if (e.key === 'Escape' && reader.classList.contains('open')) return closeDoc();
+  if (reader.classList.contains('open') || /INPUT|TEXTAREA/.test(document.activeElement.tagName)) return;
+  const d = { ArrowDown: 1, PageDown: 1, ArrowRight: 1, j: 1, ArrowUp: -1, PageUp: -1, ArrowLeft: -1, k: -1 }[e.key]; if (!d) return;
+  e.preventDefault(); slides[Math.max(0, Math.min(slides.length - 1, cur() + d))].scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); });
+
+/* ---------- background: slow soft gradient ---------- */
+(function sky() { const c = $('#sky'), x = c.getContext('2d'), B = [[110, 168, 255], [155, 140, 255], [255, 122, 192], [94, 230, 208], [72, 96, 255]];
+  const size = () => { c.width = Math.ceil(innerWidth / 8); c.height = Math.ceil(innerHeight / 8); }; size(); addEventListener('resize', size);
+  function draw(t) { const w = c.width, h = c.height; x.globalCompositeOperation = 'source-over'; x.fillStyle = '#06070e'; x.fillRect(0, 0, w, h); x.globalCompositeOperation = 'lighter';
+    B.forEach((col, i) => { const a = t * .00006 * (1 + i * .23) + i * 1.9, px = w * (.5 + .42 * Math.cos(a * 1.3 + i)), py = h * (.5 + .4 * Math.sin(a + i * 2.1)), r = Math.max(w, h) * (.34 + .08 * Math.sin(a * 2));
+      const g = x.createRadialGradient(px, py, 0, px, py, r); g.addColorStop(0, `rgba(${col},.42)`); g.addColorStop(1, `rgba(${col},0)`); x.fillStyle = g; x.fillRect(0, 0, w, h); }); }
+  let on = true; document.addEventListener('visibilitychange', () => { on = !document.hidden; if (on && !reduce) requestAnimationFrame(loop); });
+  let last = 0; function loop(t) { if (!on) return; if (t - last > 40) { draw(t); last = t; } requestAnimationFrame(loop); }
+  draw(4e5); if (!reduce) requestAnimationFrame(loop); })();
+</script>
+</body>
+</html>

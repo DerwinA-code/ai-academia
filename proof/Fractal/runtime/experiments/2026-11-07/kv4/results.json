@@ -1,0 +1,38 @@
+[
+ {
+  "cache": "q8_0",
+  "ctx": 20480,
+  "layers_on_gpu": "?",
+  "write_tok_s": 50.8,
+  "recall": [
+   {
+    "tokens": 15000,
+    "found": 12,
+    "of": 12,
+    "prompt_tok_s": 2019
+   }
+  ],
+  "vram_used_mb": 14516
+ },
+ {
+  "cache": "q4_0",
+  "ctx": 36864,
+  "layers_on_gpu": "?",
+  "write_tok_s": 50.8,
+  "recall": [
+   {
+    "tokens": 15000,
+    "found": 12,
+    "of": 12,
+    "prompt_tok_s": 2015
+   },
+   {
+    "tokens": 30000,
+    "found": 12,
+    "of": 12,
+    "prompt_tok_s": 1864
+   }
+  ],
+  "vram_used_mb": 14560
+ }
+]

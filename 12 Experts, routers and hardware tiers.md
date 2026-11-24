@@ -32,7 +32,7 @@ Three rules apply on every tier:
 - The idea is the user's (21 Nov 2026), as quoted at the top of this file. The paired rule over several seeds is the 12 Nov rule (02; Ruby academia 3.9). The plan for Ruby: `Ruby\docs\EXPERTS.md`.
 - A design, not a measurement.
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired)
 
 
 ## 2. Why: one small brain trades skills against each other (Measured, Ruby, 21 Nov 2026)
@@ -58,7 +58,7 @@ On a 1.7B model, each skill learned costs another one:
 **Proof.**
 - Results: `Ruby\docs\research\2026-11-21\ruby_brain_v7\result_ruby-v7a.json`, `Ruby\docs\research\2026-11-21\ruby_brain_v7\result_ruby-v7b.json`, log `Ruby\docs\research\2026-11-21\ruby_brain_v7\run_v7.log`
 
-**The idea behind it:** [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired), [LoRA fine-tuning](file:///E:/AI%20academia/Study%20hub.html#lora), [Distillation into a small model](file:///E:/AI%20academia/Study%20hub.html#distill)
+**The idea behind it:** [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired), [LoRA fine-tuning](https://derwina-code.github.io/ai-academia/Study%20hub.html#lora), [Distillation into a small model](https://derwina-code.github.io/ai-academia/Study%20hub.html#distill)
 
 
 ## 3. The tiers
@@ -75,7 +75,7 @@ On a 1.7B model, each skill learned costs another one:
 - The MoE fitting with part in RAM: 01 section 13 (Fractal academia 3.78).
 - The phone's 12 GB and the add-on sizes ("tens of MB"): source not recorded in a project record.
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram), [LoRA fine-tuning](file:///E:/AI%20academia/Study%20hub.html#lora)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram), [LoRA fine-tuning](https://derwina-code.github.io/ai-academia/Study%20hub.html#lora)
 
 
 ## 4. What each tier should test first
@@ -104,7 +104,7 @@ On a 1.7B model, each skill learned costs another one:
 **Proof.**
 - Results: `Fractal\exam-kit\results\general-hard\h0.jsonl`
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 
 
 ## 5. Things that will go wrong (expected, from what we know)
@@ -120,7 +120,7 @@ On a 1.7B model, each skill learned costs another one:
 **How we know.**
 - Expectations reasoned from the sections above (routing, Tailscale hand-up, expert drift); not measured. Source not recorded beyond this text.
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe)
 
 
 ## 6. Separate experts or one MoE? (written 22 Nov 2026, at the user's question)
@@ -148,7 +148,7 @@ at every layer**. They don't map to skills a person would name, and none can be 
 - A written comparison, not a measurement. gpt-oss-20b "over 3× faster": the user's impression (Fractal academia 3.70). Expert offload: "Doctor-Shotgun, *llama.cpp MoE offload guide*, huggingface.co/blog/Doctor-Shotgun/llamacpp-moe-offload-guide" (S). The 10–30 s swap: see section 3.
 - That fine-tuning an MoE can upset its routing: source not recorded.
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [LoRA fine-tuning](file:///E:/AI%20academia/Study%20hub.html#lora)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [LoRA fine-tuning](https://derwina-code.github.io/ai-academia/Study%20hub.html#lora)
 
 
 ## 7. The auditor: someone has to watch the team (Built, 22 Nov 2026)
@@ -191,7 +191,7 @@ and reports, summary first, what needs the owner and what is worth a look:
 - Results: `AI activity logs\Audit.html`, `AI activity logs\Auditor`
 - Check it yourself: `cargo test` (from `Fractal\rust\parts\auditor`; the README says 11 tests, `lib.rs` now holds 12)
 
-**The idea behind it:** [Append-only logs and an auditor](file:///E:/AI%20academia/Study%20hub.html#audit), [Prompt injection and command guards](file:///E:/AI%20academia/Study%20hub.html#guards)
+**The idea behind it:** [Append-only logs and an auditor](https://derwina-code.github.io/ai-academia/Study%20hub.html#audit), [Prompt injection and command guards](https://derwina-code.github.io/ai-academia/Study%20hub.html#guards)
 
 
 ## Open questions
@@ -203,7 +203,7 @@ and reports, summary first, what needs the owner and what is worth a look:
 **How we know.**
 - Open when written. The second has since been answered on Ruby's tier: the facts card beat the team (Ruby academia 3.20, 3.21). The per-request LoRA claim for llama.cpp: source not recorded.
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [LoRA fine-tuning](file:///E:/AI%20academia/Study%20hub.html#lora)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [LoRA fine-tuning](https://derwina-code.github.io/ai-academia/Study%20hub.html#lora)
 
 
 ## 8. First results, per tier (22-23 Nov 2026)
@@ -231,7 +231,7 @@ and reports, summary first, what needs the owner and what is worth a look:
 - Results: `Ruby\docs\research\2026-11-23\ruby_team_8\result_8a.json`, `Ruby\docs\research\2026-11-23\ruby_team_8\result_8b.json`, `Fractal\exam-kit\results\general-hard\m3-trial-gemma4-moe.jsonl`, `Fractal\exam-kit\results\general-hard\m2-trial-coder-moe.jsonl`
 - Check it yourself: `exam.exe general report results\general-hard\m3-trial-gemma4-moe.jsonl results\general-hard\h0.jsonl` (from `Fractal\exam-kit`, no model)
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired)
 
 
 ## 9. What the research says about auditing a team of AIs (23 Nov 2026; Measured by others unless marked)
@@ -300,5 +300,5 @@ the paired rule. On Ruby's tier, the "knowledge expert" is the card.
 - Check it yourself: `cargo test` (from `Fractal\rust\parts\auditor`)
 - Not kept: a record of the three-day false-alarm check.
 
-**The idea behind it:** [Append-only logs and an auditor](file:///E:/AI%20academia/Study%20hub.html#audit), [Prompt injection and command guards](file:///E:/AI%20academia/Study%20hub.html#guards), [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe)
+**The idea behind it:** [Append-only logs and an auditor](https://derwina-code.github.io/ai-academia/Study%20hub.html#audit), [Prompt injection and command guards](https://derwina-code.github.io/ai-academia/Study%20hub.html#guards), [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe)
 

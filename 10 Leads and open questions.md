@@ -105,5 +105,5 @@ Part 7 and chapters 3.19–3.25; `potential ideas.md`; Ruby's research; GrindPil
 **Proof.**
 - Results: `Fractal\exam-kit\results\general-hard\m3-trial-gemma4-moe.jsonl`, `Ruby\docs\research\2026-11-23\ruby_team_8\result_8a.json`
 
-**The idea behind it:** [Speculative decoding](file:///E:/AI%20academia/Study%20hub.html#spec), [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [Append-only logs and an auditor](file:///E:/AI%20academia/Study%20hub.html#audit)
+**The idea behind it:** [Speculative decoding](https://derwina-code.github.io/ai-academia/Study%20hub.html#spec), [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [Append-only logs and an auditor](https://derwina-code.github.io/ai-academia/Study%20hub.html#audit)
 

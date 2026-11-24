@@ -27,7 +27,7 @@ phone-brain chapter (3.24); GrindPilot's exam (`11 The exam.md`) and review.
 - Results: `Fractal\results\runs` (benchmark runs), `Fractal\runtime\experiments\2026-11-07\kv4\results.json` (haystack), `Fractal\runtime\experiments\2026-11-07\spec\results.json` (speed)
 - Code: `Fractal\evals\fractal_evals`, `Fractal\runtime\experiments\tests\live_checks.py`, `Fractal\runtime\experiments\tests\room_replay.py`, `D:\Games\HoYoPlay\games\Grind Pilot\exam`
 
-**The idea behind it:** [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 
 
 ## 2. Rules for valid measurements (each learned the hard way)
@@ -73,7 +73,7 @@ measurements, not ours; the model is in 01, section 7):
 - Results: `Fractal\runtime\experiments\2026-11-08\toolbox_live_results_run1.json` (the discarded unfair run) beside `toolbox_live_results.json`
 - Code: `Fractal\runtime\experiments\2026-11-08\toolbox_live.py`
 
-**The idea behind it:** [Repeats and the noise floor](file:///E:/AI%20academia/Study%20hub.html#repeats), [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired)
+**The idea behind it:** [Repeats and the noise floor](https://derwina-code.github.io/ai-academia/Study%20hub.html#repeats), [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired)
 
 
 ## 3. Secret exams and hard gates
@@ -97,7 +97,7 @@ measurements, not ours; the model is in 01, section 7):
 - Results: `Fractal\runtime\experiments\2026-11-09\ruby_brain\results`
 - Code: `D:\Games\HoYoPlay\games\Grind Pilot\exam`
 
-**The idea behind it:** [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 
 
 ## 4. Benches that check real state catch lying successes
@@ -118,7 +118,7 @@ measurements, not ours; the model is in 01, section 7):
 - Code: `D:\Games\HoYoPlay\games\Grind Pilot\exam`, `D:\Games\HoYoPlay\games\Grind Pilot\tests`
 - Not kept here: the bench runs themselves.
 
-**The idea behind it:** [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden), [Append-only logs and an auditor](file:///E:/AI%20academia/Study%20hub.html#audit)
+**The idea behind it:** [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden), [Append-only logs and an auditor](https://derwina-code.github.io/ai-academia/Study%20hub.html#audit)
 
 
 ## 5. Measure the product's path, not just the model
@@ -157,7 +157,7 @@ measurements, not ours; the model is in 01, section 7):
 - Results: `Fractal\runtime\experiments\2026-11-11\ruby_talk_exam\results`, `Fractal\runtime\experiments\2026-11-09\ruby_brain\results`, `Fractal\runtime\experiments\2026-11-08\typecheck_offline_results.json`
 - Code: `Fractal\runtime\experiments\2026-11-11\ruby_talk_exam\talk_exam.py`, `Fractal\runtime\experiments\2026-11-08\typecheck_offline.py`
 
-**The idea behind it:** [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden), [Distillation into a small model](file:///E:/AI%20academia/Study%20hub.html#distill)
+**The idea behind it:** [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden), [Distillation into a small model](https://derwina-code.github.io/ai-academia/Study%20hub.html#distill)
 
 
 ## 6. Judges
@@ -179,7 +179,7 @@ measurements, not ours; the model is in 01, section 7):
 - Results: `Fractal\runtime\experiments\2026-11-09\ruby_brain\results`, `Fractal\runtime\experiments\2026-11-06\writing-writer.json`
 - Code: `Fractal\runtime\experiments\2026-11-09\ruby_brain\judge.py`, `Fractal\runtime\experiments\tests\writing_bench.py`
 
-**The idea behind it:** [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired)
+**The idea behind it:** [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired)
 
 
 ## 7. Agreement must come from independent sources
@@ -202,7 +202,7 @@ measurements, not ours; the model is in 01, section 7):
 - Code: `Fractal\fractal\practice.py`
 - Not kept: the overnight practice run's per-problem log.
 
-**The idea behind it:** [Sleep: consolidating memory offline](file:///E:/AI%20academia/Study%20hub.html#sleep), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Sleep: consolidating memory offline](https://derwina-code.github.io/ai-academia/Study%20hub.html#sleep), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 
 
 ## 8. A suspicious number is a bug report
@@ -221,7 +221,7 @@ measurements, not ours; the model is in 01, section 7):
 - Code: `Fractal\fractal\mind.py`, `Fractal\fractal\studio\studio.html`
 - Not kept: the before and after map measurements.
 
-**The idea behind it:** [Graph memory with personalised PageRank](file:///E:/AI%20academia/Study%20hub.html#ppr)
+**The idea behind it:** [Graph memory with personalised PageRank](https://derwina-code.github.io/ai-academia/Study%20hub.html#ppr)
 
 
 ## 9. How a decision is made
@@ -239,7 +239,7 @@ Keeping measured numbers as comments next to each setting means the reason for e
 **Proof.**
 - Code: `Fractal\config\agents.toml`
 
-**The idea behind it:** [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired), [Repeats and the noise floor](file:///E:/AI%20academia/Study%20hub.html#repeats)
+**The idea behind it:** [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired), [Repeats and the noise floor](https://derwina-code.github.io/ai-academia/Study%20hub.html#repeats)
 
 
 ## 10. Sampled exams: find the noise floor first, then pair the answers (Measured, 13 Nov 2026)
@@ -276,7 +276,7 @@ than the exam.
 - Results: `Ruby\docs\research\2026-11-12\ruby_weights\analysis-s10.json`, `Ruby\docs\research\2026-11-12\ruby_weights\confirm.log`
 - Code: `Ruby\docs\research\2026-11-12\ruby_weights\analyse.py`, `Fractal\exam-kit\src\pair.rs`
 
-**The idea behind it:** [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired), [Repeats and the noise floor](file:///E:/AI%20academia/Study%20hub.html#repeats), [Confidence intervals for small exams](file:///E:/AI%20academia/Study%20hub.html#wilson)
+**The idea behind it:** [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired), [Repeats and the noise floor](https://derwina-code.github.io/ai-academia/Study%20hub.html#repeats), [Confidence intervals for small exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#wilson)
 
 
 ## 11. Two small traps in an exam harness (Found, 21 Nov 2026)
@@ -299,4 +299,4 @@ than the exam.
 - Code: `Fractal\exam-kit\src\gate.rs` (holder file `Fractal\exam-kit\holder.pid`), `Fractal\rust\parts\odysseus\src\compare.rs`
 - Not kept: the overnight logs of the two waiting exams.
 
-**The idea behind it:** [Processes, handles and clean shutdown](file:///E:/AI%20academia/Study%20hub.html#handles), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Processes, handles and clean shutdown](https://derwina-code.github.io/ai-academia/Study%20hub.html#handles), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)

@@ -66,7 +66,7 @@ Nothing has been measured between two real machines yet.
 **Proof.**
 - Code: `Volta\rust\src\jobs.rs`
 
-**The idea behind it:** [Prompt injection and command guards](file:///E:/AI%20academia/Study%20hub.html#guards)
+**The idea behind it:** [Prompt injection and command guards](https://derwina-code.github.io/ai-academia/Study%20hub.html#guards)
 
 
 ## 4. The other machine being off is normal
@@ -88,7 +88,7 @@ Nothing has been measured between two real machines yet.
 - Results: `Volta\tests\test_link_with_fractal.py` (the check that times it)
 - Not kept: the five timing runs as a file.
 
-**The idea behind it:** [Processes, handles and clean shutdown](file:///E:/AI%20academia/Study%20hub.html#handles)
+**The idea behind it:** [Processes, handles and clean shutdown](https://derwina-code.github.io/ai-academia/Study%20hub.html#handles)
 
 
 ## 5. One audit log for machines that can't always reach each other
@@ -108,7 +108,7 @@ Nothing has been measured between two real machines yet.
 **Proof.**
 - Code: `Volta\rust\src\activity.rs`, `Fractal\fractal\volta.py`
 
-**The idea behind it:** [Append-only logs and an auditor](file:///E:/AI%20academia/Study%20hub.html#audit)
+**The idea behind it:** [Append-only logs and an auditor](https://derwina-code.github.io/ai-academia/Study%20hub.html#audit)
 
 
 ## 6. Build and test the contract before the hardware exists
@@ -152,7 +152,7 @@ the test PC. Tests must point defaults that are "this machine" at a closed port 
 - Code: `Volta\rust\src\jobs.rs` (arrival order), `Volta\rust\src\node.rs`
 - Not kept: the failing runs.
 
-**The idea behind it:** [Processes, handles and clean shutdown](file:///E:/AI%20academia/Study%20hub.html#handles), [Repeats and the noise floor](file:///E:/AI%20academia/Study%20hub.html#repeats)
+**The idea behind it:** [Processes, handles and clean shutdown](https://derwina-code.github.io/ai-academia/Study%20hub.html#handles), [Repeats and the noise floor](https://derwina-code.github.io/ai-academia/Study%20hub.html#repeats)
 
 
 ## 8. Looking without acting
@@ -197,7 +197,7 @@ Volta's node was rewritten from Python into Rust after its owner decided the pro
 - Check it yourself: `cargo test` (from `Volta\rust`, offline)
 - Not kept: the memory and timing runs as files.
 
-**The idea behind it:** [Rewriting with parity tests](file:///E:/AI%20academia/Study%20hub.html#parity)
+**The idea behind it:** [Rewriting with parity tests](https://derwina-code.github.io/ai-academia/Study%20hub.html#parity)
 
 
 ## 10. "The same bytes" as the test for a rewrite (Built, 12 Nov 2026)
@@ -224,7 +224,7 @@ program must write **the same bytes** as the old one.
 - Results: `Fractal\rust\tests\parity.py` (the comparisons)
 - Check it yourself: `py -3 rust\tests\parity.py` (from `Fractal`, about half a minute)
 
-**The idea behind it:** [Rewriting with parity tests](file:///E:/AI%20academia/Study%20hub.html#parity)
+**The idea behind it:** [Rewriting with parity tests](https://derwina-code.github.io/ai-academia/Study%20hub.html#parity)
 
 
 ## Open questions (also in 10)

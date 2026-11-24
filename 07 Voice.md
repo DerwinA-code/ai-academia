@@ -33,7 +33,7 @@ Speech in and speech out for personal assistants. Sources: Fractal's academia 3.
 - Check it yourself: `node Fractal\runtime\experiments\tests\ruby_rules_unit.js`
 - Not kept: the clips and transcripts behind the 3 s and 58 % figures.
 
-**The idea behind it:** [Speech synthesis and the latency budget](file:///E:/AI%20academia/Study%20hub.html#voice)
+**The idea behind it:** [Speech synthesis and the latency budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#voice)
 
 
 ## 2. The latency budget
@@ -65,7 +65,7 @@ Speech in and speech out for personal assistants. Sources: Fractal's academia 3.
 **Proof.**
 - Not kept: the timing runs behind 11 s, 3 s and 12–15 s (the 27 s is in `ruby_phase0_results.json`); the numbers are from the records named above.
 
-**The idea behind it:** [Speech synthesis and the latency budget](file:///E:/AI%20academia/Study%20hub.html#voice)
+**The idea behind it:** [Speech synthesis and the latency budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#voice)
 
 
 ## 3. Text-to-speech landscape (claims, Nov 2026)
@@ -93,7 +93,7 @@ loaded, on your own card, beside whatever else must stay loaded.
 **Proof.**
 - Results: `Ruby\docs\VOICE_SHORTLIST.md`, `Ruby\docs\RESEARCH.md` (the shortlist this table was drawn from)
 
-**The idea behind it:** [Speech synthesis and the latency budget](file:///E:/AI%20academia/Study%20hub.html#voice)
+**The idea behind it:** [Speech synthesis and the latency budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#voice)
 
 
 ## 4. Designing a voice from words (no cloning)
@@ -128,7 +128,7 @@ loaded, on your own card, beside whatever else must stay loaded.
 - Results: the three designed voices, `Ruby\Ruby voice\d1`, `Ruby\Ruby voice\d2`, `Ruby\Ruby voice\d3`
 - Not kept: per-clip pitch measurements as data files; the figures live in the two documents above.
 
-**The idea behind it:** [Speech synthesis and the latency budget](file:///E:/AI%20academia/Study%20hub.html#voice)
+**The idea behind it:** [Speech synthesis and the latency budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#voice)
 
 
 ## 5. Licences and consent
@@ -180,7 +180,7 @@ fine-tuned from a stock English voice ("Cori").
 - Code: `E:\Fractal AI project\runtime\experiments\2026-11-09\ruby_phone_voice\prep.py`, `piper_fit.py`, `train_runner.py` (same folder)
 - Not kept: the release-gate listening test (never run here).
 
-**The idea behind it:** [Distillation into a small model](file:///E:/AI%20academia/Study%20hub.html#distill), [Speech synthesis and the latency budget](file:///E:/AI%20academia/Study%20hub.html#voice)
+**The idea behind it:** [Distillation into a small model](https://derwina-code.github.io/ai-academia/Study%20hub.html#distill), [Speech synthesis and the latency budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#voice)
 
 
 ## 7a. Conversation speed: how others solve it, and the mistake made here (22 Nov 2026)
@@ -281,7 +281,7 @@ Sources: [Cekura open-source TTS 2026](https://www.cekura.ai/blogs/open-source-t
 - Code: `Fractal\runtime\llama-src\tools\tts\tts-serve.cpp`
 - Not kept: the 21 Nov Pocket timings (only the numbers in Fractal academia 3.66).
 
-**The idea behind it:** [Speech synthesis and the latency budget](file:///E:/AI%20academia/Study%20hub.html#voice), [Distillation into a small model](file:///E:/AI%20academia/Study%20hub.html#distill)
+**The idea behind it:** [Speech synthesis and the latency budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#voice), [Distillation into a small model](https://derwina-code.github.io/ai-academia/Study%20hub.html#distill)
 
 
 ## 7. The test, the same for every voice
@@ -296,5 +296,5 @@ Sources: [Cekura open-source TTS 2026](https://www.cekura.ai/blogs/open-source-t
 - A method, not a result. The ≤ 0.8 s target: the user's goal in `Ruby\docs\VOICE_SHORTLIST.md` ("first sound ≤ 0.8 s after you stop speaking").
 - Used as written in Odysseus academia 3.13–3.14 (six fixed lines, loaded, blind pick).
 
-**The idea behind it:** [Speech synthesis and the latency budget](file:///E:/AI%20academia/Study%20hub.html#voice)
+**The idea behind it:** [Speech synthesis and the latency budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#voice)
 

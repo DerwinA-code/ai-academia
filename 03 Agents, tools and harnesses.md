@@ -28,7 +28,7 @@ measured on Qwen3.8-27B, paired:
 - Results: `Fractal\results\runs\20261028-185024-local-quick.jsonl.gz`, `Fractal\results\runs\20261029-211749-fractal-quick.jsonl.gz`, `Fractal\results\runs\20261029-045930-local-think-quick.jsonl.gz` (corrected 24 Nov: was 20261028-195341, an empty file), `Fractal\results\runs\20261030-001514-fractal-think-quick.jsonl.gz`, index `Fractal\results\index.jsonl`
 - Code: `Fractal\fractal\pipeline.py`
 
-**The idea behind it:** [Solve, check, repair with a compiler](file:///E:/AI%20academia/Study%20hub.html#repair), [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired)
+**The idea behind it:** [Solve, check, repair with a compiler](https://derwina-code.github.io/ai-academia/Study%20hub.html#repair), [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired)
 
 
 ## 2. Compilers and type checkers as free judges
@@ -79,7 +79,7 @@ on the hidden tests**: tests remain the real proof.
 - Results: `Fractal\runtime\experiments\2026-11-08\rust_results\r1.jsonl`, `Fractal\runtime\experiments\2026-11-08\python_check_results.jsonl`, `Fractal\runtime\experiments\2026-11-08\compilecheck_live_results.json`, log `Fractal\runtime\experiments\2026-11-08\rust_lessons.log`
 - Code: `Fractal\fractal\compilecheck.py`, `Fractal\runtime\experiments\2026-11-08\rust_bench.py`
 
-**The idea behind it:** [Solve, check, repair with a compiler](file:///E:/AI%20academia/Study%20hub.html#repair), [Lessons and playbooks in the prompt](file:///E:/AI%20academia/Study%20hub.html#lessons)
+**The idea behind it:** [Solve, check, repair with a compiler](https://derwina-code.github.io/ai-academia/Study%20hub.html#repair), [Lessons and playbooks in the prompt](https://derwina-code.github.io/ai-academia/Study%20hub.html#lessons)
 
 
 ## 3. Skills and toolboxes beat many agents
@@ -121,7 +121,7 @@ recent script.
 - Results: `Fractal\runtime\experiments\2026-11-08\toolbox_live_results.json`
 - Code: `Fractal\fractal\toolbox.py`, `Fractal\rust\parts\tools\src\toolbox.rs`, tests `Fractal\runtime\experiments\tests\toolbox_unit.py`
 
-**The idea behind it:** [Lessons and playbooks in the prompt](file:///E:/AI%20academia/Study%20hub.html#lessons), [The agent tool loop](file:///E:/AI%20academia/Study%20hub.html#loop)
+**The idea behind it:** [Lessons and playbooks in the prompt](https://derwina-code.github.io/ai-academia/Study%20hub.html#lessons), [The agent tool loop](https://derwina-code.github.io/ai-academia/Study%20hub.html#loop)
 
 
 ## 4. Improve the harness, not the weights
@@ -185,7 +185,7 @@ checked scripts and skills are where agent gains come from.
 - Results: `Fractal\runtime\experiments\2026-11-13\harness_editor\results.json`, playbook `Fractal\runtime\experiments\2026-11-13\harness_editor\self_playbook.md`, `Fractal\runtime\experiments\2026-11-13\rust_default\language_choice.json`, `Fractal\runtime\experiments\2026-11-14\obscura\results.json`
 - Code: `Fractal\runtime\experiments\2026-11-13\harness_editor\editor_test.py`, `Fractal\runtime\experiments\2026-11-13\rust_default\language_choice.py`, `Fractal\runtime\experiments\2026-11-14\obscura\measure.ps1`
 
-**The idea behind it:** [Lessons and playbooks in the prompt](file:///E:/AI%20academia/Study%20hub.html#lessons), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden), [Working inside a fixed context](file:///E:/AI%20academia/Study%20hub.html#context)
+**The idea behind it:** [Lessons and playbooks in the prompt](https://derwina-code.github.io/ai-academia/Study%20hub.html#lessons), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden), [Working inside a fixed context](https://derwina-code.github.io/ai-academia/Study%20hub.html#context)
 
 
 ## 5. Routing and model choice
@@ -207,7 +207,7 @@ checked scripts and skills are where agent gains come from.
 - Results: `Fractal\data\hub\scores.json`
 - Not kept: the 40 labelled requests' run output.
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe)
 
 
 ## 6. The tool loop: lessons from real use
@@ -229,7 +229,7 @@ checked scripts and skills are where agent gains come from.
 - Code: `Fractal\rust\parts\agent\src\turn`, `Fractal\rust\parts\tools\src\plugins\code.rs` (older Python `Fractal\fractal\studio`)
 - Not kept: the chats that showed each problem.
 
-**The idea behind it:** [The agent tool loop](file:///E:/AI%20academia/Study%20hub.html#loop)
+**The idea behind it:** [The agent tool loop](https://derwina-code.github.io/ai-academia/Study%20hub.html#loop)
 
 
 ## 7. Prompt injection
@@ -264,7 +264,7 @@ checked scripts and skills are where agent gains come from.
 **Proof.**
 - Code: `Fractal\rust\parts\tools\src\accounts.rs`, `Fractal\rust\parts\odysseus\src\mail\ai.rs` (the marker), older `Fractal\fractal\accounts.py`
 
-**The idea behind it:** [Prompt injection and command guards](file:///E:/AI%20academia/Study%20hub.html#guards)
+**The idea behind it:** [Prompt injection and command guards](https://derwina-code.github.io/ai-academia/Study%20hub.html#guards)
 
 
 ## 8. Agents that act in a UI (GrindPilot)
@@ -303,7 +303,7 @@ checked scripts and skills are where agent gains come from.
 - Code: `D:\Games\HoYoPlay\games\Grind Pilot\grindpilot-rs`, tests `D:\Games\HoYoPlay\games\Grind Pilot\tests`
 - Not kept here: the live play sessions (summarised in `D:\Games\HoYoPlay\games\Grind Pilot\grind pilot documentary\PLAYTHROUGH LOG.md`).
 
-**The idea behind it:** [The agent tool loop](file:///E:/AI%20academia/Study%20hub.html#loop), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [The agent tool loop](https://derwina-code.github.io/ai-academia/Study%20hub.html#loop), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 
 
 ## 9. Mail and calendars
@@ -342,7 +342,7 @@ checked scripts and skills are where agent gains come from.
 - Results: `AI activity logs` (the log itself), viewer `AI activity logs\Activity log.html`
 - Code: `Fractal\fractal\activity.py`, tests `Fractal\runtime\experiments\tests\activity_attach_unit.py`; the auditor that reads it `Fractal\rust\parts\auditor`
 
-**The idea behind it:** [Append-only logs and an auditor](file:///E:/AI%20academia/Study%20hub.html#audit)
+**The idea behind it:** [Append-only logs and an auditor](https://derwina-code.github.io/ai-academia/Study%20hub.html#audit)
 
 
 ## 11. Free data services as tools: a catalogue is not a tool (Read, 12 Nov 2026)
@@ -414,7 +414,7 @@ the phone is done by connectors (MCP), by the phone assistant's own actions, or 
 - Results: `Fractal\runtime\experiments\2026-11-12\facts_trial\summary.json`, `summary_run2.json`, `summary_run3.json`, `fallback_check.json`, notes `findings.md` (all in that folder)
 - Code: `Fractal\plugins\facts`, `Fractal\rust\parts\tools\src\plugins\facts.rs`, tests `Fractal\runtime\experiments\tests\facts_unit.py`, trial `Fractal\runtime\experiments\2026-11-12\facts_trial\run_trial.py`
 
-**The idea behind it:** [The agent tool loop](file:///E:/AI%20academia/Study%20hub.html#loop), [Working inside a fixed context](file:///E:/AI%20academia/Study%20hub.html#context)
+**The idea behind it:** [The agent tool loop](https://derwina-code.github.io/ai-academia/Study%20hub.html#loop), [Working inside a fixed context](https://derwina-code.github.io/ai-academia/Study%20hub.html#context)
 
 
 ## 12. A character that runs for months: Pino (Read, 12 Nov 2026)
@@ -498,7 +498,7 @@ one. It is not evidence of feeling or awareness, and the maker's own pages say "
 **Proof.**
 - Not kept: copies of the live data read on 12 Nov.
 
-**The idea behind it:** [Sleep: consolidating memory offline](file:///E:/AI%20academia/Study%20hub.html#sleep), [Graph memory with personalised PageRank](file:///E:/AI%20academia/Study%20hub.html#ppr)
+**The idea behind it:** [Sleep: consolidating memory offline](https://derwina-code.github.io/ai-academia/Study%20hub.html#sleep), [Graph memory with personalised PageRank](https://derwina-code.github.io/ai-academia/Study%20hub.html#ppr)
 
 
 ## 13. An agent that can be put down and picked up: Infinity (Read and built, 12 Nov 2026)
@@ -540,7 +540,7 @@ and 2 of 2 chats finished after "continue"; a task paused with no model calls wh
 - Results: `Fractal\runtime\experiments\2026-11-12\resume_trial\results.jsonl`, log `Fractal\runtime\experiments\2026-11-12\resume_trial\trial.log`
 - Code: `Fractal\fractal\studio\resume.py` (Rust: `Fractal\rust\parts\studio-store`), trial `Fractal\runtime\experiments\2026-11-12\resume_trial\run_trial.py`
 
-**The idea behind it:** [Processes, handles and clean shutdown](file:///E:/AI%20academia/Study%20hub.html#handles), [The agent tool loop](file:///E:/AI%20academia/Study%20hub.html#loop)
+**The idea behind it:** [Processes, handles and clean shutdown](https://derwina-code.github.io/ai-academia/Study%20hub.html#handles), [The agent tool loop](https://derwina-code.github.io/ai-academia/Study%20hub.html#loop)
 
 
 ## 14. A second, different AI beside the first: lessons from Odysseus (Measured and built, 20-21 Nov 2026)
@@ -584,4 +584,4 @@ and chats. What carried over beyond this project:
 - Check it yourself: `cargo test -p odysseus` (from `Fractal\rust`)
 - Not kept: the first phone chat's transcript as a file.
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [The agent tool loop](file:///E:/AI%20academia/Study%20hub.html#loop), [Rewriting with parity tests](file:///E:/AI%20academia/Study%20hub.html#parity)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [The agent tool loop](https://derwina-code.github.io/ai-academia/Study%20hub.html#loop), [Rewriting with parity tests](https://derwina-code.github.io/ai-academia/Study%20hub.html#parity)

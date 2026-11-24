@@ -26,7 +26,7 @@ Fractal's academia 3.2, 3.3, 3.6, 3.10, 3.13, 3.24 and Part 5.
 - Code: `Fractal\fractal\coach.py`
 - Results: `Fractal\data\rules.json`, `Fractal\data\training.jsonl`
 
-**The idea behind it:** [Lessons and playbooks in the prompt](file:///E:/AI%20academia/Study%20hub.html#lessons), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Lessons and playbooks in the prompt](https://derwina-code.github.io/ai-academia/Study%20hub.html#lessons), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 
 
 ## 2. Self-practice needs independent agreement
@@ -62,7 +62,7 @@ Fractal's academia 3.2, 3.3, 3.6, 3.10, 3.13, 3.24 and Part 5.
 - Code: `Fractal\fractal\practice.py`, `Fractal\runtime\experiments\2026-11-12\rust_academy\measure_academy.py`
 - Not kept: the overnight practice log; the 13 Nov self-study transcript.
 
-**The idea behind it:** [Solve, check, repair with a compiler](file:///E:/AI%20academia/Study%20hub.html#repair), [Lessons and playbooks in the prompt](file:///E:/AI%20academia/Study%20hub.html#lessons), [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired)
+**The idea behind it:** [Solve, check, repair with a compiler](https://derwina-code.github.io/ai-academia/Study%20hub.html#repair), [Lessons and playbooks in the prompt](https://derwina-code.github.io/ai-academia/Study%20hub.html#lessons), [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired)
 
 
 ## 3. LoRA on self-practice data: no gain
@@ -85,7 +85,7 @@ No clear gain; **not adopted.** Proven answers alone did not teach a small model
 - Code: `Fractal\fractal\train\lora.py`
 - Not kept: nothing beyond the above (corrected 24 Nov: the before/after answers are kept in the two runs).
 
-**The idea behind it:** [LoRA fine-tuning](file:///E:/AI%20academia/Study%20hub.html#lora)
+**The idea behind it:** [LoRA fine-tuning](https://derwina-code.github.io/ai-academia/Study%20hub.html#lora)
 
 
 ## 4. Distillation into a small model works
@@ -136,7 +136,7 @@ Speed and file size were unchanged (1.05 GB Q4_0, ~48–49 tok/s on CPU).
 - Results: `Fractal\runtime\experiments\2026-11-09\ruby_brain\results`, `Fractal\runtime\experiments\2026-11-09\ruby_brain\pipeline-v4b.log`
 - Code: `Fractal\runtime\experiments\2026-11-09\ruby_brain\train_ruby.py`, `Fractal\runtime\experiments\2026-11-09\ruby_brain\evalphone.py`, `Fractal\runtime\experiments\2026-11-09\ruby_brain\rescore.py`
 
-**The idea behind it:** [Distillation into a small model](file:///E:/AI%20academia/Study%20hub.html#distill), [LoRA fine-tuning](file:///E:/AI%20academia/Study%20hub.html#lora), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Distillation into a small model](https://derwina-code.github.io/ai-academia/Study%20hub.html#distill), [LoRA fine-tuning](https://derwina-code.github.io/ai-academia/Study%20hub.html#lora), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 
 
 ## 5. Sampling and thinking loops
@@ -188,7 +188,7 @@ Speed and file size were unchanged (1.05 GB Q4_0, ~48–49 tok/s on CPU).
 - Code: `Fractal\runtime\experiments\tests\route_bench.py`, `Fractal\fractal\hub\dispatch.py`
 - Not kept: the Devstral runs.
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired)
 
 
 ## 7. Out of scope on consumer hardware (for now)
@@ -214,7 +214,7 @@ Speed and file size were unchanged (1.05 GB Q4_0, ~48–49 tok/s on CPU).
 **Proof.**
 - Not kept: nothing was run (read only).
 
-**The idea behind it:** [LoRA fine-tuning](file:///E:/AI%20academia/Study%20hub.html#lora), [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram)
+**The idea behind it:** [LoRA fine-tuning](https://derwina-code.github.io/ai-academia/Study%20hub.html#lora), [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram)
 
 
 ## 8. Sleep by proxy for a small device (Built, 11 Nov 2026; first real night seen the same night)
@@ -244,7 +244,7 @@ Speed and file size were unchanged (1.05 GB Q4_0, ~48–49 tok/s on CPU).
 - Check it yourself: `py -3 Fractal\runtime\experiments\tests\ruby_digest_unit.py`
 - Not kept: the first night's report.
 
-**The idea behind it:** [Sleep: consolidating memory offline](file:///E:/AI%20academia/Study%20hub.html#sleep), [Distillation into a small model](file:///E:/AI%20academia/Study%20hub.html#distill)
+**The idea behind it:** [Sleep: consolidating memory offline](https://derwina-code.github.io/ai-academia/Study%20hub.html#sleep), [Distillation into a small model](https://derwina-code.github.io/ai-academia/Study%20hub.html#distill)
 
 
 ## 9. Changing weights by arithmetic, without training (Measured on a 1.7B, 13 Nov 2026)
@@ -312,7 +312,7 @@ Record: Ruby academia 3.9; Fractal academia 3.42 (the 27B).
 - Results: `Ruby\docs\research\2026-11-12\ruby_weights\summary.json`, `Fractal\runtime\experiments\2026-11-13\fractal_weights\results.json`
 - Code: `Ruby\docs\research\2026-11-12\ruby_weights\merge.py`, `Fractal\runtime\experiments\2026-11-13\fractal_weights\run_27b.py`
 
-**The idea behind it:** [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired), [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram), [LoRA fine-tuning](file:///E:/AI%20academia/Study%20hub.html#lora)
+**The idea behind it:** [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired), [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram), [LoRA fine-tuning](https://derwina-code.github.io/ai-academia/Study%20hub.html#lora)
 
 
 ## Improving without the builder: a workshop that proves its own changes (Built, 21 Nov 2026; not yet measured live)
@@ -359,7 +359,7 @@ switched on; the first live session waits for a free PC.
 - Check it yourself: `cargo test -p odysseus` (from `Fractal\rust`)
 - Not kept: no live session has run.
 
-**The idea behind it:** [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden), [Lessons and playbooks in the prompt](file:///E:/AI%20academia/Study%20hub.html#lessons)
+**The idea behind it:** [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden), [Lessons and playbooks in the prompt](https://derwina-code.github.io/ai-academia/Study%20hub.html#lessons)
 
 ## 10. A research pass on self-improvement methods (21 Nov 2026; read, not measured here)
 
@@ -445,7 +445,7 @@ each piece is measured. The rest is in 10 (Leads).
 - Code: `Fractal\rust\parts\learn\src\sleep\maps.rs`
 - Not kept: the tokenizer metadata read-out.
 
-**The idea behind it:** [Lessons and playbooks in the prompt](file:///E:/AI%20academia/Study%20hub.html#lessons), [Distillation into a small model](file:///E:/AI%20academia/Study%20hub.html#distill), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Lessons and playbooks in the prompt](https://derwina-code.github.io/ai-academia/Study%20hub.html#lessons), [Distillation into a small model](https://derwina-code.github.io/ai-academia/Study%20hub.html#distill), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 
 
 ## 11. A model that rewrites its own weights (read 22 Nov 2026; the winning edit measured on Fractal 22 Nov, not adopted)
@@ -506,7 +506,7 @@ a copy of Fractal's 4-bit file. Hard general exam 22 vs 21 of 26 (fixed 2, broke
 **Proof.**
 - Not kept: the edited copy, its script, runner and results (Recycle Bin, 22 Nov; Fractal academia 3.73). Baseline it was paired against: `Fractal\exam-kit\results\general-hard\h0.jsonl`.
 
-**The idea behind it:** [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 
 
 ## 12. Hermes Agent: an open agent that keeps its own memory and skills (read 22 Nov 2026; not installed)
@@ -682,7 +682,7 @@ what the conversation grounds.
 - Code: `Fractal\rust\parts\tools\src\floor.rs`, `Fractal\rust\src\scan.rs`, `Fractal\rust\parts\tools\src\toolbox.rs`
 - Not kept: nothing of Hermes was cloned or run.
 
-**The idea behind it:** [Prompt injection and command guards](file:///E:/AI%20academia/Study%20hub.html#guards), [Lessons and playbooks in the prompt](file:///E:/AI%20academia/Study%20hub.html#lessons), [Append-only logs and an auditor](file:///E:/AI%20academia/Study%20hub.html#audit)
+**The idea behind it:** [Prompt injection and command guards](https://derwina-code.github.io/ai-academia/Study%20hub.html#guards), [Lessons and playbooks in the prompt](https://derwina-code.github.io/ai-academia/Study%20hub.html#lessons), [Append-only logs and an auditor](https://derwina-code.github.io/ai-academia/Study%20hub.html#audit)
 
 
 ## 13. A research pass on fixing a 27B's known weak spots, on memory and skills, and on small exams (23 Nov 2026; read; tried the same night, 13.6)
@@ -779,7 +779,7 @@ Sources: see References, "Research pass of 23 Nov 2026".
 - Code: `Fractal\exam-kit\src\general.rs`, `Fractal\exam-kit\src\pair.rs`
 - Check it yourself: `exam.exe general report results\general-hard\s4-cases.jsonl results\general-hard\v1.jsonl` (from `Fractal\exam-kit`)
 
-**The idea behind it:** [Confidence intervals for small exams](file:///E:/AI%20academia/Study%20hub.html#wilson), [Repeats and the noise floor](file:///E:/AI%20academia/Study%20hub.html#repeats), [Lessons and playbooks in the prompt](file:///E:/AI%20academia/Study%20hub.html#lessons)
+**The idea behind it:** [Confidence intervals for small exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#wilson), [Repeats and the noise floor](https://derwina-code.github.io/ai-academia/Study%20hub.html#repeats), [Lessons and playbooks in the prompt](https://derwina-code.github.io/ai-academia/Study%20hub.html#lessons)
 
 
 ## 14. Why a small model's fine-tunes trade one skill for another, and what to do instead (Measured on Ruby 21-23 Nov 2026; research 23 Nov)
@@ -859,5 +859,5 @@ same paired exam. Put facts that change in the prompt or in retrieval, not in th
 - Results: `Ruby\docs\research\2026-11-23\ruby_team_8\README.md`, `Ruby\docs\research\2026-11-23\ruby_knowledge_k\README.md`, `Ruby\docs\research\2026-11-21\ruby_brain_v7\README.md`
 - Code: `Ruby\docs\research\2026-11-23\ruby_team_8\run_8d.sh`
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [LoRA fine-tuning](file:///E:/AI%20academia/Study%20hub.html#lora), [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [LoRA fine-tuning](https://derwina-code.github.io/ai-academia/Study%20hub.html#lora), [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired)
 

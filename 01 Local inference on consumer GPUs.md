@@ -39,7 +39,7 @@ It explains, in one line:
 - Code: `Fractal\runtime\experiments\tests\kv4_bench.py`
 - Not kept: the 8 Nov drive-read timing.
 
-**The idea behind it:** [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram), [The KV cache](file:///E:/AI%20academia/Study%20hub.html#kv)
+**The idea behind it:** [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram), [The KV cache](https://derwina-code.github.io/ai-academia/Study%20hub.html#kv)
 
 
 ## 2. The VRAM budget
@@ -74,7 +74,7 @@ If it doesn't fit, llama.cpp moves layers or buffers to system RAM. It still wor
 - Code: `Fractal\fractal\hardware.py`, `Fractal\fractal\gguf.py` (the fit estimate), `Fractal\runtime\models.ini` (the settings as now set)
 - Not kept: the 5 Nov hub log with the "short by 857 MiB" line; the 40K and vision-projector speed runs.
 
-**The idea behind it:** [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram), [The KV cache](file:///E:/AI%20academia/Study%20hub.html#kv)
+**The idea behind it:** [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram), [The KV cache](https://derwina-code.github.io/ai-academia/Study%20hub.html#kv)
 
 
 ## 3. Quantisation
@@ -106,7 +106,7 @@ If it doesn't fit, llama.cpp moves layers or buffers to system RAM. It still wor
 - Results: `Fractal\runtime\experiments\2026-11-07\kv4\results.json`, logs `Fractal\runtime\experiments\2026-11-07\kv4\server-q8_0-20480.log` and `server-q4_0-36864.log`
 - Code: `Fractal\runtime\experiments\tests\kv4_bench.py`
 
-**The idea behind it:** [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram), [The KV cache](file:///E:/AI%20academia/Study%20hub.html#kv)
+**The idea behind it:** [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram), [The KV cache](https://derwina-code.github.io/ai-academia/Study%20hub.html#kv)
 
 
 ## 4. The KV cache and hybrid models
@@ -185,7 +185,7 @@ their attention layers, so long context is far cheaper than in a plain transform
 - Code: `Fractal\fractal\gguf.py` (reads layers, KV heads, head size, attention layers)
 - Not kept: copies of the Strata pages and issues read on 10–11 Nov.
 
-**The idea behind it:** [The KV cache](file:///E:/AI%20academia/Study%20hub.html#kv), [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram)
+**The idea behind it:** [The KV cache](https://derwina-code.github.io/ai-academia/Study%20hub.html#kv), [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram)
 
 
 ## 5. Speculative decoding
@@ -233,7 +233,7 @@ VRAM, with only ~0.6 GB spare) points to memory pressure. That is a reasoned exp
 - Code: `Fractal\runtime\experiments\tests\spec_bench.py`, `Fractal\runtime\experiments\tests\mtp_sweep.py`; the adopted setting in `Fractal\config\agents.toml`
 - Not kept: the transcripts of the live 11-file runs.
 
-**The idea behind it:** [Speculative decoding](file:///E:/AI%20academia/Study%20hub.html#spec)
+**The idea behind it:** [Speculative decoding](https://derwina-code.github.io/ai-academia/Study%20hub.html#spec)
 
 
 ## 6. Several models on one card: router mode
@@ -281,7 +281,7 @@ Odysseus's gpt-oss-20b (MXFP4, 12.11 GB file, ~11.9 GB at 32K) can't both sit on
 - Results: `Fractal\exam-kit\results\bench\speed-odysseus.summary.json` (a later speed bench of gpt-oss-20b, 22 Nov)
 - Not kept: the 20 Nov load and speed timings.
 
-**The idea behind it:** [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram), [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe)
+**The idea behind it:** [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram), [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe)
 
 
 ## 7. Bigger-than-VRAM models: AirLLM vs memory-mapping
@@ -399,7 +399,7 @@ the model whose experts fit in RAM wins; the SSD engines suit a slow second opin
 - Results: `Fractal\runtime\experiments\2026-11-07\kv4\results.json` (the one measured row)
 - Not kept: the 8 Nov drive-read timing.
 
-**The idea behind it:** [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram), [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe)
+**The idea behind it:** [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram), [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe)
 
 
 ## 8. Hardware notes for older datacenter cards
@@ -422,7 +422,7 @@ the model whose experts fit in RAM wins; the SSD engines suit a slow second opin
 - Code: `Fractal\fractal\hardware.py`, `Fractal\fractal\gguf.py`
 - Not kept: nothing measured on a V100 yet (Volta is not built).
 
-**The idea behind it:** [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram)
+**The idea behind it:** [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram)
 
 
 ## 9. Writing speed is not everything
@@ -441,7 +441,7 @@ the model whose experts fit in RAM wins; the SSD engines suit a slow second opin
 - Code: `Fractal\fractal\hub\dispatch.py`, `Fractal\runtime\experiments\tests\route_bench.py`
 - Results: `Fractal\runtime\experiments\2026-11-09\ruby_brain\results` (the phone-brain runs; the llama-bench output itself is not kept)
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram)
 
 
 ## 10. Generating text coarse to fine: Next-Concept Modeling (Read, 16 Nov 2026)
@@ -511,7 +511,7 @@ on recent cards flip about 0.5 % of near-tie outputs, so parity is checked again
 - Results: `NCM lab\eval\sudoku-hard\shard0.pkl`, `NCM lab\eval\xsum\scores.txt`, `NCM lab\eval\rust\xsum.jsonl`, `NCM lab\eval\rust-scored\xsum.pkl`
 - Code: `NCM lab\rust`, `NCM lab\run_xsum.sh`
 
-**The idea behind it:** [Rewriting with parity tests](file:///E:/AI%20academia/Study%20hub.html#parity); otherwise none of the listed techniques: writing every position of a level at once, coarse to fine, instead of token by token.
+**The idea behind it:** [Rewriting with parity tests](https://derwina-code.github.io/ai-academia/Study%20hub.html#parity); otherwise none of the listed techniques: writing every position of a level at once, coarse to fine, instead of token by token.
 
 
 ## Small models deciding with a grammar (GrindPilot, 11 Nov 2026; Measured)
@@ -535,7 +535,7 @@ Record: GrindPilot documentary chapter 18.
 - Code: `D:\Games\HoYoPlay\games\Grind Pilot\grindpilot-rs`
 - Not kept here: the timing runs themselves (only chapter 18's numbers).
 
-**The idea behind it:** [The KV cache](file:///E:/AI%20academia/Study%20hub.html#kv), [The agent tool loop](file:///E:/AI%20academia/Study%20hub.html#loop)
+**The idea behind it:** [The KV cache](https://derwina-code.github.io/ai-academia/Study%20hub.html#kv), [The agent tool loop](https://derwina-code.github.io/ai-academia/Study%20hub.html#loop)
 
 
 
@@ -594,7 +594,7 @@ bandwidth divided by the bytes read per token. On the 5070 Ti (896 GB/s) the 27B
 - Volta's software: "NVIDIA developer blog on architecture support; LocalAI issue 9948" and "vLLM forum, *Support for V100 (sm_70) on vLLM 0.20*". The 12–18 tok/s for a 70B on 2× V100 is our estimate.
 - The ordered list: our own judgement from the above.
 
-**The idea behind it:** [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram), [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe)
+**The idea behind it:** [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram), [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe)
 
 
 ## 12. New ways to run models locally, mid-2026 to 21 Nov 2026 (read, not measured here)
@@ -655,7 +655,7 @@ single forum posts or blogs). The question: what would make this PC (5070 Ti 16 
 **Proof.**
 - Results: `Fractal\runtime\experiments\2026-11-07\mtp\results.json` (our own 7 Nov sweep)
 
-**The idea behind it:** [Speculative decoding](file:///E:/AI%20academia/Study%20hub.html#spec), [The KV cache](file:///E:/AI%20academia/Study%20hub.html#kv), [Speech synthesis and the latency budget](file:///E:/AI%20academia/Study%20hub.html#voice)
+**The idea behind it:** [Speculative decoding](https://derwina-code.github.io/ai-academia/Study%20hub.html#spec), [The KV cache](https://derwina-code.github.io/ai-academia/Study%20hub.html#kv), [Speech synthesis and the latency budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#voice)
 
 
 ## 13. MoE models against the dense 27B on 16 GB, measured (22 Nov 2026) and why (research, 23 Nov)
@@ -720,5 +720,5 @@ choice. A 3-4B-active MoE is a fast side model: Odysseus's role, or a "quick ans
 - Code: `Fractal\exam-kit\src\general.rs`, `Fractal\exam-kit\src\pair.rs`, `Fractal\exam-kit\src\speed.rs`
 - Check it yourself: `exam.exe general report results\general-hard\m3-trial-gemma4-moe.jsonl results\general-hard\h0.jsonl` (from `Fractal\exam-kit`)
 
-**The idea behind it:** [Mixture of experts and routers](file:///E:/AI%20academia/Study%20hub.html#moe), [Paired comparison and the sign test](file:///E:/AI%20academia/Study%20hub.html#paired), [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden)
+**The idea behind it:** [Mixture of experts and routers](https://derwina-code.github.io/ai-academia/Study%20hub.html#moe), [Paired comparison and the sign test](https://derwina-code.github.io/ai-academia/Study%20hub.html#paired), [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden)
 

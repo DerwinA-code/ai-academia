@@ -54,7 +54,7 @@ On a full 16 GB card, the vision projector on the GPU forced the main model's co
 **Proof.**
 - Not kept: the speed runs; the numbers are from Fractal academia 3.10.
 
-**The idea behind it:** [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram)
+**The idea behind it:** [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram)
 
 
 ## 3. Reading game and app screens (GrindPilot)
@@ -102,7 +102,7 @@ On a full 16 GB card, the vision projector on the GPU forced the main model's co
 **Proof.**
 - Not kept: the 9 Nov picture and video runs.
 
-**The idea behind it:** [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram)
+**The idea behind it:** [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram)
 
 
 ## 5. Privacy
@@ -194,5 +194,5 @@ Forest Labs' terms, left for the user to accept.
 - Check it yourself: `sttbench\target\release\sttbench.exe wer stt\truth.tsv stt\hyp_cohere.tsv` (from `Fractal\runtime\experiments\2026-11-21\specialists`, no model)
 - Not kept: real recordings of the user (never made; needs the user's yes).
 
-**The idea behind it:** [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden), [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram)
+**The idea behind it:** [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden), [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram)
 

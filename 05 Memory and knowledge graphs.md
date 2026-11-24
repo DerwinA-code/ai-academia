@@ -32,7 +32,7 @@ pass in `potential ideas.md`.
 - Code: `Fractal\fractal\mind.py`, Rust twin `Fractal\rust\parts\memory-mind\src\mind.rs` (Fractal academia 3.47); tests `Fractal\runtime\experiments\tests\mind_unit.py`
 - Not kept: the live test's chat and timings.
 
-**The idea behind it:** [Graph memory with personalised PageRank](file:///E:/AI%20academia/Study%20hub.html#ppr)
+**The idea behind it:** [Graph memory with personalised PageRank](https://derwina-code.github.io/ai-academia/Study%20hub.html#ppr)
 
 
 ## 2. The map can have hubs; recall can't
@@ -53,7 +53,7 @@ pass in `potential ideas.md`.
 - Code: `Fractal\fractal\mind.py`, `Fractal\rust\parts\memory-mind\src\mind.rs`
 - Results: `Fractal\data\recall_exam\history.jsonl`
 
-**The idea behind it:** [Graph memory with personalised PageRank](file:///E:/AI%20academia/Study%20hub.html#ppr)
+**The idea behind it:** [Graph memory with personalised PageRank](https://derwina-code.github.io/ai-academia/Study%20hub.html#ppr)
 
 
 ## 3. Build memory from records you already keep
@@ -75,7 +75,7 @@ pass in `potential ideas.md`.
 - Results: the vault itself, `Fractal\data\studio\mind\vault`
 - Not kept: the 1.3 s / 0.6 s timings.
 
-**The idea behind it:** [Graph memory with personalised PageRank](file:///E:/AI%20academia/Study%20hub.html#ppr)
+**The idea behind it:** [Graph memory with personalised PageRank](https://derwina-code.github.io/ai-academia/Study%20hub.html#ppr)
 
 
 ## 4. Lessons from a 15-year personal vault (a pasted Reddit post), applied
@@ -96,7 +96,7 @@ pass in `potential ideas.md`.
 - Code: `Fractal\fractal\mind.py`, `Fractal\rust\parts\memory-mind\src\mind.rs`
 - Results: `Fractal\data\studio\mind\vault`
 
-**The idea behind it:** [Graph memory with personalised PageRank](file:///E:/AI%20academia/Study%20hub.html#ppr), [Sleep: consolidating memory offline](file:///E:/AI%20academia/Study%20hub.html#sleep)
+**The idea behind it:** [Graph memory with personalised PageRank](https://derwina-code.github.io/ai-academia/Study%20hub.html#ppr), [Sleep: consolidating memory offline](https://derwina-code.github.io/ai-academia/Study%20hub.html#sleep)
 
 
 ## 5. Consolidation: self-written memory needs grounding
@@ -122,7 +122,7 @@ pass in `potential ideas.md`.
 - Code: `Fractal\fractal\sleep.py`, Rust twin `Fractal\rust\parts\learn\src\sleep.rs`
 - Not kept: the dry run's four proposed lessons.
 
-**The idea behind it:** [Sleep: consolidating memory offline](file:///E:/AI%20academia/Study%20hub.html#sleep)
+**The idea behind it:** [Sleep: consolidating memory offline](https://derwina-code.github.io/ai-academia/Study%20hub.html#sleep)
 
 
 ## 6. Promotion and forgetting
@@ -163,7 +163,7 @@ pass in `potential ideas.md`.
 - Results: `D:\Games\HoYoPlay\games\Grind Pilot\grind pilot documentary\GRINDPILOT_BRAIN.md`, `D:\Games\HoYoPlay\games\Grind Pilot\grind pilot documentary\17 Ready for any game - save lists, covered windows, honest evidence.md`
 - Not kept here: GrindPilot's own test runs live in its project, not in Lattice.
 
-**The idea behind it:** [Sleep: consolidating memory offline](file:///E:/AI%20academia/Study%20hub.html#sleep), [Repeats and the noise floor](file:///E:/AI%20academia/Study%20hub.html#repeats)
+**The idea behind it:** [Sleep: consolidating memory offline](https://derwina-code.github.io/ai-academia/Study%20hub.html#sleep), [Repeats and the noise floor](https://derwina-code.github.io/ai-academia/Study%20hub.html#repeats)
 
 
 ## 7. Vector search: when it's worth it
@@ -247,5 +247,5 @@ Two small ideas worth keeping from the "second brain" products:
 - Code: `Fractal\fractal\recall_exam.py`, tests `Fractal\runtime\experiments\tests\recall_exam_unit.py`
 - Check it yourself: `py -3 -m fractal.recall_exam` (from `Fractal`; the kept and handed measures need no model)
 
-**The idea behind it:** [Hidden tests and held-out exams](file:///E:/AI%20academia/Study%20hub.html#hidden), [Graph memory with personalised PageRank](file:///E:/AI%20academia/Study%20hub.html#ppr)
+**The idea behind it:** [Hidden tests and held-out exams](https://derwina-code.github.io/ai-academia/Study%20hub.html#hidden), [Graph memory with personalised PageRank](https://derwina-code.github.io/ai-academia/Study%20hub.html#ppr)
 

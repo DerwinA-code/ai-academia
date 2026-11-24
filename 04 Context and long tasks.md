@@ -26,7 +26,7 @@ The test case was a real project chat that ran for days and needed **451 checkpo
 - Code: `Fractal\fractal\studio\handoff.py`, `Fractal\rust\parts\handoff\src\handoff.rs`, tests `Fractal\runtime\experiments\tests\room_unit.py`
 - Not kept: the replay's output (only the numbers in Fractal academia 3.5 remain).
 
-**The idea behind it:** [Working inside a fixed context](file:///E:/AI%20academia/Study%20hub.html#context)
+**The idea behind it:** [Working inside a fixed context](https://derwina-code.github.io/ai-academia/Study%20hub.html#context)
 
 
 ## 2. Checkpoint notes: order by importance
@@ -50,7 +50,7 @@ The test case was a real project chat that ran for days and needed **451 checkpo
 - Code: `Fractal\rust\parts\handoff\src\handoff.rs`
 - Not kept: the chat that showed the refresh loop and the cut-off notes (only the bug table in Fractal academia Part 6).
 
-**The idea behind it:** [Working inside a fixed context](file:///E:/AI%20academia/Study%20hub.html#context)
+**The idea behind it:** [Working inside a fixed context](https://derwina-code.github.io/ai-academia/Study%20hub.html#context)
 
 
 ## 3. Plain notes beat "AI shorthand"
@@ -68,7 +68,7 @@ A 3× smaller note lost a sixth of the facts. **Adopted:** plain notes.
 **Proof.**
 - Not kept: the note-style comparison's notes, questions and scores. The numbers exist only in Fractal academia 3.5.
 
-**The idea behind it:** [Working inside a fixed context](file:///E:/AI%20academia/Study%20hub.html#context)
+**The idea behind it:** [Working inside a fixed context](https://derwina-code.github.io/ai-academia/Study%20hub.html#context)
 
 
 ## 4. The file system as memory
@@ -85,7 +85,7 @@ A 3× smaller note lost a sixth of the facts. **Adopted:** plain notes.
 **Proof.**
 - Code: `Fractal\fractal\studio\handoff.py`, `Fractal\rust\parts\handoff\src\handoff.rs`
 
-**The idea behind it:** [Working inside a fixed context](file:///E:/AI%20academia/Study%20hub.html#context)
+**The idea behind it:** [Working inside a fixed context](https://derwina-code.github.io/ai-academia/Study%20hub.html#context)
 
 
 ## 5. More room: a cheaper cache
@@ -105,7 +105,7 @@ A 3× smaller note lost a sixth of the facts. **Adopted:** plain notes.
 - Code: `Fractal\runtime\experiments\tests\kv4_bench.py`
 - Not kept: the 11-file task runs at 20K and 36K.
 
-**The idea behind it:** [The KV cache](file:///E:/AI%20academia/Study%20hub.html#kv), [Quantisation and the VRAM budget](file:///E:/AI%20academia/Study%20hub.html#vram)
+**The idea behind it:** [The KV cache](https://derwina-code.github.io/ai-academia/Study%20hub.html#kv), [Quantisation and the VRAM budget](https://derwina-code.github.io/ai-academia/Study%20hub.html#vram)
 
 
 ## 6. Leads from the literature (read, not yet tried)
@@ -120,7 +120,7 @@ A 3× smaller note lost a sixth of the facts. **Adopted:** plain notes.
 - Anthropic's guidance: outside source, References row "Anthropic, context editing and compaction guidance; Manus, *Context Engineering for AI Agents*" (status S).
 - Nothing measured here.
 
-**The idea behind it:** [Working inside a fixed context](file:///E:/AI%20academia/Study%20hub.html#context)
+**The idea behind it:** [Working inside a fixed context](https://derwina-code.github.io/ai-academia/Study%20hub.html#context)
 
 
 ## 7. The general lessons
@@ -135,7 +135,7 @@ A 3× smaller note lost a sixth of the facts. **Adopted:** plain notes.
 **How we know.**
 - A summary of sections 1 to 5 of this file; each lesson's source is given there (Fractal academia 3.5, 3.12, Part 6; *The Complexity Trap*, arXiv 2508.21433).
 
-**The idea behind it:** [Working inside a fixed context](file:///E:/AI%20academia/Study%20hub.html#context), [The KV cache](file:///E:/AI%20academia/Study%20hub.html#kv)
+**The idea behind it:** [Working inside a fixed context](https://derwina-code.github.io/ai-academia/Study%20hub.html#context), [The KV cache](https://derwina-code.github.io/ai-academia/Study%20hub.html#kv)
 
 
 ## 8. Dates and the clock: give the model a table, put the time on the message (Measured, 21 Nov 2026)
@@ -164,4 +164,4 @@ A 3× smaller note lost a sixth of the facts. **Adopted:** plain notes.
 - Check it yourself: `cargo test -p agent` (from `Fractal\rust`) runs the clock-line test
 - Not kept: the planner's first wrong answers and the 807-word reply.
 
-**The idea behind it:** [Working inside a fixed context](file:///E:/AI%20academia/Study%20hub.html#context), [The agent tool loop](file:///E:/AI%20academia/Study%20hub.html#loop)
+**The idea behind it:** [Working inside a fixed context](https://derwina-code.github.io/ai-academia/Study%20hub.html#context), [The agent tool loop](https://derwina-code.github.io/ai-academia/Study%20hub.html#loop)

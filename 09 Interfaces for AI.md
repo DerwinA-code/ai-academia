@@ -83,7 +83,7 @@ Azaris), Fractal's academia 3.14 and 3.18, GrindPilot's brain write-up, and the 
 - Code: `Fractal\rust\parts\studio\page\studio.html` (today's page), `Fractal\fractal\studio\studio.html` (where it was built)
 - Not kept: the timing runs.
 
-**The idea behind it:** [Graph memory with personalised PageRank](file:///E:/AI%20academia/Study%20hub.html#ppr)
+**The idea behind it:** [Graph memory with personalised PageRank](https://derwina-code.github.io/ai-academia/Study%20hub.html#ppr)
 
 
 ## 4. Look and sound

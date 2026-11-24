@@ -3,6 +3,10 @@
 **A research record of what I measured while building local AI systems**, by Derwin Agbisit
 ([LinkedIn](https://www.linkedin.com/in/derwin-agbisit-a61524204)).
 
+**View it online:** [the presentation](https://derwina-code.github.io/ai-academia/AI%20academia.html) ·
+[the study hub](https://derwina-code.github.io/ai-academia/Study%20hub.html) ·
+[landing page](https://derwina-code.github.io/ai-academia/)
+
 ## For reviewers
 
 - **What this is.** The cross-project record behind Project Lattice, a family of personal AIs I design and direct on

@@ -35,6 +35,25 @@
   experiment folders and anything personal stay local. `view/proof.json` lists every cited file and marks the claims
   that have no file kept.
 
+## What each piece was built from
+
+Each row starts from someone else's published work, names the small version built here, and says what was measured.
+Rejected results are listed next to adopted ones.
+
+| Source | The small version here | What was measured | Check it in `proof/` |
+|---|---|---|---|
+| Leviathan et al., *Fast Inference from Transformers via Speculative Decoding*, arXiv 2211.17192; Gloeckle et al., *Multi-token Prediction*, arXiv 2404.19737 | Multi-token drafting, one token ahead, on a 27B model on a 16 GB card ([01, section 5](01%20Local%20inference%20on%20consumer%20GPUs.md)) | 50.7 → 75.4 tokens/s on reasoning: adopted. Drafting two ahead made prose slower (50.6 → 36.2): not adopted | `Fractal/runtime/experiments/2026-11-07/mtp/results.json` |
+| Liu et al., *KIVI*, arXiv 2402.02750 | A 4-bit KV cache on the same model ([01, section 3](01%20Local%20inference%20on%20consumer%20GPUs.md)) | Context 20,480 → 36,864 tokens at the same 50.8 tokens/s; 12 of 12 hidden facts recalled at 30,000 tokens | `Fractal/runtime/experiments/2026-11-07/kv4/results.json` |
+| Kumbong et al., *Next-Concept Modeling*, arXiv 2610.14162 (Stanford Hazy Research) | The released models reproduced on a consumer GPU, then the generator ported to Rust ([01, section 10](01%20Local%20inference%20on%20consumer%20GPUs.md)) | ROUGE-L 27.93 on 11,334 XSum articles (paper: about 28.0). Hard Sudoku 86.25% against the paper's 86.1%; that result file is not published here | `NCM lab/eval/xsum/scores.txt` |
+| Cassano et al., *MultiPL-E*, arXiv 2208.08227 (the benchmark); Mündler et al., *Type-Constrained Code Generation*, arXiv 2504.09246 | Compiler errors fed back to the model for up to three repairs ([03, section 2](03%20Agents%2C%20tools%20and%20harnesses.md)) | Rust 133 → 141 of 156. The same idea with a Python type checker found nothing (153 → 153 of 164), so the paper's TypeScript finding did not carry over; that result file is not published here | `Fractal/runtime/experiments/2026-11-08/rust_results/r0.jsonl`, `r1.jsonl` |
+| Liu et al., *EvalPlus*, arXiv 2305.01210; Jain et al., *LiveCodeBench*, arXiv 2403.07974 (the benchmarks) | A solve, check, repair loop on the problem's own examples ([03, section 1](03%20Agents%2C%20tools%20and%20harnesses.md)) | LiveCodeBench quick set (40 tasks): 52.5% → 77.5% with thinking, 37.5% → 60% without. HumanEval+ and MBPP+ moved only within noise | `Fractal/results/index.jsonl` |
+| Singh et al., *Beyond Human Data* (ReST-EM), arXiv 2312.06585 | Self-practice kept only on independent agreement, then a LoRA trained on the kept answers ([06, sections 2 and 3](06%20Self-improvement%20and%20training.md)) | A negative result: HumanEval+ 77.5 → 72.5 and MBPP+ 76.2 → 73.8 on the 4B helper. Not adopted | `Fractal/results/index.jsonl`, runs `20261106-075430-helper-base-quick` and `20261106-094800-helper-lora-quick` |
+| Hinton et al., *Distilling the Knowledge in a Neural Network*, arXiv 1503.02531; Snell et al., *Learning by Distilling Context*, arXiv 2209.15189 | A 27B teacher with a long prompt, a 1.7B phone student with a 68-token prompt, trained with LoRA ([06, section 4](06%20Self-improvement%20and%20training.md)) | The phone exam went from 31% to 93.7% across versions v1 to v4b | `Fractal/runtime/experiments/2026-11-09/ruby_brain/results/` |
+
+Other write-ups name their sources in the same way, for example masking old tool output after *The Complexity Trap*
+(topic 04) and graph recall after *HippoRAG* (topic 05), but their result files were not kept or are not published
+here. [References](References.md) marks how closely each source was read.
+
 ---
 
 General findings about AI, gathered from the user's projects and their research. Each project keeps its own record of
